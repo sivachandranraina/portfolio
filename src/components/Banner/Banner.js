@@ -9,14 +9,14 @@ class Banner extends Component {
 
 
         this.state = {
-            instance: 'Model*',
+            instance: '',
             bio: ['Model*', 'Fullstack Developer', 'Designer', 'Photogenic', 'Casual writer', 'Wanderlust']
         };
 
 
         setTimeout(() => {
             this.renderBio();
-        }, 2000);
+        }, 1000);
 
     }
 
@@ -26,14 +26,14 @@ class Banner extends Component {
         })
         setTimeout(() => {
             this.renderBio();
-        }, 2000);
+        }, 1000);
     }
     render () {
         return (
             <div className="banner">
                 <div className="container">
                     <Row>
-                        <Col xs={12} md={{size: '6'}}>
+                        <Col xs={12}>
                             <h4>fashionaholic</h4>
                             <h1>Sivachandran Raina</h1>
                             <h4>a {this.state.instance}</h4>
