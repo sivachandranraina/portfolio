@@ -1,0 +1,12 @@
+.work-traces {
+    padding-top: 51%;
+    padding-bottom: 3rem;
+}
+
+.work-traces .company-logo {
+    text-align: center;
+}
+
+.work-traces .company-logo img {
+    width: 220px;
+}

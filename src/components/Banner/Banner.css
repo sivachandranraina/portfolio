@@ -22,15 +22,27 @@
 
 .banner h4 {
     font-weight: 300;
+    font-size: 2rem;
 }
 
 .banner h1 {
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
-.bio-item {
-    display: inline-block;
-    align-items: auto;
-    transform: rotate(90deg);
+.banner .btn-secondary {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    margin-right: 2rem;
+    padding: 1rem 1.6rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    transition: 200ms;
+    font-weight: 300;
+}
+
+.banner .btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: black
 }
