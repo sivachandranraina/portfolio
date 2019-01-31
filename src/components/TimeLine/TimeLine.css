@@ -1,0 +1,16 @@
+.timeline {
+    margin-bottom: 2rem;
+}
+
+.timeline .dot-label {
+    font-size: 0.9rem;
+}
+
+.timeline .content h1 {
+    font-size: 4rem;
+}
+
+.timeline .content p {
+    font-size: 1.3rem;
+    color: #959595;
+}
