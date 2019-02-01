@@ -12,46 +12,45 @@ class TimeLine extends Component {
     constructor() {
         super();
         this.state = {
-            value: 0,
-            previous: 0,
+            value: 4,
+            previous: 3,
             values: [{
                 icon: faBaby,
-                date: '17/03/1994',
+                date: '1994-03-17',
                 title: 'First Release',
                 description: 'Cool Night was that.',
                 content: 'The day I felt air all over my body instead of water. A surreal joy of becoming one of the humans. A gift from God. My visit from the stork.'
             }, {
                 icon: faCloud,
-                date: '01/08/2013',
+                date: '2013-08-01',
                 title: 'HUB',
                 description: 'Creative Head @ Google HUB for 1 year',
                 content: "Google HUB - Google Students'Club connects people and creates awareness among our college students who require help or service in learning all and everything related to Google."
             }, {
                 icon: faGraduationCap,
-                date: '01/04/2015',
+                date: '2015-04-01',
                 title: 'Graduation',
                 description: 'The day I felt both Day and Night at the same time @K.L.N. College of Engineering!',
                 content: 'Day: Happy about getting Degree :D <br/> Night: Sad for parting away from my college and the Stars(Professors) who crafted my knowledge and gave it a shape!'
             }, {
                 icon: faBriefcase,
-                date: '01/06/2015',
+                date: '2015-06-01',
                 title: 'Career',
                 description: 'UI Developer @ InfoFaces, <small>The second Company which I got offer in Campus Recruitment.</small>',
                 content: "Planning and Preparation is for first benchers...Absolutely! I was a back bencher.<br/><br/>The view on my profession, to choose UI was crystal clear and '<span class='primary'>Siva's adaptive attitude helped him to initiate his career journey in the right path and at the right time</span>' says, Principal Architect of InfoFaces"
             }, {
                 icon: faStar,
-                date: '01/01/2016',
+                date: '2016-01-01',
                 title: 'Award',
                 description: 'Star Performer @ InfoFaces',
                 content: 'For the smart work and new initiation in organization.<br/><br/> Got Appreciation too for making good engineers as <strong>Trainer</strong>'
             }, {
                 icon: faForward,
-                date: '01/03/2017',
+                date: '2017-03-01',
                 title: 'Next Co',
                 description: '<strong>Fullstack Developer</strong> @ Cloudix',
                 content: 'After having learned a lot drastically and implemented the same in my previous company, now that I have stepped into another startup to shape my adaptive skills and grow in knowledge front.<br/>'
             }],
-            dates: ['1994-03-17', '2013-08-01', '2015-04-01', '2015-06-01', '2016-01-01', '2017-03-01'],
             minEventPadding: 20,
             maxEventPadding: 120,
             linePadding: 100,
@@ -87,11 +86,14 @@ class TimeLine extends Component {
                         <Col xs={12}>
                             <div style={{ width: '50%', height: '100px', margin: '0 auto' }}>
                                 <HorizontalTimeline
+                                    getLabel={(e, t)=>{
+                                        return moment(e).format('MMM YYYY')
+                                    }}
                                     index={this.state.value}
                                     indexClick={(index) => {
                                         this.setState({ value: index, previous: this.state.value });
                                     }}
-                                    values={ this.state.dates }
+                                    values={ this.state.values.map(data=> data.date) }
                                     fillingMotion = {
                                         {
                                             stiffness: this.state.fillingMotionStiffness,
@@ -129,7 +131,7 @@ class TimeLine extends Component {
                                                 <h1>
                                                     <FontAwesomeIcon icon={data.icon} /> {data.title}
                                                 </h1>
-                                                <h6>- {moment(data.date).format('MM, YYYY')}</h6>
+                                                <h5>- {moment(data.date).format('MMMM, YYYY')}</h5>
                                                 <p dangerouslySetInnerHTML={this.renderAsHTML(data.description)}></p>
                                                 <p dangerouslySetInnerHTML={this.renderAsHTML(data.content)}></p>
                                             </div>

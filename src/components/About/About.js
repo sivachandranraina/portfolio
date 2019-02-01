@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
+import CircularProgressbar from "react-circular-progressbar";
 
 import scr1 from './../../assets/images/scr1.jpg';
+import 'react-circular-progressbar/dist/styles.css';
 import './About.css';
 
 class About extends Component {
@@ -42,6 +44,40 @@ class About extends Component {
                                     <p>
                                         Wanna learn: Horse riding, Swimming, Hair styling, Guitar
                                     </p>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col xs={12} className="skill-set">
+                            <Row>
+                                <Col>
+                                    <CircularProgressbar
+                                        percentage={90}
+                                        strokeWidth={2}
+                                    />
+                                </Col>
+                                <Col>
+                                    <CircularProgressbar
+                                        percentage={90}
+                                        strokeWidth={2}
+                                    />
+                                </Col>
+                                <Col>
+                                    <CircularProgressbar
+                                        percentage={90}
+                                        strokeWidth={2}
+                                    />
+                                </Col>
+                                <Col>
+                                    <CircularProgressbar
+                                        percentage={90}
+                                        strokeWidth={2}
+                                    />
+                                </Col>
+                                <Col>
+                                    <CircularProgressbar
+                                        percentage={90}
+                                        strokeWidth={2}
+                                    />
                                 </Col>
                             </Row>
                         </Col>
