@@ -10,3 +10,20 @@
     font-size: 3rem;
     font-weight: 300;
 }
+
+.about .skill-set {
+    margin-top: 6rem;
+}
+
+.about .skill-set .block {
+    text-align: center;
+}
+
+.about .skill-set .block .name {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.about .skill-set .block .circle .CircularProgressbar {
+    width: 100px;
+}

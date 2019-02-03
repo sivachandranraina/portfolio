@@ -84,7 +84,7 @@ class TimeLine extends Component {
                             <h2 className="title">Timeline</h2>
                         </Col>
                         <Col xs={12}>
-                            <div style={{ width: '50%', height: '100px', margin: '0 auto' }}>
+                            <div style={{ width: '60%', height: '100px', margin: '0 auto' }}>
                                 <HorizontalTimeline
                                     getLabel={(e, t)=>{
                                         return moment(e).format('MMM YYYY')
@@ -118,7 +118,7 @@ class TimeLine extends Component {
                             </div>
                         </Col>
                         <Col xs={12}>
-                            <div style={{ width: '70%', margin: '0 auto' }}>
+                            <div style={{ width: '80%', margin: '0 auto' }}>
                                 <SwipeableViews
                                     index={this.state.value}
                                     onChangeIndex={(value, previous) => {

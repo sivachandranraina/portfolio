@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
+import _ from "lodash";
 import CircularProgressbar from "react-circular-progressbar";
 
 import scr1 from './../../assets/images/scr1.jpg';
@@ -7,6 +8,52 @@ import 'react-circular-progressbar/dist/styles.css';
 import './About.css';
 
 class About extends Component {
+    constructor() {
+        super();
+        this.state = {
+            skillSet: [{
+                title: 'Photoshop',
+                percentage: 90
+            }, {
+                title: 'React',
+                percentage: 75
+            }, {
+                title: 'Bootstrap',
+                percentage: 80
+            }, {
+                title: 'Node',
+                percentage: 40
+            }, {
+                title: 'UX',
+                percentage: 60
+            }]
+        }
+    }
+    renderSkillSet() {
+        return _.map(this.state.skillSet, (data, index)=> {
+            return (
+                <Col className="block" key={index}>
+                    <div className="name">
+                        {data.title}
+                    </div>
+                    <div className="circle">
+                        <CircularProgressbar
+                            percentage={data.percentage}
+                            strokeWidth={2}
+                            styles={{
+                                path: {
+                                    stroke: '#FF9800'
+                                },
+                                trail: {
+                                    stroke: '#efefef'
+                                }
+                            }}
+                        />
+                    </div>
+                </Col>
+            )
+        })
+    }
 
     render () {
         return (
@@ -34,9 +81,9 @@ class About extends Component {
                                     <br/>
                                     <p>Passion grew early from my school days. Profession from my college days.</p>
                                     <p>
-                                        Favourite number is 3. Love to work in CSS3.<br/>
-                                        Black and white are my 2 favourite colors.A combination of 16 million colors.<br/>
-                                        Only 1 motive.To think creative!To innovate the effective!
+                                        Favourite number is <span className="primary">3</span>. Love to work in CSS3.<br/>
+                                        Black and white are my <span className="primary">2</span> favourite colors. A combination of 16 million colors.<br/>
+                                        Only <span className="primary">1</span> motive. To think creative! To innovate the effective!
                                     </p>
                                     <p>
                                        One thing is clear "Whatever I do my mind thinks only about design".
@@ -49,36 +96,8 @@ class About extends Component {
                         </Col>
                         <Col xs={12} className="skill-set">
                             <Row>
-                                <Col>
-                                    <CircularProgressbar
-                                        percentage={90}
-                                        strokeWidth={2}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CircularProgressbar
-                                        percentage={90}
-                                        strokeWidth={2}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CircularProgressbar
-                                        percentage={90}
-                                        strokeWidth={2}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CircularProgressbar
-                                        percentage={90}
-                                        strokeWidth={2}
-                                    />
-                                </Col>
-                                <Col>
-                                    <CircularProgressbar
-                                        percentage={90}
-                                        strokeWidth={2}
-                                    />
-                                </Col>
+                                {this.renderSkillSet()}
+                                
                             </Row>
                         </Col>
                     </Row>
