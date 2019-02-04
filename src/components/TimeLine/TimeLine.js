@@ -3,7 +3,8 @@ import { Row, Col } from "reactstrap";
 import HorizontalTimeline from "react-horizontal-timeline";
 import SwipeableViews from "react-swipeable-views";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBaby, faCloud, faGraduationCap, faBriefcase, faStar, faForward } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faBaby, faGraduationCap, faBriefcase, faStar, faForward } from '@fortawesome/free-solid-svg-icons';
 import moment from "moment";
 
 import './TimeLine.css';
@@ -21,7 +22,7 @@ class TimeLine extends Component {
                 description: 'Cool Night was that.',
                 content: 'The day I felt air all over my body instead of water. A surreal joy of becoming one of the humans. A gift from God. My visit from the stork.'
             }, {
-                icon: faCloud,
+                icon: faGoogle,
                 date: '2013-08-01',
                 title: 'HUB',
                 description: 'Creative Head @ Google HUB for 1 year',

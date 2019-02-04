@@ -4,3 +4,22 @@
     color: #ffffff;
     text-align: center;
 }
+
+.footer h1 {
+    margin-bottom: 2rem;
+}
+
+.footer h4 a {
+    color: #848484;
+    font-size: 3rem;
+    padding: 15px 2rem;
+}
+
+.footer h4 a svg {
+    transition: 200ms;
+}
+
+.footer h4 a svg:hover {
+    color: #FF9800;
+    transform: scale(1.4,1.4)
+}
