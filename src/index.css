@@ -6,6 +6,8 @@ body {
   letter-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #222222;
+  color: #ffffff;
 }
 
 code {

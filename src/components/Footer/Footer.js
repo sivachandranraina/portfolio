@@ -40,6 +40,7 @@ class Footer extends Component {
                 <div className="container">
                     <Row>
                         <Col>
+                            <h2>For more follow</h2>
                             <h4>
                                 {this.renderSocialLinks()}
                             </h4>

@@ -39,13 +39,13 @@ class About extends Component {
                     <div className="circle">
                         <CircularProgressbar
                             percentage={data.percentage}
-                            strokeWidth={2}
+                            strokeWidth={1}
                             styles={{
                                 path: {
-                                    stroke: '#FF9800'
+                                    stroke: '#FFF'
                                 },
                                 trail: {
-                                    stroke: '#efefef'
+                                    stroke: '#777'
                                 }
                             }}
                         />
@@ -73,7 +73,7 @@ class About extends Component {
                                         <p className="mb-0 text-uppercase">Life is What you do!</p>
                                         <footer className="blockquote-footer"><cite title="Source Title">Sivachandran</cite></footer>
                                     </blockquote>
-                                    <p className="">
+                                    <p className="caption">
                                         A fashionaholic by creation!
                                         <br/>Fashion designer by passion!
                                         <br/>UI designer by profession!
@@ -97,7 +97,6 @@ class About extends Component {
                         <Col xs={12} className="skill-set">
                             <Row>
                                 {this.renderSkillSet()}
-                                
                             </Row>
                         </Col>
                     </Row>

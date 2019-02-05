@@ -60,9 +60,9 @@ class TimeLine extends Component {
             fillingMotionDamping: 25,
             slidingMotionStiffness: 150,
             slidingMotionDamping: 25,
-            stylesBackground: '#ffffff',
-            stylesForeground: '#FF9800',
-            stylesOutline: '#dfdfdf',
+            stylesBackground: '#222',
+            stylesForeground: '#FFF',
+            stylesOutline: '#777',
             isTouchEnabled: true,
             isKeyboardEnabled: true,
             isOpenEnding: true,
@@ -130,7 +130,7 @@ class TimeLine extends Component {
                                         return (
                                             <div key={index} className="content">
                                                 <h1>
-                                                    <FontAwesomeIcon icon={data.icon} /> {data.title}
+                                                    <FontAwesomeIcon icon={data.icon} className="text-muted"/> {data.title}
                                                 </h1>
                                                 <h5>- {moment(data.date).format('MMMM, YYYY')}</h5>
                                                 <p dangerouslySetInnerHTML={this.renderAsHTML(data.description)}></p>

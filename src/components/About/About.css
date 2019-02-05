@@ -4,11 +4,28 @@
 
 .about .image-block img {
     width: 70%;
+    filter: grayscale(100);
+    opacity: 0.8;
+    transition: 500ms;
+}
+
+.about .image-block img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.about .image-block p {
+    color: #aaaaaa;
+}
+
+.about .image-block p.caption {
+    color: #cccccc;
 }
 
 .about .blockquote p {
     font-size: 3rem;
     font-weight: 300;
+    color: #ffffff;
 }
 
 .about .skill-set {

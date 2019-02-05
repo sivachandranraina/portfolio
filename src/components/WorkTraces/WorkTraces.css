@@ -3,9 +3,19 @@
 }
 
 .work-traces .company-logo {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    filter: grayscale(100);
+    align-items: center;
+    opacity: 0.5;
+    transition: 500ms;
+}
+
+.work-traces .company-logo:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
 
 .work-traces .company-logo img {
-    width: 220px;
+    width: 60%;
 }

@@ -7,6 +7,7 @@ import WorkTraces from './WorkTraces/WorkTraces';
 import About from './About/About';
 import TimeLine from './TimeLine/TimeLine';
 import Footer from './Footer/Footer';
+import Blog from './Blog/Blog';
 
 class App extends Component {
   render() {
@@ -15,8 +16,9 @@ class App extends Component {
         <Header />
         <Banner />
         <TimeLine />
-        <About />
         <WorkTraces />
+        <About />
+        <Blog />
         <Footer />
       </div>
     );

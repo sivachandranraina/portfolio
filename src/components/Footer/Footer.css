@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.footer h1 {
+.footer h2 {
     margin-bottom: 2rem;
 }
 
@@ -20,6 +20,6 @@
 }
 
 .footer h4 a svg:hover {
-    color: #FF9800;
+    color: #ffffff;
     transform: scale(1.4,1.4)
 }
