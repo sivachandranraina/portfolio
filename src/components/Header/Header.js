@@ -28,7 +28,7 @@ class Header extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Site is still under construction</NavLink>
+                                <NavLink>Site is still under construction</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

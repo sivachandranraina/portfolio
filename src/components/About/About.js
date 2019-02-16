@@ -45,7 +45,7 @@ class About extends Component {
                                     stroke: '#FFF'
                                 },
                                 trail: {
-                                    stroke: '#777'
+                                    stroke: '#333'
                                 }
                             }}
                         />
@@ -65,7 +65,7 @@ class About extends Component {
                         </Col>
                         <Col xs={12}>
                             <Row className="image-block">
-                                <Col xs={12} md={4} className="text-right">
+                                <Col xs={12} md={4} className="text-center">
                                     <img src={scr1} alt="SCR" />
                                 </Col>
                                 <Col xs={12} md={8} className="text-center">

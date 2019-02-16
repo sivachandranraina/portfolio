@@ -18,13 +18,13 @@ class WorkTraces extends Component {
                         </Col>
                         <Col xs={12}>
                             <Row>
-                                <Col className="company-logo">
+                                <Col xs={12} md={4} className="company-logo">
                                     <img src={ifslogo} alt="logo" />
                                 </Col>
-                                <Col className="company-logo">
+                                <Col xs={12} md={4} className="company-logo">
                                     <img src={cmslogo} alt="logo" />
                                 </Col>
-                                <Col className="company-logo">
+                                <Col xs={12} md={4} className="company-logo">
                                     <img src={jaishulogo} alt="logo" />
                                 </Col>
                             </Row>
