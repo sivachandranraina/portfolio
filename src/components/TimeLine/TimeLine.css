@@ -1,17 +1,17 @@
 .timeline {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .timeline .dot-label {
-    font-size: 0.9rem;
-    color: #aaaaaa;
+	font-size: 0.9rem;
+	color: #aaaaaa;
 }
 
 .timeline .content h1 {
-    font-size: 4rem;
+	font-size: 4rem;
 }
 
 .timeline .content p {
-    font-size: 1.1rem;
-    color: #959595;
+	font-size: 1.1rem;
+	color: #959595;
 }
