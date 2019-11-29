@@ -13,8 +13,8 @@ class TimeLine extends Component {
 	constructor() {
 		super();
 		this.state = {
-			value: 4,
-			previous: 3,
+			value: 5,
+			previous: 4,
 			values: [
 				{
 					icon: faBaby,
@@ -98,7 +98,7 @@ class TimeLine extends Component {
 						<Col xs={12} className="text-center text-uppercase position-sticky">
 							<h2 className="title">Timeline</h2>
 						</Col>
-						<Col xs={12}>
+						<Col xs={12} className="mt-4">
 							<div style={{ width: '60%', height: '100px', margin: '0 auto' }}>
 								<HorizontalTimeline
 									getLabel={(e, t) => {

@@ -15,7 +15,7 @@ class WorkTraces extends Component {
 						<Col xs={12} className="text-center text-uppercase position-sticky">
 							<h2 className="title">Work Traces</h2>
 						</Col>
-						<Col xs={12}>
+						<Col xs={12} className="mt-4">
 							<Row>
 								<Col xs={12} md={4} className="company-logo">
 									<img src={ifslogo} alt="logo" />

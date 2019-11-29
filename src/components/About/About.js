@@ -26,7 +26,7 @@ class About extends Component {
 				},
 				{
 					title: 'Node',
-					percentage: 40
+					percentage: 70
 				},
 				{
 					title: 'UX',
@@ -67,7 +67,7 @@ class About extends Component {
 						<Col xs={12} className="text-center text-uppercase position-sticky">
 							<h2 className="title">About Me</h2>
 						</Col>
-						<Col xs={12}>
+						<Col xs={12} className="mt-4">
 							<Row className="image-block">
 								<Col xs={12} md={4} className="text-center">
 									<img src={scr1} loading="lazy" alt="SCR" />
