@@ -62,8 +62,11 @@
 }
 
 .banner h1 {
+	font-family: 'Over the Rainbow';
 	font-weight: 300;
-	font-size: 4.5rem;
+	font-size: 4rem;
+	letter-spacing: 0.3rem;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .banner .btn-secondary {
@@ -79,6 +82,7 @@
 }
 
 .banner .btn-secondary:hover {
-	background-color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.6);
 	color: black;
 }

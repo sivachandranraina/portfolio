@@ -69,10 +69,10 @@ class About extends Component {
 						</Col>
 						<Col xs={12} className="mt-4">
 							<Row className="image-block">
-								<Col xs={12} md={4} className="text-center">
+								<Col xs={12} lg={4} className="text-center">
 									<img src={scr1} loading="lazy" alt="SCR" />
 								</Col>
-								<Col xs={12} md={8} className="text-center">
+								<Col xs={12} lg={8} className="text-center">
 									<blockquote className="blockquote">
 										<p className="mb-0 text-uppercase">Life is What you do!</p>
 										<footer className="blockquote-footer">

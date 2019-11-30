@@ -53,7 +53,9 @@ class Footer extends Component {
 							<br />
 							<div className="text-muted">
 								#fullstackdeveloper #designer #casualwriter #photogenic<br />
-								#wanderlust #breezysinger
+								#wanderlust #breezysinger<br />
+								#spreadlove<br />
+								💖
 							</div>
 						</Col>
 					</Row>

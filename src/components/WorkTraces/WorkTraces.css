@@ -1,6 +1,6 @@
 .work-traces {
-	min-height: 80vh;
-	margin-bottom: 8rem;
+	min-height: 50vh;
+	/* margin-bottom: 8rem; */
 }
 
 .work-traces .company-logo {
@@ -10,6 +10,7 @@
 	align-items: center;
 	opacity: 0.8;
 	transition: 500ms;
+	margin-bottom: 3rem;
 }
 
 .work-traces .company-logo:hover {

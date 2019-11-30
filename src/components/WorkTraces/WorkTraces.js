@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 
 import ifslogo from './../../assets/images/infofaces.png';
 import cmslogo from './../../assets/images/commutatus.png';
-import jaishulogo from './../../assets/images/cloudix.webp';
+import jaishulogo from './../../assets/images/cloudix.png';
 import './WorkTraces.css';
 
 class WorkTraces extends Component {
