@@ -9,6 +9,14 @@ class Blog extends Component {
 		this.state = {
 			links: [
 				{
+					title: 'Trip of Decade',
+					img: 'https://sivachandranraina.files.wordpress.com/2020/01/blogcover.jpg?w=640',
+					expert:
+						"Meeting you guys after a year, yeah I know it is huge. Cool, I have a lot to share with you guys... Actually, I went to new places in the previous year but don't have enough time to describe those trip plans & experiences. In fact, my Kolli hills trip was great but it has",
+					dateTime: 'January 7, 2020',
+					link: 'https://sivachandranraina.wordpress.com/2020/01/07/trip-of-decade/'
+				},
+				{
 					title: 'Western Odyssey',
 					img: 'https://sivachandranraina.files.wordpress.com/2019/01/cover.jpg?w=640',
 					expert:
@@ -31,14 +39,6 @@ class Blog extends Component {
 						'So the trip was over, the story begins here... Yeah it was a trip to Goa For the Instagram story update, check out Goa diary highlight in @sivachandranraina This time big gang, totally 15 people. Well planned together & reached Calangute, Goa in the early morning. Day 1 Resort guy said room check-in will open',
 					dateTime: 'April 6, 2018',
 					link: 'https://sivachandranraina.wordpress.com/2018/04/06/goa-glees/'
-				},
-				{
-					title: 'Witnessed Wayanad',
-					img: 'https://sivachandranraina.files.wordpress.com/2018/01/cover.jpg?w=640',
-					expert:
-						'Well, this one is about the trip with my bae(Dominar400). Yes, I bought a new bike in August. Wayanad was the first trip with my bae. DAY ONE Early morning started from Chennai to reach Bangalore, after Sriperambathur joined State Highway with little bit traffic, on the way first stopping to relax and had tea',
-					dateTime: 'January 16, 2018',
-					link: 'https://sivachandranraina.wordpress.com/2018/01/16/witnessed-wayanad/'
 				}
 			]
 		};
@@ -46,13 +46,13 @@ class Blog extends Component {
 	renderPosts() {
 		return this.state.links.map((data, index) => {
 			return (
-				<Col xs={12} sm={6} md={3} key={index} className="">
-					<Card>
-						<CardImg top width="100%" src={data.img} alt="image" />
+				<Col xs={12} md={6} lg={3} className="mb-4">
+					<Card key={index}>
+						<CardImg top width="100%" src={data.img} loading="lazy" alt="image" />
 						<CardBody>
 							<CardTitle>{data.title}</CardTitle>
 							<CardSubtitle>{data.dateTime}</CardSubtitle>
-							<CardText>{data.expert}</CardText>
+							<CardText>{data.expert}...</CardText>
 							<a href={data.link} target="_blank">
 								<Button block>Read more</Button>
 							</a>
@@ -67,8 +67,8 @@ class Blog extends Component {
 			<div className="blog">
 				<div className="container">
 					<Row>
-						<Col xs={12} className="text-center text-uppercase">
-							<h2>Blog</h2>
+						<Col xs={12} className="text-center text-uppercase position-sticky">
+							<h2 className="title">Blog</h2>
 						</Col>
 						<Col xs={12}>
 							<Row>{this.renderPosts()}</Row>

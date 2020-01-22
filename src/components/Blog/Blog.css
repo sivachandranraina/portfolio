@@ -1,34 +1,35 @@
 .blog {
-    background-color: #222222;
-    padding: 6rem 0rem;
+	min-height: 100vh;
+	background-color: #222222;
+	padding: 6rem 0rem;
 }
 
 .blog a {
-    text-decoration: none;
-}
-
-.blog h2 {
-    margin-bottom: 3rem;
-    color: #FFFFFF;
+	text-decoration: none;
 }
 
 .blog .card {
-    border: none;
-    color: #000000;
+	border: none;
+	color: #fff;
+}
+
+.blog .card .card-body {
+	border: none;
+	background-color: #000000;
 }
 
 .blog .card .card-title {
-    font-size: 1.2rem;
-    font-weight: 500;
+	font-size: 1.2rem;
+	font-weight: 500;
 }
 
 .blog .card .card-subtitle {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #848484;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: #848484;
 }
 
 .blog .card .card-text {
-    font-size: 0.9rem;
-    margin: 1rem 0rem;
+	font-size: 0.9rem;
+	margin: 1rem 0rem;
 }

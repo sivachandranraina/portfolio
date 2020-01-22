@@ -10,19 +10,19 @@ import Footer from './Footer/Footer';
 import Blog from './Blog/Blog';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Banner />
-        <TimeLine />
-        <WorkTraces />
-        <About />
-        <Blog />
-        <Footer />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				{/* <Header /> */}
+				<Banner />
+				<About />
+				<TimeLine />
+				<WorkTraces />
+				<Blog />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default App;

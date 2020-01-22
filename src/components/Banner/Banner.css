@@ -1,48 +1,88 @@
 .banner {
-    background-image: url('./../../assets/images/scr-outside2.jpg');
-    background-attachment: fixed;
-    height: 400px;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    height: 100vh;
-    width: 100%;
-    /* position: absolute; */
+	background-image: url('./../../assets/images/scr-outside2.jpg');
+	background-blend-mode: saturation(20);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-.banner::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 0;
+.banner .backdrop {
+	backdrop-filter: brightness(0.7);
+	animation: blurring infinite 10s;
+	-webkit-animation: blurring infinite 10s;
+	-moz-animation: blurring infinite 10s;
+}
+
+@keyframes blurring {
+	0% {
+		backdrop-filter: brightness(0.7);
+	}
+	50% {
+		backdrop-filter: brightness(0.4);
+	}
+	100% {
+		backdrop-filter: brightness(0.7);
+	}
+}
+
+@-moz-keyframes blurring {
+	0% {
+		backdrop-filter: brightness(0.7);
+	}
+	50% {
+		backdrop-filter: brightness(0.4);
+	}
+	100% {
+		backdrop-filter: brightness(0.7);
+	}
+}
+
+@-webkit-keyframes blurring {
+	0% {
+		backdrop-filter: brightness(0.7);
+	}
+	50% {
+		backdrop-filter: brightness(0.4);
+	}
+	100% {
+		backdrop-filter: brightness(0.7);
+	}
+}
+
+.banner .container {
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	height: 100vh;
+	width: 100%;
 }
 
 .banner h4 {
-    font-weight: 300;
-    font-size: 2rem;
+	font-weight: 300;
+	font-size: 2rem;
 }
 
 .banner h1 {
-    font-weight: 300;
-    font-size: 4.5rem;
+	font-family: 'Over the Rainbow';
+	font-weight: 300;
+	font-size: 4rem;
+	letter-spacing: 0.3rem;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .banner .btn-secondary {
-    margin-top: 1rem;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    margin-right: 2rem;
-    padding: 1rem 1.6rem;
-    border-radius: 3rem;
-    font-size: 1.2rem;
-    transition: 200ms;
-    font-weight: 300;
+	margin-top: 1rem;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	margin-right: 2rem;
+	padding: 1rem 1.6rem;
+	border-radius: 3rem;
+	font-size: 1.2rem;
+	transition: 200ms;
+	font-weight: 300;
 }
 
 .banner .btn-secondary:hover {
-    background-color: #FFFFFF;
-    color: black
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.6);
+	color: black;
 }

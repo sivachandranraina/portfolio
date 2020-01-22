@@ -1,21 +1,23 @@
 .work-traces {
-    margin-bottom: 8rem;
+	min-height: 50vh;
+	/* margin-bottom: 8rem; */
 }
 
 .work-traces .company-logo {
-    display: flex;
-    justify-content: center;
-    filter: grayscale(100);
-    align-items: center;
-    opacity: 0.8;
-    transition: 500ms;
+	display: flex;
+	justify-content: center;
+	filter: grayscale(100);
+	align-items: center;
+	opacity: 0.8;
+	transition: 500ms;
+	margin-bottom: 3rem;
 }
 
 .work-traces .company-logo:hover {
-    filter: grayscale(0);
-    opacity: 1;
+	filter: grayscale(0);
+	opacity: 1;
 }
 
 .work-traces .company-logo img {
-    width: 60%;
+	width: 60%;
 }
