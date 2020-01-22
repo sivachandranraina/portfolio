@@ -1,46 +1,51 @@
 .about {
-    padding-bottom: 3rem;
+	padding-bottom: 3rem;
 }
 
 .about .image-block img {
-    width: 70%;
-    filter: grayscale(100);
-    opacity: 0.8;
-    transition: 500ms;
+	width: 70%;
+	filter: grayscale(100);
+	opacity: 0.8;
+	transition: 500ms;
 }
 
 .about .image-block img:hover {
-    filter: grayscale(0);
-    opacity: 1;
+	filter: grayscale(0);
+	opacity: 1;
 }
 
 .about .image-block p {
-    color: #aaaaaa;
+	color: #aaaaaa;
 }
 
 .about .image-block p.caption {
-    color: #cccccc;
+	color: #cccccc;
 }
 
 .about .blockquote p {
-    font-size: 3rem;
-    font-weight: 300;
-    color: #ffffff;
+	font-size: 3rem;
+	font-weight: 300;
+	color: #ffffff;
 }
 
 .about .skill-set {
-    margin-top: 6rem;
+	margin-top: 6rem;
 }
 
 .about .skill-set .block {
-    text-align: center;
+	text-align: center;
 }
 
 .about .skill-set .block .name {
-    font-size: 1.3rem;
-    padding-bottom: 1rem;
+	font-size: 1.3rem;
+	padding-bottom: 1rem;
 }
 
 .about .skill-set .block .circle .CircularProgressbar {
-    width: 100px;
+	width: 100px;
+	transition: 0.25s;
+}
+
+.about .skill-set .block .circle .CircularProgressbar:hover {
+	transform: scale(1.1);
 }
