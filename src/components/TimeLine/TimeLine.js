@@ -4,7 +4,7 @@ import HorizontalTimeline from 'react-horizontal-timeline';
 import SwipeableViews from 'react-swipeable-views';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faBaby, faGraduationCap, faBriefcase, faStar, faForward } from '@fortawesome/free-solid-svg-icons';
+import { faBaby, faGraduationCap, faBriefcase, faStar, faForward, faCompass } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 
 import './TimeLine.css';
@@ -64,6 +64,14 @@ class TimeLine extends Component {
 					description: '<strong>Fullstack Developer</strong> @ Cloudix',
 					content:
 						'After having learned a lot drastically and implemented the same in my previous company, now that I have stepped into another startup to shape my adaptive skills and grow in knowledge front.<br/>'
+				},
+				{
+					icon: faCompass,
+					date: '2019-12-01',
+					title: 'Trip of Decade',
+					description: 'Road trip with Domibae | <strong>Work Smart - Save money - Travel Hardcore</strong>',
+					content:
+						'People say Rest In Peace but, I chose to Live In Peace. Everything happens for a reason, this thing happened for the reason to know about Sivachandran. <a href="https://sivachandranraina.wordpress.com/2020/01/07/trip-of-decade/" target="_blank">Read more</a>'
 				}
 			],
 			minEventPadding: 20,

@@ -35,7 +35,16 @@ class Banner extends Component {
 								<h4>fashionaholic</h4>
 								<h1>Sivachandran Raina</h1>
 								<h4>a {this.state.instance}</h4>
-								<Button>Get Started</Button>
+								<Button
+									onClick={() => {
+										window.scroll({
+											top: '500',
+											behavior: 'smooth'
+										});
+									}}
+								>
+									Get Started
+								</Button>
 								<a
 									href="https://docs.google.com/document/d/1wkx85xMuEQz3rXIi7IvuAn5CQGIWPCZ1w7Ohe3w_JNY/edit?usp=sharing"
 									target="_blank"
