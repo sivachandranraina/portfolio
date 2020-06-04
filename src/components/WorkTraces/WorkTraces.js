@@ -10,11 +10,11 @@ class WorkTraces extends Component {
 	render() {
 		return (
 			<div className="work-traces">
+				<div className="text-uppercase position-sticky">
+					<h2 className="title">Work Traces</h2>
+				</div>
 				<div className="container">
 					<Row>
-						<Col xs={12} className="text-center text-uppercase position-sticky">
-							<h2 className="title">Work Traces</h2>
-						</Col>
 						<Col xs={12} className="mt-4">
 							<Row>
 								<Col xs={12} md={4} className="company-logo">

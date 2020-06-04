@@ -1,25 +1,25 @@
 .footer {
-    background-color: #222222;
-    padding: 4rem 0rem;
-    color: #ffffff;
-    text-align: center;
+	background-color: rgba(34, 34, 34, 0.72);
+	padding: 4rem 0rem;
+	color: #ffffff;
+	text-align: center;
 }
 
 .footer h2 {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .footer h4 a {
-    color: #848484;
-    font-size: 3rem;
-    padding: 15px 2rem;
+	color: #848484;
+	font-size: 3rem;
+	padding: 15px 2rem;
 }
 
 .footer h4 a svg {
-    transition: 200ms;
+	transition: 200ms;
 }
 
 .footer h4 a svg:hover {
-    color: #ffffff;
-    transform: scale(1.4,1.4)
+	color: #ffffff;
+	transform: scale(1.4, 1.4);
 }

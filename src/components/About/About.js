@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import _ from 'lodash';
 import CircularProgressbar from 'react-circular-progressbar';
 
-import scr1 from './../../assets/images/scr1.jpg';
+import scr2 from './../../assets/images/scr2.jpg';
 import 'react-circular-progressbar/dist/styles.css';
 import './About.css';
 
@@ -49,7 +49,7 @@ class About extends Component {
 									stroke: '#FFF'
 								},
 								trail: {
-									stroke: '#333'
+									stroke: 'transparent'
 								}
 							}}
 						/>
@@ -62,15 +62,15 @@ class About extends Component {
 	render() {
 		return (
 			<div className="about">
+				<div className="text-uppercase position-sticky">
+					<h2 className="title">About Me</h2>
+				</div>
 				<div className="container">
 					<Row>
-						<Col xs={12} className="text-center text-uppercase position-sticky">
-							<h2 className="title">About Me</h2>
-						</Col>
 						<Col xs={12} className="mt-4">
 							<Row className="image-block">
 								<Col xs={12} lg={4} className="text-center">
-									<img src={scr1} loading="lazy" alt="SCR" />
+									<img src={scr2} loading="lazy" alt="SCR" />
 								</Col>
 								<Col xs={12} lg={8} className="text-center">
 									<blockquote className="blockquote">

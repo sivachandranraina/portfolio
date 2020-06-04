@@ -5,10 +5,19 @@ body {
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: #222222;
+	/* -moz-osx-font-smoothing: grayscale; */
+	background-image: url('./assets/images/LRE-0512.jpg');
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
 	color: #ffffff;
-	font-size: 16px;
+	/* font-size: 16px; */
+}
+#root {
+	backdrop-filter: blur(15px);
+}
+#root > div {
+	background-color: rgba(34, 34, 34, 0.9);
 }
 
 code {

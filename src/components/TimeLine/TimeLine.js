@@ -82,7 +82,6 @@ class TimeLine extends Component {
 			fillingMotionDamping: 25,
 			slidingMotionStiffness: 150,
 			slidingMotionDamping: 25,
-			stylesBackground: '#222',
 			stylesForeground: '#FFF',
 			stylesOutline: '#777',
 			isTouchEnabled: true,
@@ -101,11 +100,11 @@ class TimeLine extends Component {
 	render() {
 		return (
 			<div className="timeline">
+				<div className="text-uppercase position-sticky">
+					<h2 className="title">Timeline</h2>
+				</div>
 				<div className="container">
 					<Row>
-						<Col xs={12} className="text-center text-uppercase position-sticky">
-							<h2 className="title">Timeline</h2>
-						</Col>
 						<Col xs={12} className="mt-4">
 							<div style={{ width: '60%', height: '100px', margin: '0 auto' }}>
 								<HorizontalTimeline

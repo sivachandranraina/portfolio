@@ -1,18 +1,16 @@
 .about {
 	min-height: 100vh;
-	padding-bottom: 3rem;
 }
 
 .about .image-block img {
 	width: 70%;
 	filter: grayscale(100);
-	opacity: 0.8;
+	opacity: 0.7;
 	transition: 500ms;
 }
 
 .about .image-block img:hover {
 	filter: grayscale(0);
-	opacity: 1;
 }
 
 .about .image-block p {
@@ -31,6 +29,7 @@
 
 .about .skill-set {
 	margin-top: 6rem;
+	margin-bottom: 3rem;
 }
 
 .about .skill-set .block {

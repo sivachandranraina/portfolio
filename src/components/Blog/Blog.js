@@ -65,12 +65,12 @@ class Blog extends Component {
 	render() {
 		return (
 			<div className="blog">
+				<div className="text-uppercase position-sticky">
+					<h2 className="title">Blog</h2>
+				</div>
 				<div className="container">
 					<Row>
-						<Col xs={12} className="text-center text-uppercase position-sticky">
-							<h2 className="title">Blog</h2>
-						</Col>
-						<Col xs={12}>
+						<Col xs={12} className="mt-4">
 							<Row>{this.renderPosts()}</Row>
 						</Col>
 					</Row>
