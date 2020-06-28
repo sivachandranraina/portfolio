@@ -1,0 +1,43 @@
+.about {
+	min-height: 100vh;
+	.image-block {
+		img {
+			width: 70%;
+			filter: grayscale(100);
+			opacity: 0.7;
+			transition: 500ms;
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
+		p {
+			color: #aaaaaa;
+		}
+		p.caption {
+			color: #cccccc;
+		}
+	}
+	.blockquote {
+		p {
+			font-size: 3rem;
+			font-weight: 300;
+			color: #ffffff;
+		}
+	}
+	.skill-set {
+		margin-top: 6rem;
+		margin-bottom: 3rem;
+		.block {
+			text-align: center;
+			.name {
+				font-size: 1.3rem;
+				padding-bottom: 1rem;
+			}
+			.circle {
+				.CircularProgressbar {
+					width: 100px;
+				}
+			}
+		}
+	}
+}

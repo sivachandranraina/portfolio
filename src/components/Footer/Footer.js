@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faLinkedinIn, faInstagram, faWordpress } from '@fortawesome/free-brands-svg-icons';
 
-import './Footer.css';
+import './Footer.scss';
 
 class Footer extends Component {
 	constructor() {
@@ -29,6 +30,10 @@ class Footer extends Component {
 				{
 					icon: faWordpress,
 					link: 'https://sivachandranraina.wordpress.com/'
+				},
+				{
+					icon: faCompactDisc,
+					link: 'https://www.smule.com/iamscr'
 				}
 			]
 		};

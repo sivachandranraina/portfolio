@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'reactstrap';
 
-import './Banner.css';
+import './Banner.scss';
 
 class Banner extends Component {
 	constructor(props) {

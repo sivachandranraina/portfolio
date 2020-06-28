@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-import './Blog.css';
+import './Blog.scss';
 
 class Blog extends Component {
 	constructor() {

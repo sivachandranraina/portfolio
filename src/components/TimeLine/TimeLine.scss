@@ -1,0 +1,19 @@
+.timeline {
+	min-height: 80vh;
+	.dot-label {
+		font-size: 0.9rem;
+		color: #aaaaaa;
+	}
+	.content {
+		h1 {
+			font-size: 4rem;
+		}
+		p {
+			font-size: 1.1rem;
+			color: #959595;
+			a {
+				color: #959595;
+			}
+		}
+	}
+}

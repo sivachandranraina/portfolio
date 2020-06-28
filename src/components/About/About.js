@@ -5,7 +5,7 @@ import CircularProgressbar from 'react-circular-progressbar';
 
 import scr2 from './../../assets/images/scr2.jpg';
 import 'react-circular-progressbar/dist/styles.css';
-import './About.css';
+import './About.scss';
 
 class About extends Component {
 	constructor() {

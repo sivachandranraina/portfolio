@@ -1,0 +1,27 @@
+.blog {
+	min-height: 100vh;
+	a {
+		text-decoration: none;
+	}
+	.card {
+		border: none;
+		color: #fff;
+		.card-body {
+			border: none;
+			background-color: #000000;
+		}
+		.card-title {
+			font-size: 1.2rem;
+			font-weight: 500;
+		}
+		.card-subtitle {
+			font-size: 0.8rem;
+			font-weight: 500;
+			color: #848484;
+		}
+		.card-text {
+			font-size: 0.9rem;
+			margin: 1rem 0rem;
+		}
+	}
+}

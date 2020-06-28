@@ -1,0 +1,19 @@
+.work-traces {
+	min-height: 50vh;
+	.company-logo {
+		display: flex;
+		justify-content: center;
+		filter: grayscale(1);
+		align-items: center;
+		opacity: 0.8;
+		transition: 500ms;
+		margin-bottom: 3rem;
+		img {
+			width: 180px;
+		}
+		&:hover {
+			opacity: 1;
+			filter: grayscale(0);
+		}
+	}
+}

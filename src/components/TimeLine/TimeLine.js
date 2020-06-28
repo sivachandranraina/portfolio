@@ -7,7 +7,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faBaby, faGraduationCap, faBriefcase, faStar, faForward, faCompass } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 
-import './TimeLine.css';
+import './TimeLine.scss';
 
 class TimeLine extends Component {
 	constructor() {
