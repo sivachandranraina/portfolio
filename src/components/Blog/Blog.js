@@ -66,7 +66,7 @@ class Blog extends Component {
 		return (
 			<div className="blog">
 				<div className="text-uppercase position-sticky">
-					<h2 className="title">Blog</h2>
+					<h2 className="title">Travelog</h2>
 				</div>
 				<div className="container">
 					<Row>
