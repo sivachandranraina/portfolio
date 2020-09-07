@@ -61,7 +61,7 @@ class TimeLine extends Component {
 					icon: faForward,
 					date: '2017-03-01',
 					title: 'Next Co',
-					description: '<strong>Fullstack Developer</strong> @ Cloudix',
+					description: '<strong>Senior Software Engineer</strong> @ Cloudix',
 					content:
 						'After having learned a lot drastically and implemented the same in my previous company, now that I have stepped into another startup to shape my adaptive skills and grow in knowledge front.<br/>'
 				},
@@ -71,7 +71,7 @@ class TimeLine extends Component {
 					title: 'Trip of Decade',
 					description: 'Road trip with Domibae | <strong>Work Smart - Save money - Travel Hardcore</strong>',
 					content:
-						'People say Rest In Peace but, I chose to Live In Peace. Everything happens for a reason, this thing happened for the reason to know about Sivachandran. <a href="https://sivachandranraina.wordpress.com/2020/01/07/trip-of-decade/" target="_blank">Read more</a>'
+						'People say Rest In Peace but, I chose to Live In Peace. Everything happens for a reason, this thing happened for the reason to know about Sivachandran. <a href="https://sivachandranraina.wordpress.com/2020/01/07/trip-of-decade/" target="_blank" rel="noopener noreferrer"">Read more</a>'
 				}
 			],
 			minEventPadding: 20,

@@ -41,7 +41,7 @@ class Footer extends Component {
 	renderSocialLinks() {
 		return this.state.links.map((data, index) => {
 			return (
-				<a href={data.link} key={index} target="_blank">
+				<a href={data.link} key={index} target="_blank" rel="noopener noreferrer">
 					<FontAwesomeIcon icon={data.icon} />
 				</a>
 			);

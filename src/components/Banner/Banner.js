@@ -48,6 +48,7 @@ class Banner extends Component {
 								<a
 									href="https://docs.google.com/document/d/1wkx85xMuEQz3rXIi7IvuAn5CQGIWPCZ1w7Ohe3w_JNY/edit?usp=sharing"
 									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<Button>View Resume</Button>
 								</a>

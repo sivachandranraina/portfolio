@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'reactstrap';
-import _ from 'lodash';
 
 import story from './../../assets/images/story.jpg';
 import './story.scss';
@@ -44,7 +43,11 @@ class Story extends Component {
 												ready to go office Well settled and cuddled the pillow, slowly closed my
 												eyes…
 											</p>
-											<a href="https://sivachandranraina.wordpress.com/18bar32/" target="_blank">
+											<a
+												href="https://sivachandranraina.wordpress.com/18bar32/"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<Button color="primary" outline>
 													Read more
 												</Button>

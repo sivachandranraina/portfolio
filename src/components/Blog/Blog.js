@@ -46,14 +46,14 @@ class Blog extends Component {
 	renderPosts() {
 		return this.state.links.map((data, index) => {
 			return (
-				<Col xs={12} md={6} lg={3} className="mb-4">
-					<Card key={index}>
+				<Col xs={12} md={6} lg={3} className="mb-4" key={index}>
+					<Card>
 						<CardImg top width="100%" src={data.img} loading="lazy" alt="image" />
 						<CardBody>
 							<CardTitle>{data.title}</CardTitle>
 							<CardSubtitle>{data.dateTime}</CardSubtitle>
 							<CardText>{data.expert}...</CardText>
-							<a href={data.link} target="_blank">
+							<a href={data.link} target="_blank" rel="noopener noreferrer">
 								<Button block>Read more</Button>
 							</a>
 						</CardBody>

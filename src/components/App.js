@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.scss';
-import Header from './Header/Header';
+// import Header from './Header/Header';
 import Banner from './Banner/Banner';
 import WorkTraces from './WorkTraces/WorkTraces';
 import About from './About/About';

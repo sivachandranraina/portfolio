@@ -82,19 +82,23 @@ class About extends Component {
 									<p className="caption">
 										A fashionaholic by creation!
 										<br />Fashion designer by passion!
-										<br />UI designer by profession!
+										<br />JavaScriptist by profession!
 									</p>
 									<br />
 									<p>Passion grew early from my school days. Profession from my college days.</p>
 									<p>
-										Favourite number is <span className="primary">3</span>. Love to work in CSS3.<br />
-										Black and white are my <span className="primary">2</span> favourite colors. A
+										Favourite number is <span className="primary">3</span>.<br />
+										Black and white are my <span className="primary">2</span> favourite colors, a
 										combination of 16 million colors.<br />
 										Only <span className="primary">1</span> motive. To think creative! To innovate
 										the effective!
 									</p>
 									<p>One thing is clear "Whatever I do my mind thinks only about design".</p>
-									<p>Wanna learn: Horse riding, Swimming, Hair styling, Guitar</p>
+									<p>And this COVID-19 lockdown made me as a Hairstylist, as per my wishlist</p>
+									<p>
+										Wishlist: Guitarist*, Horse riding, Swimming <br />
+										<small className="float-right">* - Inprogress</small>
+									</p>
 								</Col>
 							</Row>
 						</Col>
