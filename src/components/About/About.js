@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import _ from 'lodash';
 import CircularProgressbar from 'react-circular-progressbar';
 
-import scr3 from './../../assets/images/scr3.jpg';
+import img from './../../assets/images/scr4.jpg';
 import 'react-circular-progressbar/dist/styles.css';
 import './About.scss';
 
@@ -70,7 +70,7 @@ class About extends Component {
 						<Col xs={12} className="mt-4">
 							<Row className="image-block">
 								<Col xs={12} lg={4} className="text-center">
-									<img src={scr3} loading="lazy" alt="SCR" />
+									<img src={img} loading="lazy" alt="SCR" />
 								</Col>
 								<Col xs={12} lg={8} className="text-center">
 									<blockquote className="blockquote">

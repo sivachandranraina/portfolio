@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faLinkedinIn, faInstagram, faWordpress } from '@fortawesome/free-brands-svg-icons';
+import nameLogo from './../../assets/images/name-logo.png';
 
 import './Footer.scss';
 
@@ -61,6 +62,9 @@ class Footer extends Component {
 								#wanderlust #breezysinger<br />
 								#spreadlove<br />
 								💖
+							</div>
+							<div>
+								<img src={nameLogo} alt="name-logo" className="name-logo" />
 							</div>
 						</Col>
 					</Row>

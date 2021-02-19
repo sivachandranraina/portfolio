@@ -23,14 +23,14 @@ class Banner extends Component {
 		});
 		setTimeout(() => {
 			this.renderBio();
-		}, 500);
+		}, 750);
 	}
 	render() {
 		return (
 			<div className="banner lazy">
 				<div className="backdrop">
 					<div className="container">
-						<Row>
+						<Row noGutters>
 							<Col xs={12}>
 								<h4>fashionaholic</h4>
 								<h1>Sivachandran Raina</h1>
