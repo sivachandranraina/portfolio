@@ -30,7 +30,7 @@ class Story extends Component {
 											<p className="caption">
 												A fictional story about
 												<br />Siva & Sathvika | Deva & Maya
-												<br />Reality & Imagination
+												<br />Reality x Imagination
 											</p>
 											<br />
 											<p>

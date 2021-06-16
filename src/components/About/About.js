@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import _ from 'lodash';
 import CircularProgressbar from 'react-circular-progressbar';
 
-import img from './../../assets/images/scr4.jpg';
+import img from './../../assets/images/scr1.jpg';
 import 'react-circular-progressbar/dist/styles.css';
 import './About.scss';
 
