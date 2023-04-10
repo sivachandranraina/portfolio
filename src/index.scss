@@ -6,7 +6,7 @@ body {
 	letter-spacing: 0.05em;
 	-webkit-font-smoothing: antialiased;
 	/* -moz-osx-font-smoothing: grayscale; */
-	background-image: url('./assets/images/LR-3494.jpg');
+	// background-image: url('./assets/images/LR-3494.jpg');
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
 	backdrop-filter: blur(20px);
 }
 #root > div {
-	background-color: rgba(34, 34, 34, 0.9);
+	background-color: rgba(12, 12, 12, 1);
 }
 
 code {
