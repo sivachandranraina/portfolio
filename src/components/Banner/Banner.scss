@@ -6,9 +6,9 @@
 	background-attachment: fixed;
 	.backdrop {
 		backdrop-filter: brightness(1);
-		animation: blurring infinite 5s;
-		-webkit-animation: blurring infinite 5s;
-		-moz-animation: blurring infinite 5s;
+		animation: blurring infinite 10s;
+		-webkit-animation: blurring infinite 10s;
+		-moz-animation: blurring infinite 10s;
 	}
 	.container {
 		display: flex;
@@ -50,36 +50,36 @@
 
 @keyframes blurring {
 	0% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 	50% {
-		backdrop-filter: brightness(0.7);
+		backdrop-filter: brightness(0.5);
 	}
 	100% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 }
 
 @-moz-keyframes blurring {
 	0% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 	50% {
-		backdrop-filter: brightness(0.7);
+		backdrop-filter: brightness(0.5);
 	}
 	100% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 }
 
 @-webkit-keyframes blurring {
 	0% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 	50% {
-		backdrop-filter: brightness(0.7);
+		backdrop-filter: brightness(0.5);
 	}
 	100% {
-		backdrop-filter: brightness(0.9);
+		backdrop-filter: brightness(1);
 	}
 }
