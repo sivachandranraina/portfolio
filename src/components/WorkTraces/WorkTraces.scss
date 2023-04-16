@@ -1,5 +1,4 @@
 .work-traces {
-	min-height: 40vh;
 	.company-logo {
 		display: flex;
 		justify-content: center;
@@ -7,6 +6,8 @@
 		align-items: center;
 		opacity: 0.8;
 		transition: 500ms;
+		margin-bottom: 4rem;
+		margin-top: 4rem;
 		img {
 			width: 180px;
 		}

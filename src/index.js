@@ -1,11 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
-import './index.scss';
+import { createRoot } from 'react-dom/client';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.scss';
+
+const RootElement = document.getElementById('root');
+const Root = createRoot(RootElement);
+
+Root.render(
+	<ParallaxProvider>
+		<App />
+	</ParallaxProvider>
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

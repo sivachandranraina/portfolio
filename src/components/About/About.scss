@@ -1,45 +1,46 @@
 .about {
 	min-height: 100vh;
-	.image-block {
-		img {
-			width: 70%;
-			filter: grayscale(1);
-			border-radius: 75px 75px 0px 75px;
-			transition: 500ms;
-			// box-shadow: 0px 30px 50px -50px transparent;
-			border: 2px solid transparent;
-			&:hover {
-				filter: grayscale(0.25);
-				box-shadow: 0px 0px 50px -40px #fff;
-				border-color: #fff;
+	.container {
+		margin-top: 5rem;
+		.image-block {
+			img {
+				width: 85%;
+				filter: grayscale(1);
+				border-radius: 75px 75px 0px 75px;
+				transition: 500ms;
+				// box-shadow: 0px 30px 50px -50px transparent;
+				border: 2px solid transparent;
+				&:hover {
+					filter: grayscale(0.25);
+					box-shadow: 0px 0px 50px -40px #fff;
+					border-color: #fff;
+				}
+			}
+			p {
+				color: #aaaaaa;
+			}
+			p.caption {
+				color: #cccccc;
 			}
 		}
-		p {
-			color: #aaaaaa;
-		}
-		p.caption {
-			color: #cccccc;
-		}
-	}
-	.blockquote {
-		p {
-			font-size: 3rem;
-			font-weight: 300;
-			color: #ffffff;
-		}
-	}
-	.skill-set {
-		margin-top: 6rem;
-		margin-bottom: 7rem;
-		.block {
-			text-align: center;
-			.name {
-				font-size: 1.3rem;
-				padding-bottom: 1rem;
+		.blockquote {
+			p {
+				font-size: 3rem;
+				font-weight: 300;
+				color: #ffffff;
 			}
-			.circle {
-				.CircularProgressbar {
-					width: 100px;
+		}
+		.skill-set {
+			margin-top: 6rem;
+			margin-bottom: 6rem;
+			.block {
+				.name {
+					font-size: 1.3rem;
+				}
+				.circle {
+					.CircularProgressbar {
+						width: 100px;
+					}
 				}
 			}
 		}
