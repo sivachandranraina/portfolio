@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
+import Tilt from "react-parallax-tilt";
 import _ from "lodash";
 import { Parallax } from "react-scroll-parallax";
 
@@ -11,6 +12,14 @@ const skillSet = [
   {
     title: "React",
     percentage: 75,
+  },
+  {
+    title: "Redux",
+    percentage: 75,
+  },
+  {
+    title: "Angular",
+    percentage: 60,
   },
   {
     title: "Node",
@@ -33,8 +42,11 @@ const skillSet = [
 const renderSkillSet = () => {
   return _.map(skillSet, (data, index) => {
     return (
-      <Parallax translateX={index % 2 !== 0 ? [-100, 100] : [100, -100]}>
-        <div className="skill" key={index}>
+      <Parallax
+        translateX={index % 2 !== 0 ? [-100, 100] : [100, -100]}
+        key={index}
+      >
+        <div className="skill">
           <h2>{data.title}</h2>
         </div>
       </Parallax>
@@ -54,7 +66,13 @@ const About = () => {
             <Row className="image-block">
               <Col xs={12} lg={4} className="text-center">
                 <Parallax translateX={[-10, 10]}>
-                  <img src={img} loading="lazy" alt="SCR" />
+                  <Tilt
+                    tiltMaxAngleX={10}
+                    tiltMaxAngleY={10}
+                    tiltReverse={true}
+                  >
+                    <img src={img} loading="lazy" alt="SCR" />
+                  </Tilt>
                 </Parallax>
               </Col>
 

@@ -1,3 +1,50 @@
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-ExtraBold.woff2);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-Light.woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-Thin.woff2);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-ExtraLight.woff2);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Haskoy";
+  src: url(./assets/fonts/haskoy/Haskoy-SemiBold.woff2);
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway";
+  font-family: "Haskoy";
 }
 
 @media (min-width: 1600px) {
