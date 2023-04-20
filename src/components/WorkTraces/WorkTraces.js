@@ -12,12 +12,12 @@ import './WorkTraces.scss';
 import { Parallax } from 'react-scroll-parallax';
 
 const data = [
-	{ name: 'Presidio', logo: presidio, bgImg: presidioBg },
-	{ name: 'Commutatus', logo: cmslogo, bgImg: cmsBg },
-	{ name: 'Infofaces', logo: ifslogo, bgImg: ifsBg }
+	{ name: 'Presidio', logo: presidio, bgImg: presidioBg, service: { from: 'Mar, 2017', to: 'Present' } },
+	{ name: 'Commutatus', logo: cmslogo, bgImg: cmsBg, service: { from: 'Jan, 2017', to: 'Feb, 2017' } },
+	{ name: 'Infofaces', logo: ifslogo, bgImg: ifsBg, service: { from: 'Jun, 2015', to: 'Dec, 2016' } }
 ];
 
-const Tile = ({ name, bgImg, index }) => {
+const Tile = ({ name, bgImg, logo, service, index }) => {
 	const [ show, setShow ] = useState(false);
 	return (
 		<Tilt tiltReverse={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
@@ -29,15 +29,28 @@ const Tile = ({ name, bgImg, index }) => {
 				</div>
 				<div className="wrapper media-body" style={{ backgroundImage: `url(${bgImg})` }}>
 					{show && (
-						<Marquee
-							gradient={false}
-							speed={name.length * 20}
-							delay={0.2}
-							className="animate__animated animate__fadeInUp"
-						>
-							<span>{name} &nbsp;</span>
-						</Marquee>
+						<div style={{ position: 'relative' }}>
+							<Marquee
+								gradient={false}
+								speed={name.length * 30}
+								delay={0.2}
+								className="animate__animated animate__fadeInUp"
+							>
+								<span>{name} &nbsp;</span>
+							</Marquee>
+							<div className="service">
+								<div>{service.to}</div>
+								<div>{service.from}</div>
+							</div>
+						</div>
 					)}
+				</div>
+				<div className="media-right">
+					<Parallax translateX={[ 0, -40 ]}>
+						<div className="logo">
+							<img src={logo} alt={name} />
+						</div>
+					</Parallax>
 				</div>
 			</div>
 		</Tilt>
@@ -51,11 +64,7 @@ const WorkTraces = () => {
 				<h2 className="title">Work Traces</h2>
 			</div>
 			<div className="container">
-				<div className="company">
-					{data.map(({ name, logo, bgImg }, index) => (
-						<Tile name={name} bgImg={bgImg} index={index} key={index} />
-					))}
-				</div>
+				<div className="company">{data.map((data, index) => <Tile {...data} index={index} key={index} />)}</div>
 			</div>
 		</div>
 	);

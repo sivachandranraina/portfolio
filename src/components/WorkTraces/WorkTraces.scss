@@ -1,7 +1,7 @@
 .work-traces {
 	.company {
 		.company-info {
-			height: 320px;
+			height: 330px;
 			display: flex;
 			margin: 8rem auto;
 			width: 80%;
@@ -19,17 +19,45 @@
 			}
 			.wrapper {
 				border-radius: 20px;
+				background-color: rgba(171, 139, 101, 1);
 				background-attachment: fixed;
 				background-size: cover;
 				height: inherit;
 				width: inherit;
 				transition: 200ms;
-				img {
-					width: 180px;
+				&::before {
+					position: absolute;
+					filter: brightness(0.6);
+					width: 100%;
+					height: 100%;
+					content: "";
+					border-radius: 20px;
+					top: 0;
+					left: 0;
+				}
+				span {
+					font-weight: 500;
 				}
 				.marquee-container {
 					z-index: 0;
 					animation-duration: 0.2s;
+				}
+				.service {
+					position: relative;
+					z-index: 0;
+					padding: 0px 20px;
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+				}
+			}
+			.media-right {
+				position: absolute;
+				right: 0;
+				top: 20px;
+				img {
+					width: 180px;
+					filter: saturate(0) brightness(10) drop-shadow(3px 6px 5px #000);
 				}
 			}
 			&:hover {
@@ -41,13 +69,6 @@
 				.wrapper {
 					position: relative;
 					&::before {
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						content: "";
-						border-radius: 20px;
-						top: 0;
-						left: 0;
 						backdrop-filter: blur(5px);
 					}
 				}

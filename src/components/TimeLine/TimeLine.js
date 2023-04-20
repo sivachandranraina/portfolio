@@ -42,7 +42,7 @@ const timelineData = [
 		title: 'Graduation',
 		description: 'The day I felt both Day and Night at the same time @K.L.N. College of Engineering!',
 		content:
-			'Day: Happy about getting Degree :D <br/> Night: Sad for parting away from my college and the Stars(Professors) who crafted my knowledge and gave it a shape!'
+			'Day: Happy about getting Degree 🤩 <br/> Night: Sad for parting away from my college and the Stars(Professors) who crafted my knowledge and gave it a shape!'
 	},
 	{
 		icon: faBriefcase,
@@ -67,7 +67,7 @@ const timelineData = [
 		title: 'Next Co',
 		description: '<strong>Software Engineer</strong> @ Presidio',
 		content:
-			'After having learned a lot drastically and implemented the same in my previous company, now that I have stepped into another firm to shape my adaptive skills and grow in knowledge front.<br/>'
+			'Learned immensely as a junior engineer and implemented the same in my previous company, now that I have stepped into another firm to shape my adaptive skills and grow in knowledge front.<br/>'
 	},
 	{
 		icon: faCompass,
@@ -91,7 +91,7 @@ const timelineData = [
 		title: 'Marriage',
 		description: 'Lifetime commitment',
 		content:
-			'Choosing a life partner is not a Rocket science kind of thing. It is something that makes you flip upside down at first sight itself. People say love at first sight is just an infatuation but according to me, it is actually your instinct. I went that way & married <a href="https://www.instagram.com/dharsinijeyaprakash/" target="_blank" rel="noopener noreferrer"">my girl</a>.'
+			'Choosing a life partner is not a Rocket science. It is something that makes you flip upside down at first sight itself. People say love at first sight is just an infatuation but according to me, it is actually your instinct. I went that way & married <a href="https://www.instagram.com/dharsinijeyaprakash/" target="_blank" rel="noopener noreferrer"">my girl</a>.'
 	}
 ];
 

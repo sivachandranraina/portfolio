@@ -32,10 +32,6 @@ const skillSet = [
 	{
 		title: 'Photoshop',
 		percentage: 90
-	},
-	{
-		title: 'UX',
-		percentage: 60
 	}
 ];
 
@@ -99,8 +95,7 @@ const About = () => {
 										<p>One thing is clear "Whatever I do my mind thinks only about design".</p>
 										<p>And this COVID-19 lockdown made me as a Hairstylist, as per my wishlist</p>
 										<p>
-											Wishlist: Guitarist*, Horse riding, Swimming <br />
-											<small className="float-right">* - Inprogress</small>
+											Wishlist: Horse riding, Swimming <br />
 										</p>
 									</div>
 								</Parallax>
