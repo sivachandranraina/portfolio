@@ -1,76 +1,84 @@
 .timeline {
-  min-height: 80vh;
-  .dot-label {
-    font-size: 0.9rem;
-    color: #aaaaaa;
-  }
-  .content {
-    margin: 10rem 0rem;
-    .media {
-      align-items: center;
-      &:hover {
-        .media-left {
-          svg {
-            transform: rotate(-10deg);
-            color: rgba(171, 139, 101, 1);
-          }
-        }
-        .media-body {
-          h1 {
-            &::before {
-              box-shadow: inset 0 0 10px 100px rgba(171, 139, 101, 1);
-            }
-          }
-        }
-      }
-      .media-left {
-        margin-right: 50px;
-        position: relative;
-        height: 100%;
-        z-index: -1;
-        svg {
-          transition: 200ms;
-          color: rgba($color: #fff, $alpha: 0.3);
-        }
-      }
-      .media-body {
-        h1 {
-          &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            box-shadow: inset 0 0 10px 100px rgba($color: #fff, $alpha: 0.3);
-            z-index: -1;
-            top: -35px;
-            left: 35px;
-          }
-        }
-      }
-    }
-    h1 {
-      font-size: 4rem;
-      display: inline-block;
-      position: relative;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #959595;
-      a {
-        color: #959595;
-      }
-    }
-  }
+	min-height: 80vh;
+	.dot-label {
+		font-size: 0.9rem;
+		color: #aaaaaa;
+	}
+	.content {
+		margin: 10rem 0rem;
+		.media {
+			align-items: center;
+			&:hover {
+				.media-left {
+					svg {
+						transform: rotate(-10deg);
+						color: rgba(171, 139, 101, 1);
+					}
+				}
+				.media-body {
+					h1 {
+						&:nth-child(2) {
+							&::before {
+								box-shadow: inset 0 0 10px 100px rgba(171, 139, 101, 1);
+							}
+						}
+					}
+				}
+			}
+			.media-left {
+				margin-right: 50px;
+				position: relative;
+				height: 100%;
+				z-index: -1;
+				svg {
+					transition: 200ms;
+					color: rgba($color: #fff, $alpha: 0.3);
+				}
+			}
+			.media-body {
+				position: relative;
+				h1 {
+					&:nth-child(2) {
+						z-index: -1;
+						position: absolute;
+						color: transparent;
+						left: 30px;
+						top: -30px;
+						&::before {
+							position: absolute;
+							content: "";
+							width: 100%;
+							height: 100%;
+							box-shadow: inset 0 0 10px 100px rgba($color: #555, $alpha: 1);
+							z-index: -1;
+						}
+					}
+				}
+			}
+		}
+		h1 {
+			font-size: 4rem;
+			display: inline-block;
+			position: relative;
+		}
+		p {
+			font-size: 1.1rem;
+			color: #959595;
+			a {
+				color: #959595;
+			}
+		}
+	}
 }
 
 @keyframes skewing {
-  25% {
-    // transform: rotate(10deg);
-  }
-  50% {
-    // transform: rotate(10deg);
-  }
-  75% {
-    // transform: rotate(-10deg);
-  }
+	25% {
+		// transform: rotate(10deg);
+	}
+	50% {
+		// transform: rotate(10deg);
+	}
+	75% {
+		// transform: rotate(-10deg);
+	}
 }
