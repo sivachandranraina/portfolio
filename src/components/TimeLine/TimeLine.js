@@ -123,7 +123,7 @@ const TimeLine = () => {
 										<div className="content">
 											<div className="media">
 												<Tilt tiltReverse={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
-													<div className="media-left">
+													<div className="media-left d-md-block d-none">
 														<FontAwesomeIcon
 															icon={data.icon}
 															style={{ height: 'inherit', width: '200px' }}
