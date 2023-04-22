@@ -1,37 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col, Button } from 'reactstrap';
-
-import story from './../../assets/images/story.jpg';
 import './story.scss';
+import { Parallax } from 'react-scroll-parallax';
+import Tilt from 'react-parallax-tilt';
 
-class Story extends Component {
-	render() {
-		return (
-			<div className="story">
-				<div className="text-uppercase position-sticky">
-					<h2 className="title">Fictionist</h2>
-				</div>
-				<div className="container">
-					<Row>
-						<Col xs={12} className="my-5">
-							<Row className="image-block">
-								<Col xs={12} className="text-center">
+const Story = () => {
+	return (
+		<div className="story">
+			<div className="text-uppercase position-sticky">
+				<h2 className="title">Fictionist</h2>
+			</div>
+			<div className="container">
+				<Row>
+					<Col xs={12} className="my-5">
+						<Row className="image-block">
+							<Col xs={12} className="text-center">
+								<Parallax translateY={[ 40, -10 ]}>
 									<Row>
-										<Col xs={12} lg={4}>
+										{/* <Col xs={12} lg={4}>
+										<Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} tiltReverse={true}>
 											<img src={story} loading="lazy" alt="18/32" />
-										</Col>
-										<Col xs={12} lg={8}>
+										</Tilt>
+									</Col> */}
+										<Col xs={12}>
 											<blockquote className="blockquote">
 												<p className="mb-0 text-uppercase">18/32</p>
 												<footer className="blockquote-footer">
 													<cite title="Source Title">Sivachandran</cite>
 												</footer>
 											</blockquote>
-											<p className="caption">
-												A fictional story about
-												<br />Siva & Sathvika | Deva & Maya
-												<br />Reality x Imagination
-											</p>
+											<Tilt tiltReverse={true}>
+												<p className="caption">
+													A fictional story about
+													<br />Siva & Sathvika | Deva & Maya
+													<br />Reality x Imagination
+													<div className="before" />
+												</p>
+											</Tilt>
 											<br />
 											<p>
 												Whenever you sleep, if it’s not deep means the dream plays a major role
@@ -43,6 +48,8 @@ class Story extends Component {
 												ready to go office Well settled and cuddled the pillow, slowly closed my
 												eyes…
 											</p>
+										</Col>
+										<Col xs={12}>
 											<a
 												href="https://sivachandranraina.wordpress.com/18bar32/"
 												target="_blank"
@@ -54,14 +61,14 @@ class Story extends Component {
 											</a>
 										</Col>
 									</Row>
-								</Col>
-							</Row>
-						</Col>
-					</Row>
-				</div>
+								</Parallax>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
 export default Story;

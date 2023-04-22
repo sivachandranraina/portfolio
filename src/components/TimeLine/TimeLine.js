@@ -4,14 +4,14 @@ import Tilt from 'react-parallax-tilt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import {
-	faBaby,
 	faGraduationCap,
 	faBriefcase,
 	faStar,
 	faForward,
 	faCompass,
 	faGlassCheers,
-	faIdBadge
+	faIdBadge,
+	faChild
 } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 
@@ -21,7 +21,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 const timelineData = [
 	{
-		icon: faBaby,
+		icon: faChild,
 		date: '1994-03-17',
 		title: 'First Release',
 		description: 'Cool Night was that.',

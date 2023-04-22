@@ -12,7 +12,7 @@ const Banner = () => {
 		<div className="banner lazy">
 			<div className="backdrop">
 				<div className="container">
-					<Parallax translateY={[ '100vh', '0vh' ]} speed={'10'}>
+					<Parallax translateY={[ '180vh', '-50vh' ]} speed={'100'}>
 						<Row noGutters>
 							<Col xs={12}>
 								<h4>fashionaholic</h4>

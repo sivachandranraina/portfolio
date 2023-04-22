@@ -55,20 +55,56 @@
 				}
 			}
 			.skill {
-				border-bottom: 1px solid;
+				// border-bottom: 1px solid;
+				position: relative;
+				.logo-bg {
+					width: 198px;
+					height: 230px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position-x: 75%;
+					opacity: 0;
+					transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+					/* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
+					margin: -115px 0 0 -99px;
+					overflow: hidden;
+					pointer-events: none;
+					z-index: 2;
+				}
 				&:hover {
 					h2 {
-						background-color: rgba(171, 139, 101, 0.5);
-						-webkit-text-stroke-color: #fff;
+						-webkit-text-stroke: none;
+						color: rgb(202, 164, 117);
+						&::after {
+							opacity: 1;
+							z-index: 3;
+						}
+					}
+					.logo-bg {
+						opacity: 1;
 					}
 				}
 				h2 {
+					&::after {
+						content: attr(data-item-text);
+						position: absolute;
+						left: 0;
+						top: 0;
+						-webkit-text-stroke: 0.012em rgb(202, 164, 117);
+						color: transparent;
+						opacity: 0;
+						transition: opacity 0.5s ease;
+						z-index: 0;
+					}
 					font-size: 10em;
-					color: transparent;
 					text-transform: uppercase;
-					-webkit-text-stroke: 2px rgba(171, 139, 101, 1);
-					display: inline;
-					padding: 10px 15px;
+					color: transparent;
+					-webkit-text-stroke: 0.01em white;
+					transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+					position: relative;
 				}
 			}
 		}
