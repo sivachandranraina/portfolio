@@ -53,14 +53,29 @@ body {
   letter-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
   /* -moz-osx-font-smoothing: grayscale; */
-  color: #ffffff;
   overflow-x: hidden;
-}
-#root {
-  backdrop-filter: blur(20px);
+  background-color: #f5f5f5;
 }
 #root > div {
-  background-color: rgba(12, 12, 12, 1);
+  &.dark {
+    color: #ffffff;
+    background-color: rgba(12, 12, 12, 1);
+    .position-sticky {
+      background-color: rgba(34, 34, 34, 0.95);
+    }
+    .primary {
+      color: #ffffff;
+    }
+  }
+  &.light {
+    color: #000;
+    .position-sticky {
+      background-color: rgba(225, 225, 225, 0.75);
+    }
+    .primary {
+      color: #000;
+    }
+  }
 }
 
 code {

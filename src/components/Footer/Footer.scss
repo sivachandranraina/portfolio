@@ -1,7 +1,5 @@
 .footer {
-  background-color: rgba(34, 34, 34, 0.72);
   padding: 4rem 0rem;
-  color: #ffffff;
   text-align: center;
   .name-logo {
     width: 24rem;
@@ -22,6 +20,27 @@
           transform: scale(1.4, 1.4);
         }
       }
+    }
+  }
+}
+
+.dark {
+  .footer {
+    background-color: rgba(34, 34, 34, 0.72);
+    .text-caption {
+      color: #dfdfdf;
+    }
+  }
+}
+
+.light {
+  .footer {
+    background-color: rgba(225, 225, 225, 0.5);
+    .text-caption {
+      color: rgba($color: #000000, $alpha: 1);
+    }
+    img {
+      filter: brightness(0.2);
     }
   }
 }

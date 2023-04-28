@@ -1,122 +1,344 @@
 .about {
-	min-height: 100vh;
-	.container {
-		margin-top: 5rem;
-		.image-block {
-			img {
-				width: 320px;
-				filter: grayscale(1);
-				border-radius: 75px 75px 0px 75px;
-				transition: 500ms;
-				// box-shadow: 0px 30px 50px -50px transparent;
-				border: 2px solid transparent;
-				&:hover {
-					filter: grayscale(0.25);
-					box-shadow: 0px 0px 50px -40px #fff;
-					border-color: #fff;
-				}
-			}
-			p {
-				color: #aaaaaa;
-			}
-			p.caption {
-				color: #cccccc;
-			}
-		}
-		.blockquote {
-			p {
-				font-size: 3rem;
-				font-weight: 300;
-				color: #ffffff;
-			}
-		}
+  min-height: 100vh;
+  .container {
+    margin-top: 5rem;
+    .image-block {
+      img {
+        width: 320px;
+        filter: grayscale(1);
+        border-radius: 75px 75px 0px 75px;
+        transition: 500ms;
+        // box-shadow: 0px 30px 50px -50px transparent;
+        border: 2px solid transparent;
+        &:hover {
+          filter: grayscale(0.25);
+          box-shadow: 0px 0px 50px -40px #fff;
+          border-color: #fff;
+        }
+      }
+      p {
+        color: #aaaaaa;
+      }
+      p.caption {
+        color: #cccccc;
+      }
+    }
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 320px;
+      margin: 5rem auto;
+    }
+    .blockquote {
+      p {
+        font-size: 3rem;
+        font-weight: 300;
+        color: #ffffff;
+      }
+    }
 
-		.skill-set {
-			margin-top: 16rem;
-			margin-bottom: 6rem;
-			position: relative;
-			overflow: hidden;
-			.block {
-				position: relative;
-				margin-bottom: 9rem;
-				h2 {
-					color: #fff;
-					font-size: 8em;
-					&:nth-child(1) {
-						color: transparent;
-						-webkit-text-stroke: 2px rgba(171, 139, 101, 1);
-					}
-					&:nth-child(2) {
-						top: 0;
-						position: absolute;
-						color: rgb(202, 164, 117);
-						animation: animate 4s ease-in-out infinite;
-					}
-				}
-			}
-			.skill {
-				// border-bottom: 1px solid;
-				position: relative;
-				.logo-bg {
-					width: 198px;
-					height: 230px;
-					position: absolute;
-					top: 0;
-					left: 0;
-					background-size: contain;
-					background-repeat: no-repeat;
-					background-position-x: 75%;
-					opacity: 0;
-					transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-					/* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
-					margin: -115px 0 0 -99px;
-					overflow: hidden;
-					pointer-events: none;
-					z-index: 2;
-				}
-				&:hover {
-					h2 {
-						-webkit-text-stroke: none;
-						color: rgb(202, 164, 117);
-						&::after {
-							opacity: 1;
-							z-index: 3;
-						}
-					}
-					.logo-bg {
-						opacity: 1;
-					}
-				}
-				h2 {
-					&::after {
-						content: attr(data-item-text);
-						position: absolute;
-						left: 0;
-						top: 0;
-						-webkit-text-stroke: 0.012em rgb(202, 164, 117);
-						color: transparent;
-						opacity: 0;
-						transition: opacity 0.5s ease;
-						z-index: 0;
-					}
-					font-size: 10em;
-					text-transform: uppercase;
-					color: transparent;
-					-webkit-text-stroke: 0.01em white;
-					transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
-					position: relative;
-				}
-			}
-		}
-	}
+    .skill-set {
+      margin-top: 10rem;
+      margin-bottom: 6rem;
+      position: relative;
+      overflow: hidden;
+      .block {
+        position: relative;
+        margin-bottom: 9rem;
+        h2 {
+          font-size: 8em;
+          &:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(171, 139, 101, 1);
+          }
+          &:nth-child(2) {
+            top: 0;
+            position: absolute;
+            color: rgb(202, 164, 117);
+            animation: animate 4s ease-in-out infinite;
+          }
+        }
+      }
+      .skill {
+        // border-bottom: 1px solid;
+        position: relative;
+        .logo-bg {
+          width: 198px;
+          height: 230px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-x: 75%;
+          opacity: 0;
+          transition: opacity 0.3s,
+            transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+          /* This places the cursor in the center of the image. Divide the width and height by 2 to get the top and left offsets :) */
+          margin: -115px 0 0 -99px;
+          overflow: hidden;
+          pointer-events: none;
+          z-index: 2;
+        }
+        &:hover {
+          h2 {
+            -webkit-text-stroke: none;
+            color: rgb(202, 164, 117);
+            &::after {
+              opacity: 1;
+              z-index: 3;
+            }
+          }
+          .logo-bg {
+            opacity: 1;
+          }
+        }
+        h2 {
+          &::after {
+            content: attr(data-item-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-text-stroke: 0.012em rgb(202, 164, 117);
+            color: transparent;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+          }
+          font-size: 10em;
+          text-transform: uppercase;
+          color: transparent;
+          -webkit-text-stroke: 0.01em white;
+          transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .container {
+    .image-block {
+      p {
+        color: #aaaaaa;
+      }
+      p.caption {
+        color: #cccccc;
+      }
+    }
+    .blockquote {
+      p {
+        font-size: 3rem;
+        font-weight: 300;
+        color: #ffffff;
+      }
+    }
+    .skill-set {
+      .skill {
+        h2 {
+          -webkit-text-stroke: 0.01em white;
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .container {
+    .image-block {
+      p {
+        color: #333;
+      }
+      p.caption {
+        color: #555;
+      }
+    }
+    .blockquote {
+      p {
+        font-size: 3rem;
+        font-weight: 300;
+        color: #000;
+      }
+    }
+    .skill-set {
+      .skill {
+        h2 {
+          -webkit-text-stroke: 0.01em black;
+        }
+      }
+    }
+  }
 }
 
 @keyframes animate {
-	0%,
-	100% {
-		clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-	}
-	50% {
-		clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-	}
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.rocker {
+  display: inline-block;
+  position: relative;
+  /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #eee;
+}
+
+.rocker-small {
+  font-size: 0.75em; /* Sizes the switch */
+  margin: 1em;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid #eee;
+  border-bottom: 0;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: rgb(77, 73, 71);
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+  background-color: rgb(202, 164, 117);
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+input:focus + .switch-left {
+  color: #333;
+}
+
+input:checked:focus + .switch-left {
+  color: #fff;
+}
+
+input:focus + .switch-left + .switch-right {
+  color: #fff;
+}
+
+input:checked:focus + .switch-left + .switch-right {
+  color: #333;
 }

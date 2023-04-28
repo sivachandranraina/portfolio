@@ -4,7 +4,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css/animate.min.css";
 import "./index.scss";
 
