@@ -12,6 +12,7 @@ import {
   faGlassCheers,
   faIdBadge,
   faChild,
+  faSignal,
 } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 
@@ -60,7 +61,7 @@ const timelineData = [
     title: "Award",
     description: "Star Performer @ InfoFaces",
     content:
-      "For the smart work and new initiation in organization.<br/><br/> Got Appreciation too for making good engineers as <strong>Trainer</strong>",
+      "I have garnered recognition in the organization for my smart work and proactive initiatives. My efforts have been appreciated, particularly for assisting and training fellow engineers.",
   },
   {
     icon: faForward,
@@ -80,7 +81,7 @@ const timelineData = [
       'While many say "Rest in Peace," I have chosen a different approach by embracing a life of "Living in Peace." I firmly believe that everything unfolds with a purpose, and the reason behind this experience is to introduce me to the remarkable individual named Sivachandran. <a href="https://sivachandranraina.wordpress.com/2020/01/07/trip-of-decade/" target="_blank" rel="noopener noreferrer"">Read more</a>',
   },
   {
-    icon: faIdBadge,
+    icon: faSignal,
     date: "2020-07-01",
     title: "Promotion",
     description: "<strong>Senior Software Engineer</strong> @ Presidio",
@@ -94,6 +95,14 @@ const timelineData = [
     description: "Lifetime commitment",
     content:
       'Selecting a life partner may not require rocket science, but it does have the power to turn your world upside down from the very first encounter. While some believe love at first sight is mere infatuation, I view it as a deep-seated instinct. Trusting my instincts, I followed that path and happily married the <a href="https://www.instagram.com/dharsinijeyaprakash/" target="_blank" rel="noopener noreferrer"">woman</a> who captured my heart.',
+  },
+  {
+    icon: faSignal,
+    date: "2023-07-01",
+    title: "Promotion",
+    description: "<strong>Lead Engineer</strong> @ Presidio",
+    content:
+      "While it is often believed that staying in the same place may hinder growth, I have experienced the opposite. This organization has consistently provided me with abundant opportunities and timely promotions. It has become the ideal platform for my professional development, allowing me to flourish and advance at the right moments. Contrary to common perception, this place has proven to be a catalyst for my success, offering me a fulfilling and progressive journey.<br/>",
   },
 ];
 
