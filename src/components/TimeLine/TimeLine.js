@@ -10,9 +10,9 @@ import {
   faForward,
   faCompass,
   faGlassCheers,
-  faIdBadge,
   faChild,
   faSignal,
+  faUserTie
 } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 
@@ -97,9 +97,9 @@ const timelineData = [
       'Selecting a life partner may not require rocket science, but it does have the power to turn your world upside down from the very first encounter. While some believe love at first sight is mere infatuation, I view it as a deep-seated instinct. Trusting my instincts, I followed that path and happily married the <a href="https://www.instagram.com/dharsinijeyaprakash/" target="_blank" rel="noopener noreferrer"">woman</a> who captured my heart.',
   },
   {
-    icon: faSignal,
+    icon: faUserTie,
     date: "2023-07-01",
-    title: "Promotion",
+    title: "Step ahead",
     description: "<strong>Lead Engineer</strong> @ Presidio",
     content:
       "While it is often believed that staying in the same place may hinder growth, I have experienced the opposite. This organization has consistently provided me with abundant opportunities and timely promotions. It has become the ideal platform for my professional development, allowing me to flourish and advance at the right moments. Contrary to common perception, this place has proven to be a catalyst for my success, offering me a fulfilling and progressive journey.<br/>",

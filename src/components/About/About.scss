@@ -1,7 +1,9 @@
 .about {
   min-height: 100vh;
+
   .container {
     margin-top: 5rem;
+
     .image-block {
       img {
         width: 320px;
@@ -10,19 +12,23 @@
         transition: 500ms;
         // box-shadow: 0px 30px 50px -50px transparent;
         border: 2px solid transparent;
+
         &:hover {
           filter: grayscale(0.25);
           box-shadow: 0px 0px 50px -40px #fff;
           border-color: #fff;
         }
       }
+
       p {
         color: #aaaaaa;
       }
+
       p.caption {
         color: #cccccc;
       }
     }
+
     .theme-switch {
       display: flex;
       align-items: center;
@@ -31,6 +37,7 @@
       width: 320px;
       margin: 5rem auto;
     }
+
     .blockquote {
       p {
         font-size: 3rem;
@@ -44,15 +51,19 @@
       margin-bottom: 6rem;
       position: relative;
       overflow: hidden;
+
       .block {
         position: relative;
         margin-bottom: 9rem;
+
         h2 {
           font-size: 8em;
+
           &:nth-child(1) {
             color: transparent;
             -webkit-text-stroke: 2px rgba(171, 139, 101, 1);
           }
+
           &:nth-child(2) {
             top: 0;
             position: absolute;
@@ -61,9 +72,11 @@
           }
         }
       }
+
       .skill {
         // border-bottom: 1px solid;
         position: relative;
+
         .logo-bg {
           width: 198px;
           height: 230px;
@@ -82,19 +95,23 @@
           pointer-events: none;
           z-index: 2;
         }
+
         &:hover {
           h2 {
             -webkit-text-stroke: none;
             color: rgb(202, 164, 117);
+
             &::after {
               opacity: 1;
               z-index: 3;
             }
           }
+
           .logo-bg {
             opacity: 1;
           }
         }
+
         h2 {
           &::after {
             content: attr(data-item-text);
@@ -107,11 +124,16 @@
             transition: opacity 0.5s ease;
             z-index: 0;
           }
+
+          font-family: 'Anybody',
+          cursive;
+          width: 200vw;
           font-size: 10em;
           text-transform: uppercase;
           color: transparent;
           -webkit-text-stroke: 0.01em white;
-          transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+          transition: -webkit-text-stroke 0.5s ease,
+          color 0.5s ease;
           position: relative;
         }
       }
@@ -125,10 +147,12 @@
       p {
         color: #aaaaaa;
       }
+
       p.caption {
         color: #cccccc;
       }
     }
+
     .blockquote {
       p {
         font-size: 3rem;
@@ -136,6 +160,7 @@
         color: #ffffff;
       }
     }
+
     .skill-set {
       .skill {
         h2 {
@@ -152,10 +177,12 @@
       p {
         color: #333;
       }
+
       p.caption {
         color: #555;
       }
     }
+
     .blockquote {
       p {
         font-size: 3rem;
@@ -163,6 +190,7 @@
         color: #000;
       }
     }
+
     .skill-set {
       .skill {
         h2 {
@@ -174,32 +202,30 @@
 }
 
 @keyframes animate {
+
   0%,
   100% {
-    clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%);
   }
+
   50% {
-    clip-path: polygon(
-      0% 60%,
-      15% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    );
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%);
   }
 }
 
@@ -226,7 +252,8 @@
 }
 
 .rocker-small {
-  font-size: 0.75em; /* Sizes the switch */
+  font-size: 0.75em;
+  /* Sizes the switch */
   margin: 1em;
 }
 
@@ -297,7 +324,7 @@
   transform: skewY(65deg);
 }
 
-input:checked + .switch-left {
+input:checked+.switch-left {
   background-color: rgb(202, 164, 117);
   color: #fff;
   bottom: 0px;
@@ -307,12 +334,12 @@ input:checked + .switch-left {
   transform: rotate(0deg) skewX(0deg);
 }
 
-input:checked + .switch-left::before {
+input:checked+.switch-left::before {
   background-color: transparent;
   width: 3.0833em;
 }
 
-input:checked + .switch-left + .switch-right {
+input:checked+.switch-left+.switch-right {
   background-color: #ddd;
   color: #888;
   bottom: 0.4em;
@@ -322,23 +349,23 @@ input:checked + .switch-left + .switch-right {
   transform: rotate(-15deg) skewX(-15deg);
 }
 
-input:checked + .switch-left + .switch-right::before {
+input:checked+.switch-left+.switch-right::before {
   background-color: #ccc;
 }
 
 /* Keyboard Users */
-input:focus + .switch-left {
+input:focus+.switch-left {
   color: #333;
 }
 
-input:checked:focus + .switch-left {
+input:checked:focus+.switch-left {
   color: #fff;
 }
 
-input:focus + .switch-left + .switch-right {
+input:focus+.switch-left+.switch-right {
   color: #fff;
 }
 
-input:checked:focus + .switch-left + .switch-right {
+input:checked:focus+.switch-left+.switch-right {
   color: #333;
 }

@@ -5,18 +5,23 @@
       display: flex;
       margin: 8rem auto;
       width: 80%;
+
       span {
         font-family: "Haskoy";
         font-size: 12rem;
         font-weight: 800;
       }
+
       .media-left {
         width: 100px;
         z-index: 1;
+
         span {
+          font-family: 'Anybody', cursive;
           font-size: 14rem;
         }
       }
+
       .wrapper {
         border-radius: 20px;
         background-color: rgba(171, 139, 101, 1);
@@ -26,6 +31,7 @@
         width: inherit;
         transition: 200ms;
         color: #fff;
+
         &::before {
           position: absolute;
           filter: brightness(0.6);
@@ -36,13 +42,17 @@
           top: 0;
           left: 0;
         }
+
         span {
+          font-family: 'Anybody', cursive;
           font-weight: 500;
         }
+
         .marquee-container {
           z-index: 0;
           animation-duration: 0.2s;
         }
+
         .service {
           position: relative;
           z-index: 0;
@@ -52,23 +62,28 @@
           justify-content: space-between;
         }
       }
+
       .media-right {
         position: absolute;
         right: 0;
         top: 20px;
+
         img {
           width: 180px;
           filter: saturate(0) brightness(10) drop-shadow(3px 6px 5px #000);
         }
       }
+
       &:hover {
         .media-left {
           span {
             color: rgba(171, 139, 101, 1);
           }
         }
+
         .wrapper {
           position: relative;
+
           &::before {
             backdrop-filter: blur(5px);
           }
@@ -76,4 +91,8 @@
       }
     }
   }
+}
+
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 0.125s;
 }

@@ -1,22 +1,27 @@
 .blog {
   min-height: 100vh;
+
   a {
     text-decoration: none;
   }
+
   .card {
     border: none;
     color: #fff;
     background: transparent;
     transition: 200ms;
+
     &:hover {
       .card-body {
         opacity: 1;
         backdrop-filter: blur(2px);
       }
     }
+
     img {
       border-radius: 20px;
     }
+
     .card-body {
       transition: 200ms;
       border: none;
@@ -30,26 +35,31 @@
       align-items: center;
       flex-direction: column;
       opacity: 0;
-      .marquee-container {
-        display: none;
+
+      .rfm-marquee-container {
         position: absolute;
         bottom: 12px;
         animation-duration: 0.2s;
+
         h1 {
+          font-family: 'Anybody', cursive;
           font-size: 12rem;
         }
       }
     }
+
     .card-title {
       font-size: 3rem;
       font-weight: 500;
       text-align: center;
     }
+
     .card-subtitle {
       font-size: 1.5rem;
       font-weight: 500;
       color: #dbdbdb;
     }
+
     .card-text {
       font-size: 0.9rem;
       margin: 1rem 0rem;

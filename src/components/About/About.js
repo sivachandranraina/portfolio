@@ -7,15 +7,23 @@ import { Parallax } from "react-scroll-parallax";
 import img from "./../../assets/images/scr.webp";
 import reactLogo from "./../../assets/images/skills/react.svg";
 import angularLogo from "./../../assets/images/skills/angular.svg";
-import reduxLogo from "./../../assets/images/skills/redux.svg";
+import pythonLogo from "./../../assets/images/skills/python.png";
 import nodeLogo from "./../../assets/images/skills/node.svg";
-import bootstrapLogo from "./../../assets/images/skills/bootstrap.svg";
+import openaiLogo from "./../../assets/images/skills/openai.png";
 import photoshopLogo from "./../../assets/images/skills/photoshop.svg";
 import "./About.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const skillSet = [
+
+  {
+    title: "Python",
+    percentage: 75,
+    logo: pythonLogo,
+    caption:
+      "Streamline your state management and simplify your web development workflow with Redux - the powerful library that brings predictability, consistency, and scalability to your applications.",
+  },
   {
     title: "React",
     percentage: 75,
@@ -24,11 +32,11 @@ const skillSet = [
       "Elevate your user interface and simplify your front-end development with React.js - the flexible and efficient JavaScript library that empowers you to build dynamic and reusable UI components, while maintaining optimal performance and scalability.",
   },
   {
-    title: "Redux",
-    percentage: 75,
-    logo: reduxLogo,
+    title: "Prompt Engineering",
+    percentage: 80,
+    logo: openaiLogo,
     caption:
-      "Streamline your state management and simplify your web development workflow with Redux - the powerful library that brings predictability, consistency, and scalability to your applications.",
+      "Bootstrap - the sleek, responsive, and intuitive framework that allows you to create stunning and functional websites and applications with minimal effort and maximum efficiency.",
   },
   {
     title: "Angular",
@@ -43,13 +51,6 @@ const skillSet = [
     logo: nodeLogo,
     caption:
       "Unlock the full potential of your web applications with Node.js - the powerful runtime environment that enables you to build fast, scalable, and real-time applications with ease, using JavaScript for both front-end and back-end development.",
-  },
-  {
-    title: "Bootstrap",
-    percentage: 80,
-    logo: bootstrapLogo,
-    caption:
-      "Bootstrap - the sleek, responsive, and intuitive framework that allows you to create stunning and functional websites and applications with minimal effort and maximum efficiency.",
   },
   {
     title: "Photoshop",
