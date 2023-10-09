@@ -39,7 +39,6 @@
     "react-parallax-tilt": "^1.7.129",
     "react-scripts": "^5.0.1",
     "react-scroll-parallax": "^3.4.2",
-    "react-text-loop-next": "0.0.3",
     "reactstrap": "^8.9.0"
   },
   "eslintConfig": {
