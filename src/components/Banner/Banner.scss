@@ -1,61 +1,94 @@
 .banner {
-	background-image: url('./../../assets/images/banner.webp');
+	// background-image: url('./../../assets/images/banner.webp');
 	// background-blend-mode: saturation(20);
-	background-size: cover;
-	background-position: bottom;
-	background-attachment: fixed;
 	height: 100vh;
+	cursor: default;
+
+	.img-over-text {
+		font-size: 100vh;
+		position: absolute;
+		top: -130px;
+		left: 0;
+		background-image: url('./../../assets/images/banner.webp');
+		background-size: cover;
+		background-position: bottom;
+		background-attachment: fixed;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+		z-index: 0;
+	}
+
+	.video-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+	}
+
 	.backdrop {
-		background: inherit;
+		// background: rgba(299, 137, 28, 1);
 		height: inherit;
 		backdrop-filter: brightness(1);
 		animation: blurring infinite 10s;
 		-webkit-animation: blurring infinite 10s;
 		-moz-animation: blurring infinite 10s;
 	}
+
 	.container {
 		background: inherit;
 		display: flex;
 		padding-top: 6rem;
 		color: #000000;
 		width: 100%;
+
 		.row {
 			background: inherit;
+
 			.col-12 {
+				position: relative;
+				z-index: 2;
 				padding: 30px;
-				border-radius: 30px;
+				border-radius: 0px;
 				background-color: rgba(171, 139, 101, 0.1);
-				backdrop-filter: blur(20px);
+				backdrop-filter: blur(50px);
 			}
 		}
 	}
+
 	h4 {
 		font-weight: 300;
 		font-size: 2rem;
 	}
+
 	h1 {
 		font-family: 'Sail', cursive;
-		filter: drop-shadow(2px 2px 0px rgba(171, 139, 101, 1));
+		filter: drop-shadow(2px 2px 0px rgba(299, 137, 28, 1));
 		font-weight: 300;
 		font-size: 4rem;
 		letter-spacing: 0.3rem;
 		color: #000000;
 		word-break: break-all;
 	}
+
 	.btn-secondary {
 		margin-top: 1rem;
 		background-color: transparent;
 		border: 1px solid rgba(0, 0, 0, 0.6);
 		margin-right: 2rem;
 		padding: 1rem 1.6rem;
-		border-radius: 5rem;
+		border-radius: 0;
 		font-size: 1.2rem;
 		transition: 200ms;
 		// font-weight: 300;
 		color: #000000;
+
 		&:hover {
-			// border: 1px solid rgba(171, 139, 101, 1);
-			background-color: rgba(171, 139, 101, 1);
+			// border: 1px solid rgba(299, 137, 28, 1);
+			background-color: rgba(299, 137, 28, 1);
 			color: #000000;
 		}
 	}
@@ -65,9 +98,11 @@
 	0% {
 		backdrop-filter: brightness(1);
 	}
+
 	50% {
 		backdrop-filter: brightness(0.8);
 	}
+
 	100% {
 		backdrop-filter: brightness(1);
 	}
@@ -77,9 +112,11 @@
 	0% {
 		backdrop-filter: brightness(1);
 	}
+
 	50% {
 		backdrop-filter: brightness(0.8);
 	}
+
 	100% {
 		backdrop-filter: brightness(1);
 	}
@@ -89,9 +126,11 @@
 	0% {
 		backdrop-filter: brightness(1);
 	}
+
 	50% {
 		backdrop-filter: brightness(0.8);
 	}
+
 	100% {
 		backdrop-filter: brightness(1);
 	}

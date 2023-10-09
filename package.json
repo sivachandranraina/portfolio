@@ -27,7 +27,6 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.2.1",
-    "easy-react-text-loop": "^1.0.2",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "moment": "^2.23.0",
@@ -39,6 +38,7 @@
     "react-parallax-tilt": "^1.7.129",
     "react-scripts": "^5.0.1",
     "react-scroll-parallax": "^3.4.2",
+    "react-type-animation": "^3.1.0",
     "reactstrap": "^8.9.0"
   },
   "eslintConfig": {
@@ -51,11 +51,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^9.0.0",
-    "sass-loader": "^13.3.2",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-env": "7.22.5"
+    "@babel/preset-env": "7.22.5",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^13.3.2"
   }
 }

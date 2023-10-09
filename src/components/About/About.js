@@ -111,7 +111,7 @@ const About = ({ exportTheme }) => {
       localStorage.setItem("theme", "dark");
     else localStorage.setItem("theme", theme);
     exportTheme(theme);
-  }, [theme]);
+  }, [theme, exportTheme]);
   return (
     <div className="about">
       <div className="text-uppercase position-sticky">

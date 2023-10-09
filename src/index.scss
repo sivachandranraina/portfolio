@@ -50,7 +50,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
+  // font-family: "Roboto";
+  font-family: 'Anybody', cursive;
   font-weight: 300;
   letter-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
@@ -97,7 +98,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Haskoy";
+  // font-family: "Haskoy";
 }
 
 @media (min-width: 1600px) {
