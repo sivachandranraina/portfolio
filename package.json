@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/sivachandranraina/portfolio/issues"
   },
-  "homepage": "https://sivachandranraina.netlify.com",
+  "homepage": "https://sivachandranraina.netlify.app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
@@ -27,6 +27,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.2.1",
+    "easy-react-text-loop": "^1.0.2",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "moment": "^2.23.0",

@@ -1,7 +1,8 @@
 import React from "react";
 import { Row, Col, Button } from "reactstrap";
 import { Parallax } from "react-scroll-parallax";
-import { TextLoop } from "react-text-loop-next";
+// import { TextLoop } from "react-text-loop-next";
+import { TextLoop } from "easy-react-text-loop";
 
 import "./Banner.scss";
 
@@ -26,7 +27,7 @@ const Banner = () => {
                 <h1>Sivachandran Raina</h1>
                 <h4>
                   a{" "}
-                  <TextLoop mask={true} interval={1000}>
+                  <TextLoop mask={true} interval={500}>
                     {bio.map((data, index) => (
                       <span key={index}>{data}</span>
                     ))}
