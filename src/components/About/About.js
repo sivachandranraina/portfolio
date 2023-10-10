@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Row, Col } from "reactstrap";
 import Tilt from "react-parallax-tilt";
 import _ from "lodash";
 import { Parallax } from "react-scroll-parallax";
 
 import img from "./../../assets/images/scr.webp";
+import leo from "./../../assets/images/leo.svg";
 import reactLogo from "./../../assets/images/skills/react.svg";
 import angularLogo from "./../../assets/images/skills/angular.svg";
 import pythonLogo from "./../../assets/images/skills/python.png";
@@ -12,8 +13,6 @@ import nodeLogo from "./../../assets/images/skills/node.svg";
 import openaiLogo from "./../../assets/images/skills/openai.png";
 import photoshopLogo from "./../../assets/images/skills/photoshop.svg";
 import "./About.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const skillSet = [
 
@@ -102,16 +101,7 @@ const renderSkillSet = () => {
   });
 };
 
-const About = ({ exportTheme }) => {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
-  );
-  useEffect(() => {
-    if (localStorage.getItem("theme") === undefined)
-      localStorage.setItem("theme", "dark");
-    else localStorage.setItem("theme", theme);
-    exportTheme(theme);
-  }, [theme, exportTheme]);
+const About = () => {
   return (
     <div className="about">
       <div className="text-uppercase position-sticky">
@@ -123,13 +113,16 @@ const About = ({ exportTheme }) => {
             <Row className="image-block">
               <Col xs={12} lg={4} className="text-center">
                 <Parallax translateX={[-10, 10]}>
-                  <Tilt
-                    tiltMaxAngleX={10}
-                    tiltMaxAngleY={10}
-                    tiltReverse={true}
-                  >
-                    <img src={img} loading="lazy" alt="SCR" />
-                  </Tilt>
+
+                  <div className="photo-frame">
+                    <Tilt
+                      tiltMaxAngleX={10}
+                      tiltMaxAngleY={10}
+                      tiltReverse={true}
+                    ><img src={img} loading="lazy" alt="SCR" />
+                    </Tilt>
+                    <img src={leo} loading="lazy" alt="LEO" />
+                  </div>
                 </Parallax>
               </Col>
 
@@ -184,29 +177,7 @@ const About = ({ exportTheme }) => {
             </Row>
           </Col>
 
-          <div className="theme-switch">
-            <div className="text-center">
-              <FontAwesomeIcon
-                icon={faLightbulb}
-                style={{ fontSize: "2rem" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div>
-              <label className="rocker rocker-small">
-                <input
-                  type="checkbox"
-                  value={theme}
-                  checked={theme === "light"}
-                />
-                <span className="switch-left" onClick={() => setTheme("light")}>
-                  On
-                </span>
-                <span className="switch-right" onClick={() => setTheme("dark")}>
-                  Off
-                </span>
-              </label>
-            </div>
-          </div>
+
 
           <Col xs={12} className="skill-set d-md-block d-none">
             <div className="block">

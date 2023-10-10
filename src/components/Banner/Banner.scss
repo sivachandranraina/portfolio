@@ -3,11 +3,20 @@
 	// background-blend-mode: saturation(20);
 	height: 100vh;
 	cursor: default;
+	position: relative;
+	z-index: 6;
+
+
+	// &:hover {
+	// 	.img-over-text {
+	// 		left: -180px
+	// 	}
+	// }
 
 	.img-over-text {
 		font-size: 100vh;
 		position: absolute;
-		top: -130px;
+		top: -180px;
 		left: 0;
 		background-image: url('./../../assets/images/banner.webp');
 		background-size: cover;
@@ -65,9 +74,9 @@
 	}
 
 	h1 {
-		font-family: 'Sail', cursive;
-		filter: drop-shadow(2px 2px 0px rgba(299, 137, 28, 1));
-		font-weight: 300;
+		font-family: 'Haskoy';
+		filter: drop-shadow(5px 4px 2px rgba(299, 137, 28, 1));
+		font-weight: 900;
 		font-size: 4rem;
 		letter-spacing: 0.3rem;
 		color: #000000;

@@ -11,3 +11,16 @@
   /* border-bottom: 1px solid; */
   text-align: center;
 }
+
+.theme-switch {
+  position: fixed;
+  z-index: 5;
+  transition: 500ms;
+  right: 0;
+  bottom: 0;
+  padding: 15px 15px 10px;
+
+  &:hover {
+    background-color: rgba(299, 137, 28, 1);
+  }
+}

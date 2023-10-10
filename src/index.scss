@@ -61,9 +61,24 @@ body {
 }
 
 #root>div {
+
   &.dark {
     color: #ffffff;
     background-color: rgba(12, 12, 12, 1);
+    transition: 500ms;
+
+    &::before {
+      background-image: url('./assets/images/night-scape.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      transition: 500ms;
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.1;
+    }
 
     .position-sticky {
       background-color: rgba(34, 34, 34, 0.95);
@@ -76,6 +91,20 @@ body {
 
   &.light {
     color: #000;
+    transition: 500ms;
+
+    &::before {
+      background-image: url('./assets/images/day-scape.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      transition: 500ms;
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.1;
+    }
 
     .position-sticky {
       background-color: rgba(225, 225, 225, 0.75);

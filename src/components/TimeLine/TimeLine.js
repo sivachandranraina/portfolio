@@ -132,14 +132,14 @@ const TimeLine = () => {
                         ? "animate__backInRight"
                         : "animate__backInLeft"
                     }
-                    animateOut={
-                      index % 2 === 0
-                        ? "animate__backOutRight"
-                        : "animate__backOutLeft"
-                    }
+                    // animateOut={
+                    //   index % 2 === 0
+                    //     ? "animate__backOutRight"
+                    //     : "animate__backOutLeft"
+                    // }
                     key={index}
                   >
-                    <div className="content">
+                    <div className={index % 2 === 0 ? 'content right' : 'content left'}>
                       <div className="media">
                         <Tilt
                           tiltReverse={true}

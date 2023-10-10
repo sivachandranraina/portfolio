@@ -7,6 +7,28 @@
   }
 
   .content {
+    &.left {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -50vw;
+        top: 150px;
+        width: 45vw;
+        height: 5px;
+      }
+    }
+
+    &.right {
+      &::before {
+        content: "";
+        position: absolute;
+        right: -50vw;
+        top: 150px;
+        width: 45vw;
+        height: 5px;
+      }
+    }
+
     margin: 10rem 0rem;
 
     .media {
@@ -88,6 +110,18 @@
 .light {
   .timeline {
     .content {
+      &.left {
+        &::before {
+          background-color: #898989;
+        }
+      }
+
+      &.right {
+        &::before {
+          background-color: #898989;
+        }
+      }
+
       .media {
         &:hover {
           .media-left {
@@ -131,6 +165,18 @@
 .dark {
   .timeline {
     .content {
+      &.left {
+        &::before {
+          background-color: #555;
+        }
+      }
+
+      &.right {
+        &::before {
+          background-color: #555;
+        }
+      }
+
       .media {
         &:hover {
           .media-left {
