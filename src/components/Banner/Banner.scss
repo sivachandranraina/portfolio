@@ -54,8 +54,15 @@
 				z-index: 2;
 				padding: 30px;
 				border-radius: 0px;
-				background-color: rgba(171, 139, 101, 0.1);
 				backdrop-filter: blur(50px);
+			}
+		}
+
+		.type {
+			&::after {
+				content: '_';
+				color: rgba(299, 137, 28, 1);
+				animation: cursor 250ms infinite step-start;
 			}
 		}
 	}
@@ -66,13 +73,22 @@
 	}
 
 	h1 {
-		font-family: 'Haskoy';
-		filter: drop-shadow(5px 4px 0px rgba(299, 137, 28, 1));
+		font-family: 'Croissant One';
+		text-shadow: 0.5px 0.5px 0px rgba(299, 137, 28, 1),
+			1.1px 1.1px 0px rgba(299, 137, 28, 1),
+			1.2px 1.2px 0px rgba(299, 137, 28, 1),
+			1.3px 1.3px 0px rgba(299, 137, 28, 1),
+			1.4px 1.4px 0px rgba(299, 137, 28, 1),
+			1.5px 1.5px 0px rgba(299, 137, 28, 1),
+			1.6px 1.6px 0px rgba(299, 137, 28, 1),
+			1.7px 1.7px 0px rgba(299, 137, 28, 1),
+			1.8px 1.8px 0px rgba(299, 137, 28, 1);
 		font-weight: 900;
 		font-size: 4rem;
-		letter-spacing: 0.3rem;
+		letter-spacing: -2px;
 		color: #000000;
 		word-break: break-all;
+		margin-bottom: 15px;
 	}
 
 	.btn-secondary {
@@ -142,5 +158,11 @@
 		.img-over-text {
 			// filter: drop-shadow(30px 30px 0px #000);
 		}
+	}
+}
+
+@keyframes cursor {
+	50% {
+		opacity: 0;
 	}
 }

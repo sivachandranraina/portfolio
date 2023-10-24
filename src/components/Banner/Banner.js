@@ -7,12 +7,12 @@ import bgVideo from './../../assets/videos/bg.mp4'
 import "./Banner.scss";
 
 const bio = [
-  "Fullstack Developer", 500,
-  "Designer", 500,
-  "Photogenic", 500,
-  "Casual writer", 500,
-  "Wanderlust", 500,
-  "Breezy singer", 500,
+  "Fullstack Developer", 250,
+  "Designer", 250,
+  "Photogenic", 250,
+  "Casual writer", 250,
+  "Wanderlust", 250,
+  "Breezy singer", 250,
 ];
 
 const Banner = () => {
@@ -22,10 +22,10 @@ const Banner = () => {
         <div className="container">
           <div className="img-over-text" data-item-text="SCR">SCR</div>
           <video autoPlay loop muted className="video-bg" src={bgVideo}></video>
-          <Parallax translateY={["180vh", "-50vh"]} speed={"100"}>
+          <Parallax translateY={["240vh", "-50vh"]} speed={"100"}>
             <Row noGutters>
               <Col xs={12}>
-                <h4>fashionaholic</h4>
+                {/* <h4>fashionaholic</h4> */}
                 <h1>Sivachandran Raina</h1>
                 <h4>
                   a{" "}
@@ -39,10 +39,11 @@ const Banner = () => {
                     //   "Employee asset management",
                     //   1000,
                     // ]}
-                    speed={50}
+                    speed={250}
                     // style={{ whiteSpace: "pre-line", fontSize: "2em" }}
                     repeat={Infinity}
                     cursor={false}
+                    className="type"
                   />
                 </h4>
                 <Button
