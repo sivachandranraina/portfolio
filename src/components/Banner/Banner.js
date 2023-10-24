@@ -20,7 +20,7 @@ const Banner = () => {
     <div className="banner lazy">
       <div className="backdrop">
         <div className="container">
-          <div className="img-over-text">SCR</div>
+          <div className="img-over-text" data-item-text="SCR">SCR</div>
           <video autoPlay loop muted className="video-bg" src={bgVideo}></video>
           <Parallax translateY={["180vh", "-50vh"]} speed={"100"}>
             <Row noGutters>

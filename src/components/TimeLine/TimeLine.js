@@ -12,7 +12,8 @@ import {
   faGlassCheers,
   faChild,
   faSignal,
-  faUserTie
+  faUserTie,
+  faUsers
 } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 
@@ -103,6 +104,14 @@ const timelineData = [
     description: "<strong>Lead Engineer</strong> @ Presidio",
     content:
       "While it is often believed that staying in the same place may hinder growth, I have experienced the opposite. This organization has consistently provided me with abundant opportunities and timely promotions. It has become the ideal platform for my professional development, allowing me to flourish and advance at the right moments. Contrary to common perception, this place has proven to be a catalyst for my success, offering me a fulfilling and progressive journey.<br/>",
+  },
+  {
+    icon: faUsers,
+    date: "2023-08-09",
+    title: "PenQueen",
+    description: "<a href='https://www.instagram.com/athithra_sivachandran/' target='_blank'>Athithra Sivachandran</a>",
+    content:
+      "Amidst the quiet of midnight, an urgent message sent ripples through my world. My firstborn, my wife, was experiencing a rare and unexpected onset of labor, her water breaking. A rollercoaster ride of emotions ensued. With sleepless eyes, I embarked on a flight from Chennai to Madurai, an anxious journey into the unknown. Just before boarding, my father's voice brought joyful news - our baby girl had arrived at 5:19 AM.<br/><br/> The moment I held her, I knew she was special. Our penqueen, emerged from Queen",
   },
 ];
 
