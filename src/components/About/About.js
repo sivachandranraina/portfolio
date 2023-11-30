@@ -6,6 +6,7 @@ import { Parallax } from "react-scroll-parallax";
 
 import img from "./../../assets/images/scr.webp";
 import leo from "./../../assets/images/leo.svg";
+import azure from "./../../assets/images/skills/azure.svg";
 import reactLogo from "./../../assets/images/skills/react.svg";
 import angularLogo from "./../../assets/images/skills/angular.svg";
 import pythonLogo from "./../../assets/images/skills/python.png";
@@ -15,48 +16,40 @@ import photoshopLogo from "./../../assets/images/skills/photoshop.svg";
 import "./About.scss";
 
 const skillSet = [
-
+  {
+    title: "Azure",
+    percentage: 75,
+    logo: azure
+  },
   {
     title: "Python",
     percentage: 75,
-    logo: pythonLogo,
-    caption:
-      "Streamline your state management and simplify your web development workflow with Redux - the powerful library that brings predictability, consistency, and scalability to your applications.",
+    logo: pythonLogo
   },
   {
     title: "React",
     percentage: 75,
-    logo: reactLogo,
-    caption:
-      "Elevate your user interface and simplify your front-end development with React.js - the flexible and efficient JavaScript library that empowers you to build dynamic and reusable UI components, while maintaining optimal performance and scalability.",
+    logo: reactLogo
   },
   {
     title: "Prompt Engineering",
     percentage: 80,
-    logo: openaiLogo,
-    caption:
-      "Bootstrap - the sleek, responsive, and intuitive framework that allows you to create stunning and functional websites and applications with minimal effort and maximum efficiency.",
+    logo: openaiLogo
   },
   {
     title: "Angular",
     percentage: 60,
-    logo: angularLogo,
-    caption:
-      "Take your web development skills to the next level with Angular - the comprehensive platform that empowers you to build dynamic, scalable, and feature-rich applications with ease.",
+    logo: angularLogo
   },
   {
     title: "Node",
     percentage: 70,
-    logo: nodeLogo,
-    caption:
-      "Unlock the full potential of your web applications with Node.js - the powerful runtime environment that enables you to build fast, scalable, and real-time applications with ease, using JavaScript for both front-end and back-end development.",
+    logo: nodeLogo
   },
   {
     title: "Photoshop",
     percentage: 90,
-    logo: photoshopLogo,
-    caption:
-      "Unleash your creativity and bring your visual ideas to life with Photoshop - the industry-standard image editing software that provides you with a comprehensive set of tools and features to design, enhance, and manipulate images and graphics like a pro.",
+    logo: photoshopLogo
   },
 ];
 

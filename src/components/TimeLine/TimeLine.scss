@@ -36,9 +36,9 @@
 
       &:hover {
         .media-left {
-          svg {
-            transform: rotate(-10deg);
-            color: rgba(299, 137, 28, 1);
+          img {
+            filter: grayscale(0);
+            box-shadow: 0px 0px 0px 20px rgba(299, 137, 28, 1);
           }
         }
 
@@ -59,14 +59,17 @@
         height: 100%;
         z-index: -1;
 
-        svg {
+        img {
           transition: 200ms;
+          filter: grayscale(1);
+          transform: perspective(10deg);
+          border-radius: 20px 20px 0% 20px;
         }
       }
 
       .media-body {
         position: relative;
-
+        
         h1 {
           font-family: 'Anybody',
             cursive;
@@ -79,6 +82,7 @@
             top: -30px;
 
             &::before {
+            transition: 200ms;
               position: absolute;
               content: "";
               width: 100%;

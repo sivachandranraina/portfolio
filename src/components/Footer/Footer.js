@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
-  faTwitter,
   faLinkedinIn,
   faInstagram,
   faWordpress,
@@ -21,10 +20,6 @@ class Footer extends Component {
         {
           icon: faFacebookF,
           link: "https://www.facebook.com/sivachandran.raina",
-        },
-        {
-          icon: faTwitter,
-          link: "https://www.twitter.com/iamSivachandran",
         },
         {
           icon: faLinkedinIn,

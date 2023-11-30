@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 // import Header from './Header/Header';
+import AnimatedCursor from "react-animated-cursor"
 import Banner from "./Banner/Banner";
 import WorkTraces from "./WorkTraces/WorkTraces";
 import About from "./About/About";
@@ -22,6 +23,21 @@ const App = () => {
   }, [theme]);
   return (
     <div className={theme} >
+      <AnimatedCursor
+        innerSize={14}
+        innerStyle={{
+          mixBlendMode: 'exclusion'
+        }}
+        outerSize={28}
+        color='255, 255, 255'
+        outerAlpha={0}
+        innerScale={1}
+        outerScale={2}
+        outerStyle={{
+          border: '2px solid rgb(255, 255, 255)',
+          mixBlendMode: 'exclusion'
+        }}
+      />
       {/* <Header /> */}
       <div className="theme-switch">
         <div className="text-center">
