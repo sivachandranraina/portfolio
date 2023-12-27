@@ -7,6 +7,14 @@ import "./Blog.scss";
 
 const posts = [
 	{
+		title: "Kerala Odyssey",
+		img: "https://sivachandranraina.files.wordpress.com/2023/12/cover.webp",
+		expert:
+			"As the crisp December air enveloped us, my family and I embarked on a once-in-a-lifetime year-end vacation, weaving through the picturesque landscapes of Kerala. Packed into our trusty Innova car were my wife, Dharsini, our newborn daughter, Athithra (a mere 4 months old), my parents, and in-laws. With anticipation in the air, we set out from Madurai, our hearts brimming with excitement for the adventure that lay ahead.",
+		dateTime: "December 27, 2023",
+		link: "https://sivachandranraina.wordpress.com/2023/12/27/kerala-odyssey-a-magical-year-end-vacation-with-family/",
+	},
+	{
 		title: "Trip of Decade",
 		img: "https://sivachandranraina.files.wordpress.com/2020/01/blogcover.jpg?w=640",
 		expert:
@@ -29,15 +37,7 @@ const posts = [
 			"Hey, what's up....? Best part of life is what you explore the unknown places Unforgettable things are hard to erase from your mind because that much adventures is on there Bike trip is the only way to taste both of them, exploring the unknown places with the adventure & that is not a new thing",
 		dateTime: "June 18, 2018",
 		link: "https://sivachandranraina.wordpress.com/2018/06/18/mesmerizing-mountains/",
-	},
-	{
-		title: "Goa Glees",
-		img: "https://sivachandranraina.files.wordpress.com/2018/04/lr-edit-0841.jpg?w=640",
-		expert:
-			"So the trip was over, the story begins here... Yeah it was a trip to Goa For the Instagram story update, check out Goa diary highlight in @sivachandranraina This time big gang, totally 15 people. Well planned together & reached Calangute, Goa in the early morning. Day 1 Resort guy said room check-in will open",
-		dateTime: "April 6, 2018",
-		link: "https://sivachandranraina.wordpress.com/2018/04/06/goa-glees/",
-	},
+	}
 ];
 
 const Blog = () => {
@@ -73,17 +73,10 @@ const Blog = () => {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												<Card
+												<Card style={{ 'backgroundImage': `url(${data.img})` }}
 													onMouseEnter={() => setShow(true)}
 													onMouseLeave={() => setShow(false)}
 												>
-													<CardImg
-														top
-														width="100%"
-														src={data.img}
-														loading="lazy"
-														alt="image"
-													/>
 													<CardBody>
 														<div
 															className="d-flex justify-content-between"
@@ -96,7 +89,7 @@ const Blog = () => {
 															<Marquee
 																delay={0.2}
 																className="animate__animated animate__fadeInUp"
-																speed={data.title.length * 20}
+																speed={data.title.length * 40}
 																gradient={false}
 															>
 																<h1>{data.title}&nbsp;&nbsp;</h1>

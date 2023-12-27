@@ -135,7 +135,7 @@ const About = () => {
                       <br />
                       Fashion designer by passion!
                       <br />
-                      JavaScriptist by profession!
+                      Scriptist by profession!
                     </p>
                     <br />
                     <p>
@@ -155,7 +155,7 @@ const About = () => {
                     </p>
                     <p>
                       One thing is clear "Whatever I do my mind thinks only
-                      about design".
+                      about creative stuff".
                     </p>
                     <p>
                       And this COVID-19 lockdown made me as a Hairstylist, as
