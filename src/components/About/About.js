@@ -123,7 +123,7 @@ const About = () => {
                 <Parallax translateX={[10, -10]}>
                   <div>
                     <blockquote className="blockquote">
-                      <h1 className="mb-0 text-uppercase">
+                      <h1 className="mb-0">
                         Life is What you do!
                       </h1>
                       <footer className="blockquote-footer">
