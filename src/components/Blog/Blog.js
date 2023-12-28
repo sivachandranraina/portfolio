@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Tilt from "react-parallax-tilt";
-import { Row, Col, Card, CardImg, CardBody } from "reactstrap";
+import { Row, Col, Card, CardBody } from "reactstrap";
 
 import "./Blog.scss";
 
