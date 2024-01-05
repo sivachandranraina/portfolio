@@ -24,3 +24,15 @@
     background-color: rgba(299, 137, 28, 1);
   }
 }
+
+.dark {
+  .title {
+    text-shadow: 2px 2px 0px #000;
+  }
+}
+
+.light {
+  .title {
+    text-shadow: 2px 2px 0px #fff;
+  }
+}

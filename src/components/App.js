@@ -62,7 +62,7 @@ const App = () => {
           </label>
         </div>
       </div>
-      <Banner />
+      <Banner theme={theme} />
       <About exportTheme={(data) => setTheme(data)} />
       <TimeLine />
       <WorkTraces />
