@@ -105,7 +105,7 @@ const About = () => {
           <Col xs={12} className="mt-4">
             <Row className="image-block">
               <Col xs={12} lg={4} className="text-center">
-                <Parallax translateX={[-10, 10]}>
+                <Parallax style={{ position: 'sticky', top: '200px' }} translateX={[-15, 0]}>
 
                   <div className="photo-frame">
                     <Tilt
@@ -120,7 +120,7 @@ const About = () => {
               </Col>
 
               <Col xs={12} lg={8} className="text-center">
-                <Parallax translateX={[10, -10]}>
+                <Parallax translateX={[20, 0]}>
                   <div>
                     <blockquote className="blockquote">
                       <h1 className="mb-0">
@@ -139,31 +139,23 @@ const About = () => {
                     </p>
                     <br />
                     <p>
-                      Passion grew early from my school days. Profession from my
-                      college days.
+                      The seeds of passion were planted early in my school days, and by college, they'd blossomed into a full-fledged career. Don't ask me which one – that's a secret for now! But here's what fuels my fire
                     </p>
                     <p>
-                      Favourite number is <span className="primary">3</span>.
-                      <br />
-                      Black and white are my <span className="primary">
-                        2
-                      </span>{" "}
-                      favourite colors, a combination of 16 million colors.
-                      <br />
-                      Only <span className="primary">1</span> motive. To think
-                      creative! To innovate the effective!
+                      <ul>
+                        <li>
+                          <div className="primary">The number 3</div> It's just plain lucky! Maybe it signifies the perfect blend of passion, profession, and a dash of creativity?
+                        </li>
+                        <li>
+                          <div className="primary">Black and white</div> These opposites attract in my world. They represent the simplicity that sparks endless creative possibilities, like turning 16 million colors into a masterpiece.
+                        </li>
+                        <li>
+                          <div className="primary">One driving force</div> To think outside the box and make the good even better! Every project, every idea gets the creative treatment.</li>
+                        <li>
+                          <div className="primary">My mantra</div> My mind is a constant brainstorm, overflowing with fresh ideas.</li>
+                      </ul>
                     </p>
-                    <p>
-                      One thing is clear "Whatever I do my mind thinks only
-                      about creative stuff".
-                    </p>
-                    <p>
-                      And this COVID-19 lockdown made me as a Hairstylist, as
-                      per my wishlist
-                    </p>
-                    <p>
-                      Wishlist: Horse riding, Swimming <br />
-                    </p>
+                    <p>Speaking of fresh ideas, thanks to that unexpected COVID lockdown, I discovered a hidden talent – hairstyling! It was always on my wishlist, right alongside horse riding and swimming (still on the to-do list!). So, I grabbed my scissors and became a lockdown hairstylist extraordinaire.</p>
                   </div>
                 </Parallax>
               </Col>
@@ -176,6 +168,9 @@ const About = () => {
             <div className="block">
               <h2>SKILLS</h2>
               <h2>SKILLS</h2>
+            </div>
+            <div className="logo-group">
+              {skillSet.map(({ logo, title }) => <div className="logo"><img src={logo} alt={title}></img><div className="caption">{title}</div></div>)}
             </div>
             <div>{renderSkillSet()}</div>
           </Col>

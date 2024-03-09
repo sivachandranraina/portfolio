@@ -14,6 +14,7 @@
 	// }
 
 	.img-over-text {
+		font-family: 'Anybody', cursive;
 		font-size: 100vh;
 		position: absolute;
 		top: 50px;
@@ -42,7 +43,7 @@
 		background: inherit;
 		display: flex;
 		padding-top: 6rem;
-		color: #000000;
+		// color: #000000;
 		width: 100%;
 
 		.row {
@@ -69,6 +70,7 @@
 	h4 {
 		font-weight: 300;
 		font-size: 2rem;
+		font-family: 'Anybody', cursive;
 	}
 
 	h1 {
@@ -92,20 +94,20 @@
 
 	.btn-secondary {
 		margin-top: 1rem;
+		font-family: 'Anybody', cursive;
 		background-color: transparent;
-		border: 1px solid rgba(0, 0, 0, 0.6);
 		margin-right: 2rem;
 		padding: 1rem 1.6rem;
 		border-radius: 0;
 		font-size: 1.2rem;
 		transition: 200ms;
 		// font-weight: 300;
-		color: #000000;
+		// color: #000000;
 
 		&:hover {
 			// border: 1px solid rgba(299, 137, 28, 1);
 			background-color: rgba(299, 137, 28, 1);
-			color: #000000;
+			// color: #000000;
 		}
 	}
 }
@@ -155,6 +157,10 @@
 .dark {
 	.banner {
 		background-color: #000000;
+		.btn-secondary {
+			border: 1px solid rgba(255, 255, 255, 0.6);
+			color: #fff
+		}
 		.img-over-text {
 			-webkit-text-fill-color: rgba(0, 0, 0, 0.4);
 		}
@@ -164,6 +170,10 @@
 .light {
 	.banner{
 		background-color: #eee;
+		.btn-secondary {
+			border: 1px solid rgba(0, 0, 0, 0.6);
+			color: #000000
+		}
 		.img-over-text {
 			-webkit-text-fill-color: rgba(299, 137, 28, 0.2);
 		}
