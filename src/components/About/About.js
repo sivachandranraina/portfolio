@@ -13,6 +13,8 @@ import pythonLogo from "./../../assets/images/skills/python.png";
 import nodeLogo from "./../../assets/images/skills/node.svg";
 import openaiLogo from "./../../assets/images/skills/openai.png";
 import photoshopLogo from "./../../assets/images/skills/photoshop.svg";
+import aiCerti from "./../../assets/images/certificate/microsoft-certified-associate-badge.svg";
+import fundaCerti from "./../../assets/images/certificate/microsoft-certified-fundamentals-badge.svg";
 import "./About.scss";
 
 const skillSet = [
@@ -170,7 +172,14 @@ const About = () => {
               <h2>SKILLS</h2>
             </div>
             <div className="logo-group">
-              {skillSet.map(({ logo, title }) => <div className="logo"><img src={logo} alt={title}></img><div className="caption">{title}</div></div>)}
+              <div className="logo">
+                <img src={aiCerti} alt="AI Certificate"></img>
+                <div className="caption">Azure AI Engineer Associate</div>
+              </div>
+              <div className="logo">
+                <img src={fundaCerti} alt="Fundamentals Certificate"></img>
+                <div className="caption">Azure Fundamentals</div>
+              </div>
             </div>
             <div>{renderSkillSet()}</div>
           </Col>
