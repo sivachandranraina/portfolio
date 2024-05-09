@@ -1,0 +1,135 @@
+.chatline {
+    .container {
+        position: relative;
+        margin-bottom: 9rem;
+
+        .intro {
+            height: 70vh;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                font-size: 4em;
+            }
+
+            .blinker {
+                animation: cursor 500ms infinite step-start;
+            }
+        }
+
+        .revealing-div {
+            opacity: 0;
+            transition: opacity 0.5s ease 500ms;
+            margin: 100px 10px;
+
+            .right {
+                display: flex;
+                justify-content: end;
+                margin-top: 200px;
+
+                .message {
+                    font-weight: 600;
+                    border-radius: 15px 15px 0px 15px;
+                }
+            }
+
+            .left {
+                display: flex;
+                justify-content: start;
+
+                .media-left {
+                    width: 100px;
+                    margin-right: 15px;
+
+                    img {
+                        border-radius: 15px;
+                        width: 100%;
+                        transition: 250ms;
+                    }
+                }
+
+                &:hover {
+                    .media-left {
+                        img {
+                            transform: scale(1.5);
+                            transform-origin: bottom right;
+                            border: 4px solid rgba(299, 137, 28, 1)
+                        }
+                    }
+
+                    .message {
+                        box-shadow: 0px 0px 0px 6px rgba(299, 137, 28, 1);
+                    }
+                }
+
+                .message {
+                    border-radius: 15px 15px 15px 0px;
+                }
+            }
+
+            .message {
+                max-width: 60vw;
+                padding: 15px;
+
+                h2 {
+                    font-family: 'Anybody', cursive;
+                }
+
+                a {
+                    color: #959595;
+                }
+
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .revealed {
+            opacity: 1;
+        }
+    }
+}
+
+.dark {
+    .chatline {
+        .container {
+            .revealing-div {
+                .right {
+                    .message {
+                        background-color: rgba(209, 101, 2, 1);
+                    }
+                }
+
+                .left {
+                    .message {
+                        background-color: #202020;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.light {
+    .chatline {
+        .container {
+            .revealing-div {
+                .right {
+                    .message {
+                        background-color: rgba(299, 137, 28, 1);
+                    }
+                }
+
+                .left {
+                    .message {
+                        background-color: #ddd;
+                    }
+                }
+            }
+        }
+    }
+}

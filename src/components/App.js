@@ -4,11 +4,11 @@ import "./App.scss";
 import AnimatedCursor from "react-animated-cursor"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import ChatLine from "./ChatLine/ChatLine";
 
 const Banner = React.lazy(() => import("./Banner/Banner"));
 const WorkTraces = React.lazy(() => import("./WorkTraces/WorkTraces"));
 const About = React.lazy(() => import("./About/About"));
-const TimeLine = React.lazy(() => import("./TimeLine/TimeLine"));
 const Footer = React.lazy(() => import("./Footer/Footer"));
 const Blog = React.lazy(() => import("./Blog/Blog"));
 const Story = React.lazy(() => import("./Story/story"));
@@ -66,7 +66,7 @@ const App = () => {
         </div>
         <Banner theme={theme} />
         <About exportTheme={(data) => setTheme(data)} />
-        <TimeLine />
+        <ChatLine />
         <WorkTraces />
         <Story />
         <Blog />
