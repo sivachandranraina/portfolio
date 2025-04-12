@@ -49,6 +49,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -66,6 +69,10 @@ body {
 .primary {
   font-weight: bold;
   color: rgba(299, 137, 28, 1);
+}
+
+html {
+  background-color: rgba(0, 0, 0, 1);
 }
 
 #root>div {
