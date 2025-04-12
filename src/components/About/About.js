@@ -4,7 +4,6 @@ import Tilt from "react-parallax-tilt";
 import _ from "lodash";
 import { Parallax } from "react-scroll-parallax";
 
-import img from "./../../assets/images/scr.webp";
 import leo from "./../../assets/images/leo.svg";
 import azure from "./../../assets/images/skills/azure.svg";
 import reactLogo from "./../../assets/images/skills/react.svg";
@@ -107,22 +106,22 @@ const About = () => {
           <Col xs={12} className="mt-4">
             <Row className="image-block">
               <Col xs={12} lg={4} className="text-center">
-                <Parallax style={{ position: 'sticky', top: '200px' }} translateX={[-15, 0]}>
-
+                <div style={{ position: 'sticky', top: '200px' }}>
                   <div className="photo-frame">
                     <Tilt
                       tiltMaxAngleX={10}
                       tiltMaxAngleY={10}
                       tiltReverse={true}
-                    ><img src={img} loading="lazy" alt="SCR" />
+                    >
+                      <div className="dp">
+                      </div>
                     </Tilt>
                     <img src={leo} loading="lazy" alt="LEO" />
                   </div>
-                </Parallax>
+                </div>
               </Col>
 
               <Col xs={12} lg={8} className="text-center">
-                <Parallax translateX={[20, 0]}>
                   <div>
                     <blockquote className="blockquote">
                       <h1 className="mb-0">
@@ -159,7 +158,6 @@ const About = () => {
                     </p>
                     <p>Speaking of fresh ideas, thanks to that unexpected COVID lockdown, I discovered a hidden talent – hairstyling! It was always on my wishlist, right alongside horse riding and swimming (still on the to-do list!). So, I grabbed my scissors and became a lockdown hairstylist extraordinaire.</p>
                   </div>
-                </Parallax>
               </Col>
             </Row>
           </Col>

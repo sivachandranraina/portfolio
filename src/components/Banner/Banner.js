@@ -27,7 +27,7 @@ const Banner = ({ theme }) => {
             <Row noGutters>
               <Col xs={12}>
                 {/* <h4>fashionaholic</h4> */}
-                <h1>Sivachandran Raina</h1>
+                <h1>Sivachandran NKK</h1>
                 <h4>
                   a{" "}
                   <TypeAnimation

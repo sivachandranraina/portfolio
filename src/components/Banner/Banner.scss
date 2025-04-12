@@ -23,6 +23,7 @@
 		background-image: url('./../../assets/images/banner.webp');
 		background-size: cover;
 		background-attachment: fixed;
+		background-position: center;
 		-webkit-background-clip: text;
 		text-transform: uppercase;
 		z-index: 0;
@@ -89,7 +90,7 @@
 		letter-spacing: 2px;
 		word-break: break-all;
 		margin-bottom: 15px;
-		background: -webkit-linear-gradient(45deg , #FF891C, #CC703F, #985761, #653E84, #3124A6);
+		background: -webkit-linear-gradient(0deg , #FF891C, #CC703F, #ab592c, #5f2a0d, #4b1b01);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

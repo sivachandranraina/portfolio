@@ -17,10 +17,10 @@ class Footer extends Component {
     super();
     this.state = {
       links: [
-        {
-          icon: faFacebookF,
-          link: "https://www.facebook.com/sivachandran.raina",
-        },
+        // {
+        //   icon: faFacebookF,
+        //   link: "https://www.facebook.com/sivachandran.raina",
+        // },
         {
           icon: faLinkedinIn,
           link: "https://in.linkedin.com/in/sivachandran-raina-59538079",
