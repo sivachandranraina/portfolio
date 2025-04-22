@@ -45,7 +45,7 @@ const App = () => {
           <div className="text-center">
             <FontAwesomeIcon
               icon={faLightbulb}
-              style={{ fontSize: "2rem" }}
+              style={{ fontSize: "1.5rem" }}
             ></FontAwesomeIcon>
           </div>
           <div>

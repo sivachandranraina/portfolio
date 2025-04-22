@@ -8,7 +8,7 @@ import nightVideo from './../../assets/videos/night_scape.mp4';
 import "./Banner.scss";
 
 const bio = [
-  "Fullstack Developer", 250,
+  "Generative AI Architect", 250,
   "Designer", 250,
   "Photogenic", 250,
   "Casual writer", 250,
@@ -64,6 +64,7 @@ const Banner = ({ theme }) => {
                 >
                   <Button>View Resume</Button>
                 </a>
+
               </Col>
             </Row>
           </Parallax>

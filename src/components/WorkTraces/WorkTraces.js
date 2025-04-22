@@ -12,18 +12,43 @@ import './WorkTraces.scss';
 import { Parallax } from 'react-scroll-parallax';
 
 const data = [
-	{ name: 'Presidio', logo: presidio, bgImg: presidioBg, service: { from: 'Mar, 2017', to: 'Present' } },
-	{ name: 'Commutatus', logo: cmslogo, bgImg: cmsBg, service: { from: 'Jan, 2017', to: 'Feb, 2017' } },
-	{ name: 'Infofaces', logo: ifslogo, bgImg: ifsBg, service: { from: 'Jun, 2015', to: 'Dec, 2016' } }
+	{
+		name: 'Presidio',
+				logo: presidio,
+		bgImg: presidioBg,
+		service:
+		{
+			from: 'Mar, 2017',
+			to: 'Present'
+		},
+		projects: ["Synapse AI", "ECU Health AI", "CHOP AI", "IDC Generative AI", "MediGuru", "Vera Whole Health"]
+	},
+	{
+		name: 'Commutatus',
+		logo: cmslogo, bgImg: cmsBg, service: {
+			from: 'Jan, 2017',
+			to: 'Feb, 2017'
+		},
+		projects: ["Youth Portal"]
+	},
+	{
+		name: 'Infofaces',
+		logo: ifslogo,
+		bgImg: ifsBg, service: {
+			from: 'Jun, 2015',
+			to: 'Dec, 2016'
+		},
+		projects: ["TMG", "RMS", "ERP"]
+	}
 ];
 
-const Tile = ({ name, bgImg, logo, service, index }) => {
-	const [ show, setShow ] = useState(false);
+const Tile = ({ name, bgImg, logo, service, index, projects }) => {
+	const [show, setShow] = useState(false);
 	return (
 		<Tilt tiltReverse={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
 			<div className="company-info media" onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
 				<div className="media-left">
-					<Parallax translateX={[ -40, 20 ]}>
+					<Parallax translateX={[-40, 20]}>
 						<span>{data.length - index}.</span>
 					</Parallax>
 				</div>
@@ -42,11 +67,16 @@ const Tile = ({ name, bgImg, logo, service, index }) => {
 								<div>{service.to}</div>
 								<div>{service.from}</div>
 							</div>
+							<div className="projects">
+								{projects.map(data =>
+									<div>{data}</div>
+								)}
+							</div>
 						</div>
 					)}
 				</div>
 				<div className="media-right">
-					<Parallax translateX={[ 0, -40 ]}>
+					<Parallax translateX={[0, -40]}>
 						<div className="logo">
 							<img src={logo} alt={name} />
 						</div>
