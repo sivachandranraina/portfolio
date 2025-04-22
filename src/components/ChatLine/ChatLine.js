@@ -40,6 +40,12 @@ const RevealingDivs = ({ divisions }) => {
                 <br />
                 <div className="text-muted">A proper <strong>OpenAI</strong> fan boy</div>
             </div>
+            <div className="text-input" onClick={() => {
+                window.scroll({
+                    top: window.scrollY + 750,
+                    behavior: "smooth",
+                });
+            }} >Ask anything about Sivachandran</div>
             {divisions.map(({ type, data }, index) => (
                 <div
                     key={index}
@@ -59,7 +65,8 @@ const ChatLine = () => {
     return <div className="chatline">
         <div className="text-uppercase position-sticky">
             <h2 className="title">Chatline</h2>
-        </div><RevealingDivs divisions={chatData}></RevealingDivs>
+        </div>
+        <RevealingDivs divisions={chatData}></RevealingDivs>
     </div>
 }
 

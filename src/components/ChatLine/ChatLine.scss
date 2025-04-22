@@ -1,8 +1,9 @@
 .chatline {
     .container {
         position: relative;
-        margin-bottom: 9rem;
-
+        margin: 9rem auto;
+        padding-bottom: 100px;
+        border-radius: 40px;
         .intro {
             height: 70vh;
             margin: auto;
@@ -18,18 +19,18 @@
             .blinker {
                 animation: cursor 500ms infinite step-start;
             }
+
         }
 
         .revealing-div {
             opacity: 0;
             transition: opacity 0.5s ease 500ms;
             margin: 100px 10px;
-
             .right {
                 display: flex;
                 justify-content: end;
                 margin-top: 200px;
-
+                margin-right: 30px;
                 .message {
                     font-weight: 600;
                     border-radius: 15px 15px 0px 15px;
@@ -39,7 +40,7 @@
             .left {
                 display: flex;
                 justify-content: start;
-
+                margin-left: 30px;
                 .media-left {
                     width: 100px;
                     margin-right: 15px;
@@ -49,24 +50,6 @@
                         width: 100%;
                         transition: 250ms;
                     }
-                }
-
-                &:hover {
-                    .media-left {
-                        img {
-                            transform: scale(1.5);
-                            transform-origin: bottom right;
-                            border: 4px solid rgba(299, 137, 28, 1)
-                        }
-                    }
-
-                    .message {
-                        box-shadow: 0px 0px 0px 6px rgba(299, 137, 28, 1);
-                    }
-                }
-
-                .message {
-                    border-radius: 15px 15px 15px 0px;
                 }
             }
 
@@ -91,24 +74,33 @@
         .revealed {
             opacity: 1;
         }
+
+        .text-input {
+            z-index: 1;
+            position: sticky;
+            top: 90dvh;
+            margin: 0px 200px;
+            border: 2px solid;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
     }
 }
 
 .dark {
     .chatline {
         .container {
+            background-color: #202020;
             .revealing-div {
                 .right {
                     .message {
                         background-color: rgba(209, 101, 2, 1);
                     }
                 }
-
-                .left {
-                    .message {
-                        background-color: #202020;
-                    }
-                }
+            }
+            .text-input {
+                color: #aaa;
+                background-color: #202020;
             }
         }
     }
@@ -117,18 +109,17 @@
 .light {
     .chatline {
         .container {
+            background-color: #ddd;
             .revealing-div {
                 .right {
                     .message {
                         background-color: rgba(299, 137, 28, 1);
                     }
                 }
-
-                .left {
-                    .message {
-                        background-color: #ddd;
-                    }
-                }
+            }
+            .text-input {
+                color: #777;
+                background-color: #ddd;
             }
         }
     }
