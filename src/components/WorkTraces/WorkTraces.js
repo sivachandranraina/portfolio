@@ -29,7 +29,7 @@ const data = [
 			from: 'Jan, 2017',
 			to: 'Feb, 2017'
 		},
-		projects: ["Youth Portal"]
+		projects: ["Youth Oppourtunity Portal"]
 	},
 	{
 		name: 'Infofaces',
