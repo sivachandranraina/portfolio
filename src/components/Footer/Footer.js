@@ -3,7 +3,6 @@ import { Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebookF,
   faLinkedinIn,
   faInstagram,
   faWordpress,
@@ -17,10 +16,6 @@ class Footer extends Component {
     super();
     this.state = {
       links: [
-        // {
-        //   icon: faFacebookF,
-        //   link: "https://www.facebook.com/sivachandran.raina",
-        // },
         {
           icon: faLinkedinIn,
           link: "https://in.linkedin.com/in/sivachandran-raina-59538079",
