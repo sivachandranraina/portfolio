@@ -5,43 +5,41 @@ import _ from "lodash";
 import { Parallax } from "react-scroll-parallax";
 
 import leo from "./../../assets/images/leo.svg";
-import azure from "./../../assets/images/skills/azure.svg";
-import reactLogo from "./../../assets/images/skills/react.svg";
-import angularLogo from "./../../assets/images/skills/angular.svg";
+import aiLogo from "./../../assets/images/skills/gemini-icon-logo.svg";
 import pythonLogo from "./../../assets/images/skills/python.png";
 import nodeLogo from "./../../assets/images/skills/node.svg";
-import openaiLogo from "./../../assets/images/skills/openai.png";
 import photoshopLogo from "./../../assets/images/skills/photoshop.svg";
 import aiCerti from "./../../assets/images/certificate/microsoft-certified-associate-badge.svg";
 import fundaCerti from "./../../assets/images/certificate/microsoft-certified-fundamentals-badge.svg";
+import awsAICerti from "./../../assets/images/certificate/aws-certified-generative-ai-developer-professional-.png";
 import "./About.scss";
 
 const skillSet = [
   {
-    title: "Azure",
-    percentage: 75,
-    logo: azure
+    title: "Agentic AI",
+    percentage: 80,
+    logo: aiLogo
   },
   {
     title: "Python",
     percentage: 75,
     logo: pythonLogo
   },
-  {
-    title: "React",
-    percentage: 75,
-    logo: reactLogo
-  },
-  {
-    title: "Prompt Engineering",
-    percentage: 80,
-    logo: openaiLogo
-  },
-  {
-    title: "Angular",
-    percentage: 60,
-    logo: angularLogo
-  },
+  // {
+  //   title: "React",
+  //   percentage: 75,
+  //   logo: reactLogo
+  // },
+  // {
+  //   title: "Azure",
+  //   percentage: 75,
+  //   logo: azure
+  // },
+  // {
+  //   title: "Angular",
+  //   percentage: 60,
+  //   logo: angularLogo
+  // },
   {
     title: "Node",
     percentage: 70,
@@ -114,6 +112,10 @@ const About = () => {
                       tiltReverse={true}
                     >
                       <div className="dp">
+                        <div className="image-caption">
+                          <h2>A smile looks good on me</h2>
+                          Want to get hands-on?
+                        </div>
                       </div>
                     </Tilt>
                     <img src={leo} loading="lazy" alt="LEO" />
@@ -170,6 +172,10 @@ const About = () => {
               <h2>SKILLS</h2>
             </div>
             <div className="logo-group">
+              <div className="logo">
+                <img src={awsAICerti} alt="AWS AI Certificate"></img>
+                {/* <div className="caption">AWS Certified Generative AI Developer – Professional</div> */}
+              </div>
               <div className="logo">
                 <img src={aiCerti} alt="AI Certificate"></img>
                 <div className="caption">Azure AI Engineer Associate</div>
