@@ -9,7 +9,7 @@ export default function About() {
     }
   };
 
-  const fadeUp = {
+  const fadeUp: any = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
@@ -17,7 +17,7 @@ export default function About() {
   return (
     <section id="about" className="relative overflow-hidden bg-slate-50 py-32 dark:bg-slate-950">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -42,8 +42,8 @@ export default function About() {
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-8 h-1 w-20 rounded-full bg-gradient-to-r from-violet-400 to-indigo-500" />
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

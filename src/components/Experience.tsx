@@ -82,7 +82,7 @@ export default function Experience() {
     visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
   };
 
-  const cardVariants = {
+  const cardVariants: any = {
     hidden: { opacity: 0, y: 50, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
   };
@@ -90,7 +90,7 @@ export default function Experience() {
   return (
     <section id="work" ref={containerRef} className="relative overflow-hidden bg-white py-24 dark:bg-slate-950">
       <div className="pointer-events-none absolute inset-0 overflow-hidden flex justify-center items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
@@ -101,7 +101,7 @@ export default function Experience() {
         </motion.div>
       </div>
       <div className="relative mx-auto w-full max-w-6xl px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -124,13 +124,13 @@ export default function Experience() {
         <div className="mt-14 relative">
           {/* Animated SVG Timeline connecting the items */}
           <div className="absolute left-6 md:left-[50px] top-10 bottom-10 w-0.5 bg-slate-200 dark:bg-slate-800/50 hidden md:block z-0">
-            <motion.div 
+            <motion.div
               style={{ scaleY: pathLength, originY: 0 }}
               className="w-full h-full bg-gradient-to-b from-violet-400 via-indigo-500 to-fuchsia-500 rounded-full"
             />
           </div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -170,11 +170,11 @@ export default function Experience() {
                       <h3 className="mt-3 font-display text-5xl font-semibold leading-[0.95] text-slate-900 dark:text-white sm:text-7xl tracking-tight">
                         {experience.company}
                       </h3>
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "6rem" }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="mt-6 h-1 bg-gradient-to-r from-violet-400 to-indigo-500 rounded-full" 
+                        className="mt-6 h-1 bg-gradient-to-r from-violet-400 to-indigo-500 rounded-full"
                       />
                     </div>
 
@@ -189,11 +189,11 @@ export default function Experience() {
                     </p>
                     <div className="space-y-6">
                       {experience.projects.map((project, projectIndex) => (
-                        <motion.div 
+                        <motion.div
                           initial={{ opacity: 0, x: 20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.2 + (projectIndex * 0.1) }}
-                          key={project.name} 
+                          key={project.name}
                           className="flex gap-4 group cursor-default"
                         >
                           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-semibold text-violet-600 transition-colors group-hover:bg-violet-100 group-hover:text-violet-700 dark:bg-slate-800 dark:group-hover:bg-violet-900/50 dark:group-hover:text-violet-300">

@@ -6,7 +6,7 @@ type HoverType = "default" | "link" | "theme";
 
 export default function CustomCursor() {
   const [hoverType, setHoverType] = useState<HoverType>("default");
-  
+
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
@@ -31,7 +31,7 @@ export default function CustomCursor() {
 
     const handleHoverState = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      
+
       const isThemeSwitch = target.closest("button[aria-label='Toggle light and dark mode']");
 
       if (isThemeSwitch) {
@@ -66,7 +66,7 @@ export default function CustomCursor() {
         className="pointer-events-none fixed inset-0 z-[-1] hidden md:block"
         style={{ background: ambientGlow }}
       />
-      
+
       {/* Modern Morphing Cursor */}
       <motion.div
         className="pointer-events-none fixed left-0 top-0 z-[10000] flex items-center justify-center overflow-hidden mix-blend-difference"
