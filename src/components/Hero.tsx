@@ -22,7 +22,7 @@ export default function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="group relative min-h-screen bg-cover bg-fixed"
-        style={{ backgroundImage: `url(${profileImage})` }}
+        style={{ backgroundImage: `url(${profileImage})`, backgroundPositionY: "-150px" }}
         aria-label="Sivachandran portrait background"
         role="img"
       >
