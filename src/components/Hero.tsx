@@ -102,16 +102,20 @@ export default function Hero() {
             >
               <span className="relative z-10">Get in touch</span>
               <div className="absolute inset-0 z-0 h-full w-full translate-y-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-transform duration-300 ease-in-out group-hover:translate-y-0" />
+              {/* Glossy sweep shine */}
+              <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine pointer-events-none" />
             </a>
 
             <a
               href="https://docs.google.com/document/d/1wkx85xMuEQz3rXIi7IvuAn5CQGIWPCZ1w7Ohe3w_JNY/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/40 dark:border-slate-800 dark:bg-slate-900/40 px-8 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 backdrop-blur-md transition-all hover:bg-slate-100/50 dark:hover:bg-slate-800/50 hover:border-slate-400 dark:hover:border-slate-700"
+              className="group relative inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-900/10 px-8 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 backdrop-blur-md transition-all hover:bg-slate-100/50 dark:hover:bg-slate-800/55 hover:border-slate-400 dark:hover:border-slate-700 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.15)]"
             >
               <FileText className="h-4 w-4" />
               <span>View CV</span>
+              {/* Glossy sweep shine */}
+              <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             </a>
           </motion.div>
 
@@ -153,8 +157,8 @@ export default function Hero() {
             style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
             className="relative glass-panel rounded-[36px] p-4 w-full max-w-[340px] md:max-w-[380px] shadow-2xl border border-white/20 transition-all duration-300"
           >
-            {/* Fine gradient border wrapping only this portrait card */}
-            <div className="absolute inset-[-1.5px] rounded-[38px] bg-gradient-to-tr from-violet-500/40 via-fuchsia-500/20 to-cyan-500/30 -z-10 pointer-events-none" />
+            {/* Realistic light-catching glass bevel frame outline */}
+            <div className="absolute inset-[-2px] rounded-[38px] border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6)] pointer-events-none -z-10" />
 
             <div className="relative aspect-[4/5] rounded-[24px] overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/20 dark:border-slate-800/40 group">
               <img
@@ -166,6 +170,9 @@ export default function Hero() {
               
               {/* Dynamic light refraction layer on hover */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Reflective light sweep sweep */}
+              <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/25 to-transparent group-hover:animate-shine pointer-events-none" />
             </div>
 
             {/* Profile footer within card */}

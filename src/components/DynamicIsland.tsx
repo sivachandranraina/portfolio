@@ -127,12 +127,12 @@ export default function DynamicIsland() {
               {/* Right Theme Switcher */}
               <button
                 onClick={toggleTheme}
-                className="relative flex h-7 w-12 items-center rounded-full bg-slate-200 p-0.5 dark:bg-slate-800 transition-colors"
+                className="relative flex h-7 w-12 items-center rounded-full bg-slate-200/50 dark:bg-slate-900/60 p-0.5 border border-slate-300/35 dark:border-white/5 shadow-inner transition-colors"
                 aria-label="Toggle theme"
               >
                 <motion.div
                   layout
-                  className="flex h-6 w-6 items-center justify-center rounded-full bg-white dark:bg-slate-900 shadow-sm"
+                  className="flex h-6 w-6 items-center justify-center rounded-full bg-white/90 border border-white shadow-[0_2px_4px_rgba(0,0,0,0.06),inset_0_1px_1px_rgba(255,255,255,1)] dark:bg-white/10 dark:border-white/10 dark:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.2)]"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 >
                   {theme === "dark" ? (

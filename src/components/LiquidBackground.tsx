@@ -4,7 +4,7 @@ export default function LiquidBackground() {
   // Config for 6 floating blobs with distinct gradient themes and movement paths
   const blobs = [
     {
-      color: "bg-gradient-to-br from-violet-500/30 via-purple-500/25 to-indigo-500/20",
+      color: "bg-gradient-to-br from-violet-300/20 via-purple-300/15 to-indigo-300/10",
       size: "w-[300px] h-[300px] md:w-[500px] md:h-[500px]",
       x: ["0%", "25%", "-15%", "10%", "0%"],
       y: ["0%", "-30%", "20%", "-10%", "0%"],
@@ -13,7 +13,7 @@ export default function LiquidBackground() {
       duration: 28,
     },
     {
-      color: "bg-gradient-to-br from-fuchsia-500/25 via-pink-500/20 to-rose-500/15",
+      color: "bg-gradient-to-br from-rose-200/20 via-pink-200/15 to-purple-205/10",
       size: "w-[250px] h-[250px] md:w-[450px] md:h-[450px]",
       x: ["0%", "-25%", "20%", "-15%", "0%"],
       y: ["0%", "25%", "-20%", "30%", "0%"],
@@ -22,7 +22,7 @@ export default function LiquidBackground() {
       duration: 24,
     },
     {
-      color: "bg-gradient-to-br from-cyan-400/25 via-blue-500/20 to-indigo-600/15",
+      color: "bg-gradient-to-br from-sky-200/20 via-blue-200/15 to-indigo-200/10",
       size: "w-[280px] h-[280px] md:w-[480px] md:h-[480px]",
       x: ["10%", "-15%", "25%", "-10%", "10%"],
       y: ["-10%", "20%", "-30%", "15%", "-10%"],
@@ -31,7 +31,7 @@ export default function LiquidBackground() {
       duration: 32,
     },
     {
-      color: "bg-gradient-to-br from-amber-400/20 via-orange-500/15 to-rose-500/10",
+      color: "bg-gradient-to-br from-amber-100/15 via-orange-100/10 to-rose-100/5",
       size: "w-[220px] h-[220px] md:w-[380px] md:h-[380px]",
       x: ["-10%", "15%", "-20%", "10%", "-10%"],
       y: ["20%", "-15%", "25%", "-20%", "20%"],
@@ -40,7 +40,7 @@ export default function LiquidBackground() {
       duration: 22,
     },
     {
-      color: "bg-gradient-to-br from-emerald-400/15 via-teal-500/15 to-cyan-500/10",
+      color: "bg-gradient-to-br from-teal-100/15 via-cyan-100/10 to-sky-100/5",
       size: "w-[240px] h-[240px] md:w-[420px] md:h-[420px]",
       x: ["15%", "5%", "-15%", "20%", "15%"],
       y: ["15%", "-25%", "10%", "-15%", "15%"],

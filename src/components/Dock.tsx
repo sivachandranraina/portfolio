@@ -96,7 +96,7 @@ export default function Dock() {
               {isActive && (
                 <motion.div
                   layoutId="dockBubble"
-                  className="absolute inset-0 bg-violet-600/10 dark:bg-violet-400/15 rounded-2xl border border-violet-500/20 dark:border-violet-400/20 -z-10"
+                  className="absolute inset-0 bg-white/60 border border-white/60 shadow-[0_4px_12px_rgba(0,0,0,0.06),inset_0_1.5px_1.5px_rgba(255,255,255,1)] dark:bg-white/10 dark:border-white/10 dark:shadow-[0_4px_12px_rgba(0,0,0,0.3),inset_0_1.5px_1.5px_rgba(255,255,255,0.15)] rounded-2xl -z-10"
                   transition={{
                     type: "spring",
                     stiffness: 350,

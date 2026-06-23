@@ -154,22 +154,23 @@ export default function Experience() {
                 {/* Visual timeline node */}
                 <div className="absolute -left-[61px] top-[40px] w-6 h-6 rounded-full border-4 border-slate-100 dark:border-slate-950 bg-violet-500 hidden md:block z-20 shadow-md group-hover:scale-125 transition-transform duration-300" />
 
-                {/* Rotating colored gradient border wrapper on card hover */}
-                <div className="relative rounded-[30px] p-[1.2px] overflow-hidden bg-slate-200/50 dark:bg-slate-800/40 shadow-xl">
-                  <div className={`absolute left-1/2 top-1/2 -z-10 h-[220%] w-[220%] -translate-x-1/2 -translate-y-1/2 ${experience.glowGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow`} />
-                  
-                  {/* Frosted Glass inner container */}
-                  <div className="bg-white/95 dark:bg-slate-900/90 rounded-[29px] p-6 md:p-10 backdrop-blur-md relative overflow-hidden h-full w-full">
-                    {/* Atmospheric brand cover blur in background of the card */}
-                    <div className="absolute inset-0 z-0 opacity-[0.06] dark:opacity-[0.08] pointer-events-none">
-                      <img
-                        src={experience.cover}
-                        alt=""
-                        className="h-full w-full object-cover scale-110 filter blur-[10px]"
-                        aria-hidden
-                      />
-                    </div>
+                {/* Thick glass frame outline and box shadows */}
+                <div className="relative rounded-[30px] p-[1px] overflow-hidden bg-white/40 dark:bg-slate-950/20 border border-white/40 dark:border-white/10 shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.6),0_12px_36px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_24px_48px_rgba(0,0,0,0.4)] backdrop-blur-md">
+                  {/* Reflective light sweep sweep */}
+                  <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none z-20" />
 
+                  {/* Atmospheric brand cover blur in background of the card */}
+                  <div className="absolute inset-0 z-0 opacity-[0.05] dark:opacity-[0.07] pointer-events-none">
+                    <img
+                      src={experience.cover}
+                      alt=""
+                      className="h-full w-full object-cover scale-110 filter blur-[15px]"
+                      aria-hidden
+                    />
+                  </div>
+
+                  {/* Glass inner container details */}
+                  <div className="p-6 md:p-10 relative z-10">
                     <div className="relative z-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                       {/* Left: Summary & Metadata */}
                       <div className="space-y-6">
@@ -196,7 +197,7 @@ export default function Experience() {
                       </div>
 
                       {/* Right: Key Projects list inside glass box */}
-                      <div className="rounded-[24px] border border-slate-200/50 bg-slate-50/50 p-6 dark:border-slate-800/40 dark:bg-slate-950/20">
+                      <div className="rounded-[24px] border border-white/60 bg-white/45 p-6 dark:border-white/10 dark:bg-slate-900/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_8px_rgba(0,0,0,0.03)] backdrop-blur-md">
                         <div className="flex items-center gap-2 mb-5">
                           <Award className="h-4 w-4 text-violet-500" />
                           <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">

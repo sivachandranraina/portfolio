@@ -175,25 +175,26 @@ export default function Skills() {
 
             <div className="grid grid-cols-2 gap-4">
               {aiTools.map((tool) => (
-                <div key={tool.name} className="relative group rounded-[22px] p-[1.2px] overflow-hidden bg-slate-200/50 dark:bg-slate-850">
-                  {/* Rotating colorful Apple intelligence border on hover */}
-                  <div className="absolute left-1/2 top-1/2 -z-10 h-[280%] w-[280%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#8b5cf6_220deg,#ec4899_280deg,#06b6d4_340deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                <div
+                  key={tool.name}
+                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex items-center gap-3 backdrop-blur-md overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)]"
+                >
+                  {/* Reflective light sweep sweep */}
+                  <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                   
-                  <div className="bg-white/95 dark:bg-slate-900/90 rounded-[21px] p-4 flex items-center gap-3 backdrop-blur-md h-full w-full">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200/20 bg-slate-100/50 dark:bg-slate-950 p-2">
-                      <img
-                        src={tool.logo}
-                        alt={`${tool.name} logo`}
-                        className={`h-7 w-7 object-contain ${tool.type === "invert" ? "dark:invert" : ""}`}
-                      />
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200/20 bg-slate-100/50 dark:bg-slate-900/50 p-2 z-10">
+                    <img
+                      src={tool.logo}
+                      alt={`${tool.name} logo`}
+                      className={`h-7 w-7 object-contain ${tool.type === "invert" ? "dark:invert" : ""}`}
+                    />
+                  </div>
+                  <div className="z-10">
+                    <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                      {tool.name}
                     </div>
-                    <div>
-                      <div className="text-sm font-semibold text-slate-900 dark:text-white">
-                        {tool.name}
-                      </div>
-                      <div className="text-[8px] font-bold uppercase tracking-widest text-slate-400 mt-0.5">
-                        {tool.brand}
-                      </div>
+                    <div className="text-[8px] font-bold uppercase tracking-widest text-slate-400 mt-0.5">
+                      {tool.brand}
                     </div>
                   </div>
                 </div>
@@ -223,21 +224,21 @@ export default function Skills() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {certifications.map((cert) => (
-                <div key={cert.title} className="relative group rounded-[22px] p-[1.2px] overflow-hidden bg-slate-200/50 dark:bg-slate-850">
-                  {/* Rotating colorful Apple intelligence border on hover */}
-                  <div className="absolute left-1/2 top-1/2 -z-10 h-[280%] w-[280%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#eab308_220deg,#ec4899_280deg,#8b5cf6_340deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                <div
+                  key={cert.title}
+                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex flex-col items-center justify-between gap-4 backdrop-blur-md overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] h-full"
+                >
+                  <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                   
-                  <div className="bg-white/95 dark:bg-slate-900/90 rounded-[21px] p-4 flex flex-col items-center justify-between gap-4 backdrop-blur-md h-full w-full">
-                    <div className="flex h-28 w-full items-center justify-center rounded-xl bg-slate-100/50 dark:bg-slate-950 p-2 overflow-hidden">
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        className="h-full w-full object-contain filter drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="text-[11px] font-semibold text-center text-slate-700 dark:text-slate-200 group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors leading-snug">
-                      {cert.title}
-                    </div>
+                  <div className="flex h-28 w-full items-center justify-center rounded-xl bg-slate-100/50 dark:bg-slate-900/50 p-2 overflow-hidden z-10">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="h-full w-full object-contain filter drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="text-[11px] font-semibold text-center text-slate-700 dark:text-slate-200 group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors leading-snug z-10">
+                    {cert.title}
                   </div>
                 </div>
               ))}

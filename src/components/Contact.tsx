@@ -147,19 +147,19 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/sivachandran-nkk"
                 target="_blank"
                 rel="noreferrer"
-                className="relative group flex items-center gap-4 p-4 rounded-[22px] overflow-hidden border border-slate-200/50 bg-slate-50/50 dark:border-slate-800/50 dark:bg-slate-950/15"
+                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
               >
-                {/* Rotating glow ring on card hover */}
-                <div className="absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#3b82f6_220deg,#6366f1_280deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                {/* Reflective light sweep sweep */}
+                <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                 
-                <div className="bg-white/90 dark:bg-slate-900/90 rounded-[20px] p-4 flex items-center justify-between w-full backdrop-blur-sm">
+                <div className="p-4 flex items-center justify-between w-full z-10">
                   <div className="flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500 border border-slate-200/10">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                       </svg>
                     </span>
-                    <div>
+                    <div className="text-left">
                       <div className="text-sm font-semibold text-slate-900 dark:text-white">
                         LinkedIn
                       </div>
@@ -177,19 +177,19 @@ export default function Contact() {
                 href="https://instagram.com/sivachandranraina"
                 target="_blank"
                 rel="noreferrer"
-                className="relative group flex items-center gap-4 p-4 rounded-[22px] overflow-hidden border border-slate-200/50 bg-slate-50/50 dark:border-slate-800/50 dark:bg-slate-950/15"
+                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
               >
-                {/* Rotating glow ring on card hover */}
-                <div className="absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#ec4899_220deg,#f43f5e_280deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                {/* Reflective light sweep sweep */}
+                <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                 
-                <div className="bg-white/90 dark:bg-slate-900/90 rounded-[20px] p-4 flex items-center justify-between w-full backdrop-blur-sm">
+                <div className="p-4 flex items-center justify-between w-full z-10">
                   <div className="flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500 border border-slate-200/10">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                         <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm6.2-2.4a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z" />
                       </svg>
                     </span>
-                    <div>
+                    <div className="text-left">
                       <div className="text-sm font-semibold text-slate-900 dark:text-white">
                         Instagram
                       </div>

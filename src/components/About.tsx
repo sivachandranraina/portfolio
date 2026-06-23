@@ -59,8 +59,10 @@ export default function About() {
             variants={fadeUp}
             className="glass-panel p-8 rounded-[32px] md:col-span-2 flex flex-col justify-between border border-white/20 dark:border-slate-800/50 shadow-xl relative group overflow-hidden"
           >
-            {/* Hover card border highlight */}
-            <div className="absolute inset-[-1.5px] rounded-[34px] bg-gradient-to-tr from-violet-500/20 via-transparent to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 pointer-events-none" />
+            {/* Realistic light-catching glass bevel frame outline */}
+            <div className="absolute inset-[-2px] rounded-[34px] border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6)] pointer-events-none -z-10" />
+            {/* Reflective light sweep sweep */}
+            <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
@@ -85,7 +87,8 @@ export default function About() {
             variants={fadeUp}
             className="glass-panel p-8 rounded-[32px] flex flex-col justify-between border border-white/20 dark:border-slate-800/50 shadow-xl relative group overflow-hidden"
           >
-            <div className="absolute inset-[-1.5px] rounded-[34px] bg-gradient-to-tr from-fuchsia-500/20 via-transparent to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 pointer-events-none" />
+            <div className="absolute inset-[-2px] rounded-[34px] border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6)] pointer-events-none -z-10" />
+            <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-fuchsia-500/10 text-fuchsia-500">
@@ -114,7 +117,7 @@ export default function About() {
               {["AWS Certified", "Azure Certified", "GenAI Dev"].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-slate-200/50 dark:bg-slate-800/60 px-4 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-300/30"
+                  className="rounded-full bg-white/50 border border-white/60 dark:bg-white/5 dark:border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_6px_rgba(0,0,0,0.03)] px-4 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400 backdrop-blur-md"
                 >
                   {tag}
                 </span>
@@ -127,7 +130,8 @@ export default function About() {
             variants={fadeUp}
             className="glass-panel p-8 rounded-[32px] flex flex-col justify-between border border-white/20 dark:border-slate-800/50 shadow-xl relative group overflow-hidden"
           >
-            <div className="absolute inset-[-1.5px] rounded-[34px] bg-gradient-to-tr from-cyan-500/20 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 pointer-events-none" />
+            <div className="absolute inset-[-2px] rounded-[34px] border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6)] pointer-events-none -z-10" />
+            <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500">
@@ -147,7 +151,8 @@ export default function About() {
             variants={fadeUp}
             className="glass-panel p-8 rounded-[32px] md:col-span-2 flex flex-col justify-between border border-white/20 dark:border-slate-800/50 shadow-xl relative group overflow-hidden"
           >
-            <div className="absolute inset-[-1.5px] rounded-[34px] bg-gradient-to-tr from-amber-500/20 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 pointer-events-none" />
+            <div className="absolute inset-[-2px] rounded-[34px] border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6)] pointer-events-none -z-10" />
+            <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500">
