@@ -1,127 +1,210 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Mail, MapPin, Copy, Check, Send } from "lucide-react";
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("sivachandran94@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const fadeUp: any = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 25 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { type: "spring", stiffness: 100, damping: 15 } 
+    }
   };
 
   return (
-    <section id="contact" className="relative z-[11] overflow-hidden py-24 text-white h-[700px] pt-24 border-t border-t-slate-800">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Dynamic auroras for contact */}
-        {/* <div className="absolute -bottom-1/2 left-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-r from-emerald-500/10 to-transparent blur-[100px] animate-aurora" />
-        <div className="absolute -top-1/4 right-0 h-[400px] w-[400px] rounded-full bg-gradient-to-l from-violet-500/10 to-transparent blur-[100px] animate-auroraSlow" /> */}
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5 }}
-          className="absolute -right-8 top-[10%] text-[150px] md:text-[240px] font-display font-semibold uppercase tracking-[0.2em] text-slate-700/10"
-        >
-          Connect
-        </motion.div>
+    <section id="contact" className="relative py-28 px-6 overflow-hidden">
+      {/* Background large decorative title */}
+      <div className="absolute right-10 top-10 pointer-events-none select-none -z-10">
+        <span className="font-display text-[150px] md:text-[220px] font-bold uppercase tracking-[0.15em] text-slate-200/20 dark:text-slate-800/10 leading-none">
+          Reach
+        </span>
       </div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-        className="relative mx-auto grid w-full max-w-6xl gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr] z-10"
-      >
-        <div className="space-y-8">
-          <motion.div variants={fadeUp}>
-            <p className="font-display text-sm uppercase tracking-[0.3em] text-violet-400">
-              Connect
-            </p>
-            <h2 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl drop-shadow-lg">
-              Let's build something <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent">thoughtful</span> together.
-            </h2>
-          </motion.div>
-          <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light leading-relaxed max-w-lg">
-            I am always open to new projects, collaborations, or just a friendly hello.
-            Reach out on social or email and I will get back to you soon.
-          </motion.p>
-          <motion.div variants={fadeUp} className="space-y-6 pt-4 text-sm text-slate-300">
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center transition-colors group-hover:bg-violet-900/40 group-hover:border-violet-500/50">
-                <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-xs uppercase tracking-[0.3em] text-slate-500 mb-1">
-                  Email
-                </span>
-                <a href="mailto:sivachandran94@gmail.com" className="text-lg hover:text-violet-400 transition-colors">sivachandran94@gmail.com</a>
+      <div className="mx-auto w-full max-w-6xl">
+        {/* Header Block */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-14 text-left"
+        >
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-violet-500 font-bold">
+            Connect
+          </p>
+          <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold leading-tight text-slate-900 dark:text-white max-w-xl">
+            Let's build something thoughtful together.
+          </h2>
+          <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+        </motion.div>
+
+        {/* Bento Contact Hub */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+          className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 relative z-10"
+        >
+          {/* Left Panel: Direct Communication glass-panel */}
+          <motion.div
+            variants={fadeUp}
+            className="glass-panel p-8 md:p-10 rounded-[32px] border border-white/20 dark:border-slate-800/50 shadow-xl flex flex-col justify-between"
+          >
+            <div className="space-y-6">
+              <p className="text-lg text-slate-600 dark:text-slate-350 font-light leading-relaxed max-w-lg">
+                I am always open to new projects, agentic AI consulting, Python microservices scaling, or just a friendly hello. Reach out and I will get back to you soon.
+              </p>
+
+              <div className="space-y-6 pt-4">
+                {/* Email Address Widget with Copy Button */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-950/20 border border-slate-200/40 dark:border-slate-800/50 gap-4 group/item">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-500">
+                      <Mail className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-slate-400">
+                        Email Address
+                      </span>
+                      <a href="mailto:sivachandran94@gmail.com" className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-violet-500 transition-colors">
+                        sivachandran94@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <button
+                    onClick={copyEmail}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-2 text-xs font-semibold shadow-sm transition-all hover:scale-105 active:scale-95"
+                  >
+                    <AnimatePresence mode="wait">
+                      {copied ? (
+                        <motion.span
+                          key="copied"
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          exit={{ scale: 0.8, opacity: 0 }}
+                          className="flex items-center gap-1.5"
+                        >
+                          <Check className="h-3.5 w-3.5 text-emerald-500" />
+                          <span>Copied</span>
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          key="copy"
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          exit={{ scale: 0.8, opacity: 0 }}
+                          className="flex items-center gap-1.5"
+                        >
+                          <Copy className="h-3.5 w-3.5" />
+                          <span>Copy</span>
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </button>
+                </div>
+
+                {/* Location Widget */}
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-950/20 border border-slate-200/40 dark:border-slate-800/50">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-slate-400">
+                      Location
+                    </span>
+                    <span className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-200">
+                      Chennai, India
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center transition-colors group-hover:bg-emerald-900/40 group-hover:border-emerald-500/50">
-                <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-xs uppercase tracking-[0.3em] text-slate-500 mb-1">
-                  Location
-                </span>
-                <span className="text-lg">Chennai, India</span>
-              </div>
-            </div>
           </motion.div>
-        </div>
 
-        <motion.div variants={fadeUp} className="mt-8 lg:mt-0">
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/50 backdrop-blur-xl p-8 shadow-2xl relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-400 mb-8 relative z-10">Social Network</p>
-            <div className="space-y-4 relative z-10">
-              <motion.a
+          {/* Right Panel: Social networks grid links */}
+          <motion.div
+            variants={fadeUp}
+            className="glass-panel p-8 rounded-[32px] border border-white/20 dark:border-slate-800/50 shadow-xl flex flex-col justify-between"
+          >
+            <div className="space-y-4">
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 block mb-4">
+                Social Pipelines
+              </span>
+
+              {/* LinkedIn capsule */}
+              <a
                 href="https://www.linkedin.com/in/sivachandran-nkk"
                 target="_blank"
                 rel="noreferrer"
-                className="group/link flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 px-6 py-5 transition-colors hover:border-violet-500/50 hover:bg-slate-900"
+                className="relative group flex items-center gap-4 p-4 rounded-[22px] overflow-hidden border border-slate-200/50 bg-slate-50/50 dark:border-slate-800/50 dark:bg-slate-950/15"
               >
-                <span className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-violet-500/20 bg-violet-500/10 text-violet-400 shadow-[0_0_30px_rgba(56,189,248,0.15)] transition-shadow group-hover/link:shadow-[0_0_40px_rgba(56,189,248,0.4)]">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden>
-                    <path d="M20.45 20.45h-3.56v-5.59c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.69H9.33V9h3.42v1.56h.05c.48-.9 1.65-1.86 3.4-1.86 3.64 0 4.31 2.4 4.31 5.52v6.23zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
-                  </svg>
-                </span>
-                <div>
-                  <div className="text-lg font-semibold text-white group-hover/link:text-violet-400 transition-colors">LinkedIn</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-400 mt-1">
-                    Professional updates
+                {/* Rotating glow ring on card hover */}
+                <div className="absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#3b82f6_220deg,#6366f1_280deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                
+                <div className="bg-white/90 dark:bg-slate-900/90 rounded-[20px] p-4 flex items-center justify-between w-full backdrop-blur-sm">
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                        LinkedIn
+                      </div>
+                      <div className="text-[8px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">
+                        Professional updates
+                      </div>
+                    </div>
                   </div>
+                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-blue-500 transition-colors" />
                 </div>
-              </motion.a>
+              </a>
 
-              <motion.a
+              {/* Instagram capsule */}
+              <a
                 href="https://instagram.com/sivachandranraina"
                 target="_blank"
                 rel="noreferrer"
-                className="group/link flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 px-6 py-5 transition-colors hover:border-pink-500/50 hover:bg-slate-900"
+                className="relative group flex items-center gap-4 p-4 rounded-[22px] overflow-hidden border border-slate-200/50 bg-slate-50/50 dark:border-slate-800/50 dark:bg-slate-950/15"
               >
-                <span className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-pink-500/20 bg-pink-500/10 text-pink-400 shadow-[0_0_30px_rgba(236,72,153,0.15)] transition-shadow group-hover/link:shadow-[0_0_40px_rgba(236,72,153,0.4)]">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden>
-                    <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm6.2-2.4a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z" />
-                  </svg>
-                </span>
-                <div>
-                  <div className="text-lg font-semibold text-white group-hover/link:text-pink-400 transition-colors">Instagram</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-400 mt-1">
-                    Visual stories
+                {/* Rotating glow ring on card hover */}
+                <div className="absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#ec4899_220deg,#f43f5e_280deg,transparent_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-apple-glow" />
+                
+                <div className="bg-white/90 dark:bg-slate-900/90 rounded-[20px] p-4 flex items-center justify-between w-full backdrop-blur-sm">
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                        <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm6.2-2.4a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                        Instagram
+                      </div>
+                      <div className="text-[8px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">
+                        Visual stories
+                      </div>
+                    </div>
                   </div>
+                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-pink-500 transition-colors" />
                 </div>
-              </motion.a>
+              </a>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
