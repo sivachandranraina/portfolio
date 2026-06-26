@@ -1,4 +1,4 @@
-import profileImage from "../assets/bg.png";
+import profileImage from "../assets/bg.jpg";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -22,12 +22,12 @@ export default function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="group relative min-h-screen bg-cover bg-fixed"
-        style={{ backgroundImage: `url(${profileImage})`, backgroundPositionY: "-150px" }}
+        style={{ backgroundImage: `url(${profileImage})`, backgroundPositionY: "20%" }}
         aria-label="Sivachandran portrait background"
         role="img"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/40 to-slate-950/100 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 z-10 flex flex-col justify-between">
+        <div className="absolute inset-0 z-10 flex flex-col justify-end">
           <motion.div
             className="mx-auto w-full max-w-6xl px-6 pb-16 pt-32"
             variants={containerVariants}
@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className="mx-auto w-full max-w-6xl px-6 pb-16 pt-32 font-display text-slate-200/80 text-[18px] md:text-[28px] tracking-widest uppercase"
+            className="mx-auto w-full max-w-6xl px-6 pb-16 font-display text-slate-200/80 text-[18px] md:text-[28px] tracking-widest uppercase"
           >
             Agentic AI &#x2022; Vibe Coder &#x2022; Pythonista &#x2022; TypeScriptist &#x2022; Spread <b className="text-[firebrick] animate-pulse">❤</b>
           </motion.div>
