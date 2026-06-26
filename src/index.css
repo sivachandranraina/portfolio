@@ -88,8 +88,8 @@ img {
 
 .glass-panel {
   background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(28px) saturate(210%);
-  -webkit-backdrop-filter: blur(28px) saturate(210%);
+  backdrop-filter: blur(2px) saturate(210%);
+  -webkit-backdrop-filter: blur(2px) saturate(210%);
   border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow: 
     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.45), /* bevel light reflection */
@@ -99,8 +99,8 @@ img {
 
 .dark .glass-panel {
   background: rgba(15, 23, 42, 0.35);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 
     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.15), /* dark bevel reflection */
@@ -110,8 +110,8 @@ img {
 
 .glass-dock {
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(40px) saturate(225%);
-  -webkit-backdrop-filter: blur(40px) saturate(225%);
+  backdrop-filter: blur(2px) saturate(225%);
+  -webkit-backdrop-filter: blur(2px) saturate(225%);
   border: 1px solid rgba(255, 255, 255, 0.38);
   box-shadow: 
     inset 0 2px 2px rgba(255, 255, 255, 0.65),
@@ -120,8 +120,8 @@ img {
 
 .dark .glass-dock {
   background: rgba(15, 23, 42, 0.5);
-  backdrop-filter: blur(40px) saturate(190%);
-  -webkit-backdrop-filter: blur(40px) saturate(190%);
+  backdrop-filter: blur(2px) saturate(190%);
+  -webkit-backdrop-filter: blur(2px) saturate(190%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 
     inset 0 2px 2px rgba(255, 255, 255, 0.15),

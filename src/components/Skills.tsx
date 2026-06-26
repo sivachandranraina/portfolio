@@ -18,36 +18,36 @@ const iconSkills = [
     label: "Python",
     tagline: "GenAI + automation",
     icon: pythonIcon,
-    tone: "bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-300",
-    accent: "from-emerald-400/20 via-emerald-500/10 to-transparent",
+    tone: "bg-slate-50 text-slate-600 dark:bg-slate-900/40 dark:text-slate-300",
+    accent: "from-slate-400/10 to-transparent",
   },
   {
     label: "Azure",
     tagline: "AI + cloud services",
     icon: azureIcon,
-    tone: "bg-violet-50 text-violet-600 dark:bg-violet-950/40 dark:text-violet-300",
-    accent: "from-violet-400/20 via-blue-500/10 to-transparent",
+    tone: "bg-slate-50 text-slate-600 dark:bg-slate-900/40 dark:text-slate-300",
+    accent: "from-slate-400/10 to-transparent",
   },
   {
     label: "AWS",
     tagline: "AI + cloud services",
     icon: awsIcon,
-    tone: "bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-300",
-    accent: "from-amber-400/20 via-orange-500/10 to-transparent",
+    tone: "bg-slate-50 text-slate-600 dark:bg-slate-900/40 dark:text-slate-300",
+    accent: "from-slate-400/10 to-transparent",
   },
   {
     label: "Node",
     tagline: "APIs + realtime",
     icon: nodeIcon,
-    tone: "bg-lime-50 text-lime-600 dark:bg-lime-950/40 dark:text-lime-300",
-    accent: "from-lime-400/20 via-emerald-500/10 to-transparent",
+    tone: "bg-slate-50 text-slate-600 dark:bg-slate-900/40 dark:text-slate-300",
+    accent: "from-slate-400/10 to-transparent",
   },
   {
     label: "LLM & SLM",
     tagline: "Agentic AI",
     icon: geminiIcon,
-    tone: "bg-fuchsia-50 text-fuchsia-600 dark:bg-fuchsia-950/40 dark:text-fuchsia-300",
-    accent: "from-fuchsia-400/20 via-pink-500/10 to-transparent",
+    tone: "bg-slate-50 text-slate-600 dark:bg-slate-900/40 dark:text-slate-300",
+    accent: "from-slate-400/10 to-transparent",
   },
 ];
 
@@ -101,13 +101,13 @@ export default function Skills() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
         >
           <div>
-            <p className="font-display text-xs uppercase tracking-[0.3em] text-violet-500 font-bold">
+            <p className="font-display text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 font-bold">
               Skillset
             </p>
             <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-slate-900 dark:text-white">
               Tools I use to ship polished experiences.
             </h2>
-            <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+            <div className="mt-6 h-1 w-16 rounded-full bg-slate-200 dark:bg-slate-800" />
           </div>
           <p className="max-w-md text-base text-slate-600 dark:text-slate-300 font-light leading-relaxed">
             A hand-picked array of core frameworks, cloud infrastructure suites, and agentic integrations designed for maximum efficiency.
@@ -127,7 +127,7 @@ export default function Skills() {
               variants={itemVariants}
               key={skill.label}
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-[24px] border border-slate-200/60 bg-white/50 dark:border-slate-800/60 dark:bg-slate-950/40 p-5 shadow-sm backdrop-blur-md transition-all duration-300"
+              className="group relative overflow-hidden rounded-[24px] border border-slate-200/60 bg-white/50 dark:border-slate-800/60 dark:bg-slate-950/40 p-5 shadow-sm backdrop-blur-[2px] transition-all duration-300"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${skill.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-100 -z-10`} />
               <div className="flex flex-col gap-4">
@@ -162,7 +162,7 @@ export default function Skills() {
             className="glass-panel p-8 rounded-[32px] border border-white/20 dark:border-slate-800/50 shadow-xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200/10">
                 <Sparkles className="h-4.5 w-4.5" />
               </div>
               <div>
@@ -177,7 +177,7 @@ export default function Skills() {
               {aiTools.map((tool) => (
                 <div
                   key={tool.name}
-                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex items-center gap-3 backdrop-blur-md overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)]"
+                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex items-center gap-3 backdrop-blur-[2px] overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)]"
                 >
                   {/* Reflective light sweep sweep */}
                   <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
@@ -211,7 +211,7 @@ export default function Skills() {
             className="glass-panel p-8 rounded-[32px] border border-white/20 dark:border-slate-800/50 shadow-xl"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200/10">
                 <ShieldCheck className="h-4.5 w-4.5" />
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function Skills() {
               {certifications.map((cert) => (
                 <div
                   key={cert.title}
-                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex flex-col items-center justify-between gap-4 backdrop-blur-md overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] h-full"
+                  className="relative group rounded-[22px] border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/20 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_4px_12px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.3)] p-4 flex flex-col items-center justify-between gap-4 backdrop-blur-[2px] overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] h-full"
                 >
                   <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                   

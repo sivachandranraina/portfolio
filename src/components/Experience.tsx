@@ -12,8 +12,8 @@ const experiences = [
     role: "Lead Engineer",
     period: "Mar, 2017 - Present",
     cover: presidioOutside,
-    accent: "from-violet-500/20 via-indigo-500/10 to-transparent",
-    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#8b5cf6_220deg,#6366f1_280deg,#06b6d4_340deg,transparent_360deg)]",
+    accent: "from-slate-400/10 via-slate-500/5 to-transparent",
+    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#64748b_220deg,#94a3b8_280deg,#cbd5e1_340deg,transparent_360deg)]",
     summary:
       "A 1000+ headcount firm where I lead large-scale development pipelines, owning Generative AI orchestrations and enterprise API infrastructures.",
     projects: [
@@ -36,8 +36,8 @@ const experiences = [
     role: "Frontend Developer",
     period: "Jan, 2017 - Feb, 2017",
     cover: commutatusOutside,
-    accent: "from-emerald-500/20 via-teal-500/10 to-transparent",
-    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#10b981_220deg,#14b8a6_280deg,#06b6d4_340deg,transparent_360deg)]",
+    accent: "from-slate-400/10 via-slate-500/5 to-transparent",
+    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#64748b_220deg,#94a3b8_280deg,#cbd5e1_340deg,transparent_360deg)]",
     summary:
       "A fast-paced product startup environment where I shipped frontend logic and optimized user search funnels.",
     projects: [
@@ -52,8 +52,8 @@ const experiences = [
     role: "UI Developer",
     period: "Jun, 2015 - Dec, 2016",
     cover: infofacesOutside,
-    accent: "from-fuchsia-500/20 via-pink-500/10 to-transparent",
-    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#d946ef_220deg,#ec4899_280deg,#f43f5e_340deg,transparent_360deg)]",
+    accent: "from-slate-400/10 via-slate-500/5 to-transparent",
+    glowGradient: "bg-[conic-gradient(from_0deg,transparent_0deg,transparent_160deg,#64748b_220deg,#94a3b8_280deg,#cbd5e1_340deg,transparent_360deg)]",
     summary:
       "A startup environment where I built mortgage dashboards, candidate interviews modules, and operations reporting panels.",
     projects: [
@@ -115,13 +115,13 @@ export default function Experience() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
         >
           <div>
-            <p className="font-display text-xs uppercase tracking-[0.3em] text-violet-500 font-bold">
+            <p className="font-display text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 font-bold">
               Experience
             </p>
             <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-slate-900 dark:text-white">
               Places I helped build and scale.
             </h2>
-            <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+            <div className="mt-6 h-1 w-16 rounded-full bg-slate-200 dark:bg-slate-800" />
           </div>
           <p className="max-w-md text-base text-slate-600 dark:text-slate-300 font-light leading-relaxed">
             A comprehensive track record of system ownership, team collaboration, and flagship feature delivery.
@@ -134,7 +134,7 @@ export default function Experience() {
           <div className="absolute left-6 md:left-[45px] top-6 bottom-6 w-[2px] bg-slate-200 dark:bg-slate-800/40 hidden md:block z-0">
             <motion.div
               style={{ scaleY: pathLength, originY: 0 }}
-              className="w-full h-full bg-gradient-to-b from-violet-500 via-fuchsia-500 to-emerald-400 origin-top"
+              className="w-full h-full bg-slate-350 dark:bg-slate-700 origin-top"
             />
           </div>
 
@@ -152,10 +152,10 @@ export default function Experience() {
                 className="relative ml-0 md:ml-20 group"
               >
                 {/* Visual timeline node */}
-                <div className="absolute -left-[61px] top-[40px] w-6 h-6 rounded-full border-4 border-slate-100 dark:border-slate-950 bg-violet-500 hidden md:block z-20 shadow-md group-hover:scale-125 transition-transform duration-300" />
+                <div className="absolute -left-[61px] top-[40px] w-6 h-6 rounded-full border-4 border-slate-100 dark:border-slate-950 bg-slate-400 dark:bg-slate-600 hidden md:block z-20 shadow-md group-hover:scale-125 transition-transform duration-300" />
 
                 {/* Thick glass frame outline and box shadows */}
-                <div className="relative rounded-[30px] p-[1px] overflow-hidden bg-white/40 dark:bg-slate-950/20 border border-white/40 dark:border-white/10 shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.6),0_12px_36px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_24px_48px_rgba(0,0,0,0.4)] backdrop-blur-md">
+                <div className="relative rounded-[30px] p-[1px] overflow-hidden bg-white/40 dark:bg-slate-950/20 border border-white/40 dark:border-white/10 shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.6),0_12px_36px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_24px_48px_rgba(0,0,0,0.4)] backdrop-blur-[2px]">
                   {/* Reflective light sweep sweep */}
                   <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none z-20" />
 
@@ -175,7 +175,7 @@ export default function Experience() {
                       {/* Left: Summary & Metadata */}
                       <div className="space-y-6">
                         <div className="flex flex-wrap items-center gap-3">
-                          <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-500/10 bg-violet-500/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
+                          <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200/50 bg-slate-100/50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:border-slate-850 dark:bg-slate-900/30 dark:text-slate-450">
                             <Calendar className="h-3 w-3" />
                             {experience.period}
                           </span>
@@ -197,9 +197,9 @@ export default function Experience() {
                       </div>
 
                       {/* Right: Key Projects list inside glass box */}
-                      <div className="rounded-[24px] border border-white/60 bg-white/45 p-6 dark:border-white/10 dark:bg-slate-900/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_8px_rgba(0,0,0,0.03)] backdrop-blur-md">
+                      <div className="rounded-[24px] border border-white/60 bg-white/45 p-6 dark:border-white/10 dark:bg-slate-900/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_8px_rgba(0,0,0,0.03)] backdrop-blur-[2px]">
                         <div className="flex items-center gap-2 mb-5">
-                          <Award className="h-4 w-4 text-violet-500" />
+                          <Award className="h-4 w-4 text-slate-500" />
                           <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
                             Top Projects
                           </span>

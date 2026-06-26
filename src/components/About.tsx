@@ -37,13 +37,13 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-left"
         >
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-violet-500 font-bold">
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 font-bold">
             About Me
           </p>
           <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold leading-tight text-slate-900 dark:text-white max-w-2xl">
             A curious developer bridging the gap between Cloud architecture and Agentic AI.
           </h2>
-          <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+          <div className="mt-6 h-1 w-16 rounded-full bg-slate-200 dark:bg-slate-800" />
         </motion.div>
 
         {/* Bento Grid Layout */}
@@ -65,7 +65,7 @@ export default function About() {
             <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-350 border border-slate-200/10">
                 <User className="h-5 w-5" />
               </div>
               <h3 className="font-display text-2xl font-semibold text-slate-900 dark:text-white">
@@ -91,7 +91,7 @@ export default function About() {
             <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-fuchsia-500/10 text-fuchsia-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-350 border border-slate-200/10">
                 <Globe className="h-5 w-5" />
               </div>
               <h3 className="font-display text-2xl font-semibold text-slate-900 dark:text-white">
@@ -99,15 +99,15 @@ export default function About() {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-emerald-500" />
+                  <div className="h-2 w-2 rounded-full bg-slate-400" />
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">Chennai, India</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-violet-500" />
+                  <div className="h-2 w-2 rounded-full bg-slate-400" />
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">Agentic AI & RAG</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-fuchsia-500" />
+                  <div className="h-2 w-2 rounded-full bg-slate-400" />
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">9+ Years Industry XP</span>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function About() {
               {["AWS Certified", "Azure Certified", "GenAI Dev"].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-white/50 border border-white/60 dark:bg-white/5 dark:border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_6px_rgba(0,0,0,0.03)] px-4 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400 backdrop-blur-md"
+                  className="rounded-full bg-white/50 border border-white/60 dark:bg-white/5 dark:border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_2px_6px_rgba(0,0,0,0.03)] px-4 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-400 backdrop-blur-[2px]"
                 >
                   {tag}
                 </span>
@@ -134,7 +134,7 @@ export default function About() {
             <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
 
             <div className="space-y-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-350 border border-slate-200/10">
                 <Terminal className="h-5 w-5" />
               </div>
               <h3 className="font-display text-2xl font-semibold text-slate-900 dark:text-white">

@@ -38,13 +38,13 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-left"
         >
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-violet-500 font-bold">
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 font-bold">
             Connect
           </p>
           <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold leading-tight text-slate-900 dark:text-white max-w-xl">
             Let's build something thoughtful together.
           </h2>
-          <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+          <div className="mt-6 h-1 w-16 rounded-full bg-slate-200 dark:bg-slate-800" />
         </motion.div>
 
         {/* Bento Contact Hub */}
@@ -69,14 +69,14 @@ export default function Contact() {
                 {/* Email Address Widget with Copy Button */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-950/20 border border-slate-200/40 dark:border-slate-800/50 gap-4 group/item">
                   <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-500">
+                    <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-650 dark:text-slate-350 border border-slate-200/10">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
                       <span className="block text-[8px] font-bold uppercase tracking-[0.25em] text-slate-400">
                         Email Address
                       </span>
-                      <a href="mailto:sivachandran94@gmail.com" className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-violet-500 transition-colors">
+                      <a href="mailto:sivachandran94@gmail.com" className="text-sm md:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-slate-550 dark:hover:text-slate-350 transition-colors">
                         sivachandran94@gmail.com
                       </a>
                     </div>
@@ -116,7 +116,7 @@ export default function Contact() {
 
                 {/* Location Widget */}
                 <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-100/50 dark:bg-slate-950/20 border border-slate-200/40 dark:border-slate-800/50">
-                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                  <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-650 dark:text-slate-350 border border-slate-200/10">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -147,14 +147,14 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/sivachandran-nkk"
                 target="_blank"
                 rel="noreferrer"
-                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
+                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-[2px] transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
               >
                 {/* Reflective light sweep sweep */}
                 <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                 
                 <div className="p-4 flex items-center justify-between w-full z-10">
                   <div className="flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500 border border-slate-200/10">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-650 dark:text-slate-350 border border-slate-200/10">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                       </svg>
@@ -168,7 +168,7 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
-                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-blue-500 transition-colors" />
+                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors" />
                 </div>
               </a>
 
@@ -177,14 +177,14 @@ export default function Contact() {
                 href="https://instagram.com/sivachandranraina"
                 target="_blank"
                 rel="noreferrer"
-                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
+                className="relative group flex items-center gap-4 rounded-[22px] overflow-hidden border border-white/60 bg-white/40 dark:border-white/10 dark:bg-slate-950/15 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_2px_8px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.12),0_4px_12px_rgba(0,0,0,0.35)] backdrop-blur-[2px] transition-all hover:-translate-y-0.5 hover:shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.6),0_8px_20px_rgba(0,0,0,0.06)] w-full"
               >
                 {/* Reflective light sweep sweep */}
                 <div className="absolute inset-0 w-[50%] -translate-x-full skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/15 to-transparent group-hover:animate-shine pointer-events-none z-20" />
                 
                 <div className="p-4 flex items-center justify-between w-full z-10">
                   <div className="flex items-center gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-pink-500/10 text-pink-500 border border-slate-200/10">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-650 dark:text-slate-350 border border-slate-200/10">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                         <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm6.2-2.4a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z" />
                       </svg>
@@ -198,7 +198,7 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
-                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-pink-500 transition-colors" />
+                  <Send className="h-4.5 w-4.5 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors" />
                 </div>
               </a>
             </div>

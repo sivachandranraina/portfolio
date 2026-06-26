@@ -5,8 +5,7 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import CustomCursor from "./components/CustomCursor";
 import LiquidBackground from "./components/LiquidBackground";
-import DynamicIsland from "./components/DynamicIsland";
-import Dock from "./components/Dock";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
@@ -26,8 +25,8 @@ function App() {
         }}
       />
 
-      {/* Apple-style floating header bar */}
-      <DynamicIsland />
+      {/* Floating theme switch toggle */}
+      <ThemeToggle />
 
       {/* Main content layouts */}
       <main className="relative z-10 w-full overflow-x-hidden">
@@ -37,9 +36,6 @@ function App() {
         <Experience />
         <Contact />
       </main>
-
-      {/* Bottom floating navigation dock */}
-      <Dock />
 
       {/* Sleek bottom footer */}
       <footer className="relative z-20 py-16 text-center font-display text-[9px] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-600 bg-transparent border-t border-slate-200/20 dark:border-slate-800/30">

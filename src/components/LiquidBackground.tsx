@@ -4,7 +4,7 @@ export default function LiquidBackground() {
   // Config for 6 floating blobs with distinct gradient themes and movement paths
   const blobs = [
     {
-      color: "bg-gradient-to-br from-violet-300/20 via-purple-300/15 to-indigo-300/10",
+      color: "bg-gradient-to-br from-slate-200/15 via-indigo-200/10 to-slate-300/5 dark:from-slate-800/15 dark:via-indigo-950/10 dark:to-slate-900/5",
       size: "w-[300px] h-[300px] md:w-[500px] md:h-[500px]",
       x: ["0%", "25%", "-15%", "10%", "0%"],
       y: ["0%", "-30%", "20%", "-10%", "0%"],
@@ -13,7 +13,7 @@ export default function LiquidBackground() {
       duration: 28,
     },
     {
-      color: "bg-gradient-to-br from-rose-200/20 via-pink-200/15 to-purple-205/10",
+      color: "bg-gradient-to-br from-indigo-200/12 via-slate-200/8 to-indigo-300/5 dark:from-indigo-950/12 dark:via-slate-900/8 dark:to-indigo-900/5",
       size: "w-[250px] h-[250px] md:w-[450px] md:h-[450px]",
       x: ["0%", "-25%", "20%", "-15%", "0%"],
       y: ["0%", "25%", "-20%", "30%", "0%"],
@@ -22,7 +22,7 @@ export default function LiquidBackground() {
       duration: 24,
     },
     {
-      color: "bg-gradient-to-br from-sky-200/20 via-blue-200/15 to-indigo-200/10",
+      color: "bg-gradient-to-br from-slate-300/10 via-indigo-200/8 to-slate-200/5 dark:from-slate-800/10 dark:via-indigo-950/8 dark:to-slate-900/5",
       size: "w-[280px] h-[280px] md:w-[480px] md:h-[480px]",
       x: ["10%", "-15%", "25%", "-10%", "10%"],
       y: ["-10%", "20%", "-30%", "15%", "-10%"],
@@ -31,7 +31,7 @@ export default function LiquidBackground() {
       duration: 32,
     },
     {
-      color: "bg-gradient-to-br from-amber-100/15 via-orange-100/10 to-rose-100/5",
+      color: "bg-gradient-to-br from-slate-200/8 via-slate-100/5 to-indigo-200/5 dark:from-slate-900/8 dark:via-slate-950/5 dark:to-indigo-950/3",
       size: "w-[220px] h-[220px] md:w-[380px] md:h-[380px]",
       x: ["-10%", "15%", "-20%", "10%", "-10%"],
       y: ["20%", "-15%", "25%", "-20%", "20%"],
@@ -40,7 +40,7 @@ export default function LiquidBackground() {
       duration: 22,
     },
     {
-      color: "bg-gradient-to-br from-teal-100/15 via-cyan-100/10 to-sky-100/5",
+      color: "bg-gradient-to-br from-slate-300/8 via-indigo-200/5 to-slate-200/3 dark:from-slate-850/8 dark:via-indigo-900/5 dark:to-slate-900/3",
       size: "w-[240px] h-[240px] md:w-[420px] md:h-[420px]",
       x: ["15%", "5%", "-15%", "20%", "15%"],
       y: ["15%", "-25%", "10%", "-15%", "15%"],
@@ -53,7 +53,7 @@ export default function LiquidBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 h-full w-full overflow-hidden bg-slate-50 transition-colors duration-700 dark:bg-slate-950">
       {/* Container applying the liquid gooey filter */}
-      <div className="liquid-gooey relative h-full w-full opacity-60 dark:opacity-40">
+      <div className="liquid-gooey relative h-full w-full opacity-45 dark:opacity-25">
         {blobs.map((blob, idx) => (
           <motion.div
             key={idx}
