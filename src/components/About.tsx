@@ -24,7 +24,7 @@ export default function About() {
           viewport={{ once: true }}
           className="absolute -left-10 top-6 text-[180px] md:text-[240px] font-display font-semibold uppercase tracking-[0.2em] text-slate-200/50 dark:text-slate-800/40"
         >
-          About
+          Intro
         </motion.div>
       </div>
       <div className="relative mx-auto grid w-full max-w-6xl gap-16 px-6 md:grid-cols-2">

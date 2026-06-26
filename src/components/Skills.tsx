@@ -108,7 +108,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="absolute -right-8 top-2 text-[180px] md:text-[240px] font-display font-semibold uppercase tracking-[0.2em] text-slate-200/50 dark:text-slate-800/40"
         >
-          Skills
+          Stack
         </motion.div>
       </div>
       <div className="relative mx-auto w-full max-w-6xl px-6">

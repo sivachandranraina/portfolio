@@ -97,7 +97,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="absolute -left-8 top-4 text-[150px] md:text-[240px] font-display font-semibold uppercase tracking-[0.1em] leading-none text-slate-200/50 dark:text-slate-800/30"
         >
-          Work<br />Experience
+          History
         </motion.div>
       </div>
       <div className="relative mx-auto w-full max-w-6xl px-6">

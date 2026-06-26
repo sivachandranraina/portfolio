@@ -20,7 +20,7 @@ export default function Contact() {
           transition={{ duration: 1.5 }}
           className="absolute -right-8 top-[10%] text-[150px] md:text-[240px] font-display font-semibold uppercase tracking-[0.2em] text-slate-700/10"
         >
-          Connect
+          Reach
         </motion.div>
       </div>
 
