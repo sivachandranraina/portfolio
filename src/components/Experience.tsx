@@ -131,7 +131,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          className=""
         >
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-[#E50914]">
@@ -141,39 +141,36 @@ export default function Experience() {
             <h2 className="mt-2 font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-wide text-white">
               Places I helped build and scale.
             </h2>
-            <p className="mt-2 max-w-xl text-sm md:text-base text-[#b3b3b3]">
+            <p className="mt-2 text-sm md:text-base text-[#b3b3b3]">
               A closer look at the companies, environments, and flagship
               projects I delivered.
             </p>
-          </div>
-
-          {/* Netflix Season Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setSelectedSeason("all")}
-              className={`rounded px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${
-                selectedSeason === "all"
+            {/* Netflix Season Filter Pills */}
+            <div className="flex flex-wrap items-center justify-start gap-2 mt-8">
+              <button
+                type="button"
+                onClick={() => setSelectedSeason("all")}
+                className={`rounded px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${selectedSeason === "all"
                   ? "bg-[#E50914] text-white shadow-[0_0_20px_rgba(229,9,20,0.4)]"
                   : "border border-white/20 bg-[#181818] text-[#b3b3b3] hover:border-white/50 hover:text-white"
-              }`}
-            >
-              All Seasons (3)
-            </button>
-            {experiences.map((exp) => (
-              <button
-                key={exp.company}
-                type="button"
-                onClick={() => setSelectedSeason(exp.company)}
-                className={`rounded px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${
-                  selectedSeason === exp.company
+                  }`}
+              >
+                All Seasons (3)
+              </button>
+              {experiences.map((exp) => (
+                <button
+                  key={exp.company}
+                  type="button"
+                  onClick={() => setSelectedSeason(exp.company)}
+                  className={`rounded px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${selectedSeason === exp.company
                     ? "bg-[#E50914] text-white shadow-[0_0_20px_rgba(229,9,20,0.4)]"
                     : "border border-white/20 bg-[#181818] text-[#b3b3b3] hover:border-white/50 hover:text-white"
-                }`}
-              >
-                S{exp.seasonNumber}: {exp.company}
-              </button>
-            ))}
+                    }`}
+                >
+                  S{exp.seasonNumber}: {exp.company}
+                </button>
+              ))}
+            </div>
           </div>
         </motion.div>
 

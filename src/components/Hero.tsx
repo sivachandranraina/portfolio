@@ -38,7 +38,7 @@ export default function Hero({ greeting }: HeroProps) {
         className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${profileImage})`,
-          backgroundPosition: "center 20%",
+          backgroundPosition: "left",
         }}
         aria-label="Sivachandran portrait background"
         role="img"

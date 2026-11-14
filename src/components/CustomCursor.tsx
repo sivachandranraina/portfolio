@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
-import { Play, Sparkles } from "lucide-react";
+import { Sparkles, ArrowUpRight } from "lucide-react";
 
-type HoverType = "default" | "link" | "theme";
+type HoverType = "default" | "link" | "theme" | "arrow";
 
 export default function CustomCursor() {
   const [hoverType, setHoverType] = useState<HoverType>("default");
@@ -93,7 +93,7 @@ export default function CustomCursor() {
           {hoverType === "theme" ? (
             <Sparkles className="h-4 w-4 text-white" />
           ) : (
-            <Play className="h-4 w-4 fill-white text-white ml-0.5" />
+            <ArrowUpRight className="h-4 w-4 text-white" />
           )}
         </motion.div>
       </motion.div>

@@ -4,7 +4,6 @@ import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
-import CustomCursor from "./components/CustomCursor";
 import Navbar, {
   VIEWER_PROFILES,
   type ViewerProfile,
@@ -22,8 +21,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#141414] text-white relative selection:bg-[#E50914] selection:text-white">
-      <CustomCursor />
-
       {/* Netflix "S" Badge Intro Loader */}
       <NetflixIntroLoader
         isOpen={showIntro}
