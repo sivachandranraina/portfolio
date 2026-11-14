@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -6,7 +7,74 @@ import Skills from "./components/Skills";
 import ThemeToggle from "./components/ThemeToggle";
 import CustomCursor from "./components/CustomCursor";
 
+// Import Comic Version Components
+import ComicHero from "./components/ComicHero";
+import ComicAbout from "./components/ComicAbout";
+import ComicSkills from "./components/ComicSkills";
+import ComicExperience from "./components/ComicExperience";
+import ComicContact from "./components/ComicContact";
+
 function App() {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener("popstate", handleLocationChange);
+
+    // Override pushState to notify page of navigation
+    const originalPushState = window.history.pushState;
+    window.history.pushState = function (state: any, title: string, url?: string | null) {
+      originalPushState.call(window.history, state, title, url);
+      handleLocationChange();
+    };
+
+    // Override replaceState to notify page of navigation
+    const originalReplaceState = window.history.replaceState;
+    window.history.replaceState = function (state: any, title: string, url?: string | null) {
+      originalReplaceState.call(window.history, state, title, url);
+      handleLocationChange();
+    };
+
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+    };
+  }, []);
+
+  // Update root classes for layout settings (e.g. cursor: none)
+  useEffect(() => {
+    if (currentPath === "/comic") {
+      document.documentElement.classList.add("comic-view");
+    } else {
+      document.documentElement.classList.remove("comic-view");
+    }
+  }, [currentPath]);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, "", path);
+  };
+
+  const isComic = currentPath === "/comic";
+
+  if (isComic) {
+    return (
+      <div className="bg-[#09090b] text-[#fafafa] relative min-h-screen">
+        <ComicHero onSwitchToModern={() => navigateTo("/")} />
+        <ComicAbout />
+        <ComicSkills />
+        <ComicExperience />
+        <ComicContact />
+        <footer className="relative py-12 z-10 text-center text-xs uppercase tracking-[0.35em] text-[#71717a] font-semibold bg-[#09090b]">
+          • Vibe coded in Comic version by Sivachandran •
+        </footer>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 relative selection:bg-violet-500/30">
       <CustomCursor />

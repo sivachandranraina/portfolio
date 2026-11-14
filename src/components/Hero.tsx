@@ -64,6 +64,14 @@ export default function Hero() {
                   >
                     View CV
                   </a>
+                  <button
+                    onClick={() => {
+                      window.history.pushState({}, "", "/comic");
+                    }}
+                    className="rounded-full border border-violet-500/40 bg-violet-500/10 px-8 py-3 text-sm font-semibold text-violet-300 backdrop-blur-md transition-all hover:bg-violet-500/20 hover:border-violet-500 hover:scale-105"
+                  >
+                    Comic Mode ⚡
+                  </button>
                 </motion.div>
               </div>
             </div>
