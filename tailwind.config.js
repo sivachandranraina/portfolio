@@ -18,9 +18,10 @@ export default {
         },
       },
       fontFamily: {
-        display: ["'Bebas Neue'", "'Space Grotesk'", "system-ui", "sans-serif"],
+        display: ["'Space Grotesk'", "'Bebas Neue'", "system-ui", "sans-serif"],
         sans: ["'Inter'", "system-ui", "sans-serif"],
         body: ["'Inter'", "system-ui", "sans-serif"],
+        bebas: ["'Bebas Neue'"]
       },
       keyframes: {
         aurora: {

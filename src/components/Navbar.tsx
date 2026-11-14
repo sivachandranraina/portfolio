@@ -107,7 +107,7 @@ export default function Navbar({
             className="group flex items-center gap-2.5 focus:outline-none"
             aria-label="Sivachandran Netflix Home"
           >
-            <span className="font-display text-3xl sm:text-4xl tracking-[0.14em] text-[#E50914] drop-shadow-[0_2px_10px_rgba(229,9,20,0.5)] transition-transform group-hover:scale-[1.03]">
+            <span className="font-bebas text-3xl sm:text-4xl tracking-[0.14em] text-[#E50914] drop-shadow-[0_2px_10px_rgba(229,9,20,0.5)] transition-transform group-hover:scale-[1.03]">
               SIVACHANDRAN
             </span>
           </a>
