@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { Play, Sparkles } from "lucide-react";
 
 type HoverType = "default" | "link" | "theme";
 
@@ -20,8 +20,8 @@ export default function CustomCursor() {
   const auraX = useSpring(cursorX, auraConfig);
   const auraY = useSpring(cursorY, auraConfig);
 
-  // Modern ambient spotlight effect
-  const ambientGlow = useMotionTemplate`radial-gradient(350px circle at ${auraX}px ${auraY}px, rgba(167, 139, 250, 0.12), transparent 80%)`;
+  // Netflix Red ambient spotlight effect
+  const ambientGlow = useMotionTemplate`radial-gradient(400px circle at ${auraX}px ${auraY}px, rgba(229, 9, 20, 0.12), transparent 80%)`;
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -32,15 +32,16 @@ export default function CustomCursor() {
     const handleHoverState = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
 
-      const isThemeSwitch = target.closest("button[aria-label='Toggle light and dark mode']");
+      const isProfileSwitch = target.closest("button[data-cursor='profile']");
 
-      if (isThemeSwitch) {
+      if (isProfileSwitch) {
         setHoverType("theme");
       } else if (
         target.tagName.toLowerCase() === "a" ||
         target.tagName.toLowerCase() === "button" ||
         target.closest("a") ||
-        target.closest("button")
+        target.closest("button") ||
+        target.closest("[data-interactive='true']")
       ) {
         setHoverType("link");
       } else {
@@ -61,15 +62,15 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Ambient Flashlight Glow (follows mouse smoothly in background) */}
+      {/* Ambient Netflix Crimson Glow (follows mouse smoothly in background) */}
       <motion.div
-        className="pointer-events-none fixed inset-0 z-[-1] hidden md:block"
+        className="pointer-events-none fixed inset-0 z-[1] hidden md:block"
         style={{ background: ambientGlow }}
       />
 
-      {/* Modern Morphing Cursor */}
+      {/* Netflix Morphing Cursor */}
       <motion.div
-        className="pointer-events-none fixed left-0 top-0 z-[10000] flex items-center justify-center overflow-hidden mix-blend-difference"
+        className="pointer-events-none fixed left-0 top-0 z-[10000] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(229,9,20,0.6)]"
         style={{
           x: dotX,
           y: dotY,
@@ -77,10 +78,11 @@ export default function CustomCursor() {
           translateY: "-50%",
         }}
         animate={{
-          width: isHovering ? 56 : 12,
-          height: isHovering ? 56 : 12,
+          width: isHovering ? 48 : 12,
+          height: isHovering ? 48 : 12,
           borderRadius: "50%",
-          backgroundColor: "rgba(255, 255, 255, 1)",
+          backgroundColor: isHovering ? "#E50914" : "#E50914",
+          border: isHovering ? "2px solid rgba(255,255,255,0.9)" : "0px solid transparent",
         }}
         transition={{ type: "spring", stiffness: 400, damping: 25 }}
       >
@@ -89,9 +91,9 @@ export default function CustomCursor() {
           transition={{ duration: 0.2 }}
         >
           {hoverType === "theme" ? (
-            <Sparkles className="h-5 w-5 text-black" />
+            <Sparkles className="h-4 w-4 text-white" />
           ) : (
-            <ArrowUpRight className="h-5 w-5 text-black" />
+            <Play className="h-4 w-4 fill-white text-white ml-0.5" />
           )}
         </motion.div>
       </motion.div>

@@ -1,31 +1,155 @@
+import { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
-import ThemeToggle from "./components/ThemeToggle";
 import CustomCursor from "./components/CustomCursor";
+import Navbar, {
+  VIEWER_PROFILES,
+  type ViewerProfile,
+  WhoIsWatchingModal,
+} from "./components/Navbar";
+import NetflixIntroLoader from "./components/NetflixIntroLoader";
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [activeProfile, setActiveProfile] = useState<ViewerProfile>(
+    VIEWER_PROFILES[0]
+  );
+  const [whoIsWatchingOpen, setWhoIsWatchingOpen] = useState(false);
+  const [serviceCode, setServiceCode] = useState("NKK-2015-2026");
+
   return (
-    <div className="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 relative selection:bg-violet-500/30">
+    <div className="min-h-screen bg-[#141414] text-white relative selection:bg-[#E50914] selection:text-white">
       <CustomCursor />
-      {/* Background noise texture */}
-      <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>
-      <div className="fixed right-6 top-6 z-50">
-        <ThemeToggle />
-      </div>
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Contact />
-      <footer className="relative py-8 z-10 text-center text-xs uppercase tracking-[0.3em] text-slate-300">
-        &#x2022; Vibe coded by Sivachandran &#x2022;
-        <div className="pointer-events-none z-[-1] bg-slate-900 dark:bg-slate-950 absolute bottom-0 left-0 h-[780px] w-full overflow-hidden">
-          <div className="absolute -bottom-20 h-[180px] w-[120%] -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-400/45 via-emerald-400/35 to-fuchsia-400/40 blur-3xl animate-aurora" />
-          <div className="absolute -bottom-24 h-[220px] w-[120%] -translate-x-1/2 rounded-full bg-gradient-to-r from-amber-300/35 via-cyan-400/35 to-indigo-400/35 blur-3xl animate-auroraSlow" />
-          <div className="absolute -bottom-10 h-[120px] left-1/2 w-[100%] -translate-x-1/2 rounded-full bg-gradient-to-r from-rose-400/30 via-purple-400/30 to-violet-400/30 blur-2xl animate-aurora" />
+
+      {/* Netflix "S" Badge Intro Loader */}
+      <NetflixIntroLoader
+        isOpen={showIntro}
+        onComplete={() => setShowIntro(false)}
+      />
+
+      {/* Subtle Film Grain Texture */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')",
+        }}
+      />
+
+      {/* Netflix Sticky Navigation Header */}
+      <Navbar
+        activeProfile={activeProfile}
+        onSelectProfile={setActiveProfile}
+        onOpenWhoIsWatching={() => setWhoIsWatchingOpen(true)}
+      />
+
+      {/* Who's Watching Profile Switcher Overlay */}
+      <WhoIsWatchingModal
+        isOpen={whoIsWatchingOpen}
+        activeProfile={activeProfile}
+        onSelect={setActiveProfile}
+        onClose={() => setWhoIsWatchingOpen(false)}
+      />
+
+      {/* Main Streaming Content */}
+      <main>
+        <Hero greeting={activeProfile.greeting} />
+        <About />
+        <Skills />
+        <Experience />
+        <Contact />
+      </main>
+
+      {/* Authentic Netflix Footer */}
+      <footer className="relative z-10 border-t border-white/10 bg-[#0b0b0b] py-14 text-[#808080]">
+        <div className="mx-auto max-w-7xl px-6 md:px-12">
+          <p className="text-sm">
+            Questions or project inquiries? Call or email{" "}
+            <a
+              href="mailto:sivachandran94@gmail.com"
+              className="text-[#b3b3b3] underline hover:text-white"
+            >
+              sivachandran94@gmail.com
+            </a>
+          </p>
+
+          <div className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-4">
+            <a href="#home" className="hover:underline">
+              Featured Billboard
+            </a>
+            <a href="#about" className="hover:underline">
+              Storyline &amp; Bio
+            </a>
+            <a href="#skills" className="hover:underline">
+              Top 10 Tech Stack
+            </a>
+            <a href="#work" className="hover:underline">
+              Seasons &amp; Episodes
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1wkx85xMuEQz3rXIi7IvuAn5CQGIWPCZ1w7Ohe3w_JNY/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline"
+            >
+              Official Resume / CV
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sivachandran-nkk"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline"
+            >
+              LinkedIn Channel
+            </a>
+            <a
+              href="https://instagram.com/sivachandranraina"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline"
+            >
+              Instagram Stories
+            </a>
+            <button
+              type="button"
+              onClick={() => setWhoIsWatchingOpen(true)}
+              className="text-left hover:underline"
+            >
+              Switch Viewer Profile
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowIntro(true)}
+              className="text-left text-[#E50914] font-semibold hover:underline"
+            >
+              Replay &ldquo;S&rdquo; Intro
+            </button>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+            <button
+              type="button"
+              onClick={() =>
+                setServiceCode(
+                  serviceCode === "NKK-2015-2026"
+                    ? "GENAI-ARCHITECT-99"
+                    : "NKK-2015-2026"
+                )
+              }
+              className="border border-[#808080] px-3 py-1.5 text-xs text-[#808080] transition hover:border-white hover:text-white"
+            >
+              Service Code: {serviceCode}
+            </button>
+
+            <div className="text-xs uppercase tracking-[0.3em] text-[#b3b3b3]">
+              &#x2022; Vibe coded by{" "}
+              <span className="font-bold text-[#E50914]">Sivachandran</span>{" "}
+              &#x2022;
+            </div>
+          </div>
         </div>
       </footer>
     </div>
